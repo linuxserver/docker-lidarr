@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+# cd /app/lidarr || exit
+
+exec \
+	s6-setuidgid abc mono --debug /app/lidarr/Lidarr.exe \
+	-nobrowser -data=/config
