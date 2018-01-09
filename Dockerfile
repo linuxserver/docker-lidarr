@@ -17,7 +17,10 @@ RUN \
 	-L "https://ci.appveyor.com/api/buildjobs/32mn5y508u357fke/artifacts/Lidarr.${LIDARR_VER}.linux.tar.gz" && \
  tar xf \
  /tmp/lidarr.tar.gz -C \
-	/app/lidarr --strip-components=1
+	/app/lidarr --strip-components=1 && \
+ echo "**** cleanup ****" && \
+ rm -rf \
+	/tmp/*
 
 # copy local files
 COPY root/ /
