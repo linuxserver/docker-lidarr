@@ -32,6 +32,8 @@ The [LinuxServer.io][linuxserverurl] team brings you another image release featu
 
 Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
+[![lidarr](https://github.com/lidarr/Lidarr/blob/develop/Logo/400.png)][appurl]
+
 &nbsp;
 
 ## Usage
