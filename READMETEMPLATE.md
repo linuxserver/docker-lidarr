@@ -2,8 +2,8 @@
 [forumurl]: https://forum.linuxserver.io
 [ircurl]: https://www.linuxserver.io/irc/
 [podcasturl]: https://www.linuxserver.io/podcast/
-[appurl]: www.example.com
-[hub]: https://hub.docker.com/r/<image-name>/
+[appurl]: https://github.com/lidarr/Lidarr
+[hub]: https://hub.docker.com/r/linuxserver/lidarr/
 
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png?v=4&s=4000)][linuxserverurl]
@@ -27,11 +27,10 @@ The [LinuxServer.io][linuxserverurl] team brings you another image release featu
  + weekly base OS updates with common layers across the entire LinuxServer.io ecosystem to minimise space usage, down time and bandwidth
  + security updates
 
-# <image-name>
+# linuxserver/lidarr
+[![](https://images.microbadger.com/badges/version/linuxserver/lidarr.svg)](https://microbadger.com/images/linuxserver/lidarr "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/lidarr.svg)](https://microbadger.com/images/linuxserver/lidarr "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/lidarr.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/lidarr.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/x86-64/x86-64-lidarr)](https://ci.linuxserver.io/job/Docker-Builders/job/x86-64/job/x86-64-lidarr/)
 
-Provide a short, concise description of the application. No more than two SHORT paragraphs. Link to sources where possible and include an image illustrating your point if necessary. Point users to the original applications website, as that's the best place to get support - not here.
-
-`IMPORTANT, replace all instances of <image-name> with the correct dockerhub repo (ie linuxserver/plex) and <container-name> information (ie, plex)`
+Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
 &nbsp;
 
@@ -39,11 +38,13 @@ Provide a short, concise description of the application. No more than two SHORT 
 
 ```
 docker create \
-  --name=<container-name> \
+  --name=lidarr \
   -v <path to data>:/config \
+  -v <path to downloads>:/downloads \
+  -v <path to music>:/music \
   -e PGID=<gid> -e PUID=<uid>  \
-  -p 1234:1234 \
-  <image-name>
+  -p 8686:8686 \
+  linuxserver/lidarr
 ```
 
 &nbsp;
@@ -59,8 +60,10 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 
 | Parameter | Function |
 | :---: | --- |
-| `-p 1234` | the port(s) |
-| `-v /config` | explain what lives here |
+| `-p 8686` | the port(s) |
+| `-v /config` | Contains your config files|
+| `-v /downloads` | Path to your download folder for music |
+| `-v /music` | Path to your music library |
 | `-e PGID` | for GroupID, see below for explanation |
 | `-e PUID` | for UserID, see below for explanation |
 
@@ -83,8 +86,7 @@ In this instance `PUID=1001` and `PGID=1001`, to find yours use `id user` as bel
 
 ## Setting up the application
 
-Insert a basic user guide here to get a n00b up and running with the software inside the container. DELETE ME
-
+Access the webui at `<your-ip>:8686`, for more information check out [Lidarr][appurl].
 
 &nbsp;
 
@@ -92,10 +94,10 @@ Insert a basic user guide here to get a n00b up and running with the software in
 
 | Function | Command |
 | :--- | :--- |
-| Shell access (live container) | `docker exec -it <container-name> /bin/bash` |
-| Realtime container logs | `docker logs -f <container-name>` |
-| Container version number | `docker inspect -f '{{ index .Config.Labels "build_version" }}' <container-name>` |
-| Image version number |  `docker inspect -f '{{ index .Config.Labels "build_version" }}' <image-name>` |
+| Shell access (live container) | `docker exec -it lidarr /bin/bash` |
+| Realtime container logs | `docker logs -f lidarr` |
+| Container version number | `docker inspect -f '{{ index .Config.Labels "build_version" }}' lidarr` |
+| Image version number |  `docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/lidarr` |
 
 &nbsp;
 
@@ -103,4 +105,4 @@ Insert a basic user guide here to get a n00b up and running with the software in
 
 |  Date | Changes |
 | :---: | --- |
-| dd.MM.yy |  Initial Release. |
+| 23.02.18 |  Initial Release. |
