@@ -7,14 +7,15 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="sparklyballs"
 
 # package versions
-ARG LIDARR_VER="develop.0.2.0.224"
+ARG LIDARR_JOB="pn5sq70ipx9bsu8m"
+ARG LIDARR_VER="develop.0.2.0.286"
 
 RUN \
  echo "**** install lidarr ****" && \
  mkdir -p /app/lidarr && \
  curl -o \
  /tmp/lidarr.tar.gz \
-	-L "https://ci.appveyor.com/api/buildjobs/32mn5y508u357fke/artifacts/Lidarr.${LIDARR_VER}.linux.tar.gz" && \
+	-L "https://ci.appveyor.com/api/buildjobs/${LIDARR_JOB}/artifacts/Lidarr.${LIDARR_VER}.linux.tar.gz" && \
  tar xf \
  /tmp/lidarr.tar.gz -C \
 	/app/lidarr --strip-components=1 && \
