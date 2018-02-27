@@ -107,4 +107,5 @@ Access the webui at `<your-ip>:8686`, for more information check out [Lidarr][ap
 
 |  Date | Changes |
 | :---: | --- |
+| 27.02.18 |  Use json to query for new version. |
 | 23.02.18 |  Initial Release. |
