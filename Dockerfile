@@ -9,6 +9,7 @@ LABEL maintainer="sparklyballs"
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
 ARG LIDARR_BRANCH="nightly"
+ENV XDG_CONFIG_HOME="/config/xdg"
 
 RUN \
  echo "**** install jq ****" && \
