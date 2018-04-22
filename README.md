@@ -46,7 +46,7 @@ docker create \
   -v <path to music>:/music \
   -e PGID=<gid> -e PUID=<uid>  \
   -p 8686:8686 \
-  linuxserver/lidarr
+  lsiodev/lidarr-preview
 ```
 
 &nbsp;
@@ -88,6 +88,8 @@ In this instance `PUID=1001` and `PGID=1001`, to find yours use `id user` as bel
 
 ## Setting up the application
 
+`IMPORTANT: This is the dev preview version and is not meant for end users`
+
 Access the webui at `<your-ip>:8686`, for more information check out [Lidarr][appurl].
 
 &nbsp;
@@ -107,6 +109,7 @@ Access the webui at `<your-ip>:8686`, for more information check out [Lidarr][ap
 
 |  Date | Changes |
 | :---: | --- |
+| 22.04.18 |  Switch this branch to the nightly versions, auto-updating on container start |
 | 17.03.18 |  Add ENV XDG_CONFIG_HOME="/config/xdg" to Dockerfile for signalr fix. |
 | 27.02.18 |  Use json to query for new version. |
 | 23.02.18 |  Initial Release. |
