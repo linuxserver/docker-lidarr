@@ -107,6 +107,7 @@ Access the webui at `<your-ip>:8686`, for more information check out [Lidarr][ap
 
 |  Date | Changes |
 | :---: | --- |
+| 22.04.18 |  Switch to beta builds. |
 | 17.03.18 |  Add ENV XDG_CONFIG_HOME="/config/xdg" to Dockerfile for signalr fix. |
 | 27.02.18 |  Use json to query for new version. |
 | 23.02.18 |  Initial Release. |
