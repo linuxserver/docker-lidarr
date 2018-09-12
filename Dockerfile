@@ -16,16 +16,6 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	jq && \
- echo "**** install lidarr ****" && \
- mkdir -p /app/lidarr && \
- lidarr_url=$(curl "https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}/changes?os=linux" \
-	| jq -r '.[0].url') && \
-  curl -o \
- /tmp/lidarr.tar.gz -L \
-	"${lidarr_url}" && \
- tar ixzf \
- /tmp/lidarr.tar.gz -C \
-	/app/lidarr --strip-components=1 && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
