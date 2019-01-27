@@ -1,24 +1,7 @@
 #!/usr/bin/with-contenv bash
 
-# cleanup any existing install
-[[ -d /app/lidarr ]] && \
-	rm -rf /app/lidarr
-mkdir -p /app/lidarr
+# cd /app/lidarr || exit
 
-# (re)install develop version of lidarr
-lidarr_url=$(curl "https://services.lidarr.audio/v1/update/nightly/changes?os=linux" \
-	| jq -r '.[0].url')
-curl -o \
- /tmp/lidarr.tar.gz -L \
-	"${lidarr_url}"
-tar ixzf \
-/tmp/lidarr.tar.gz -C \
-	/app/lidarr --strip-components=1
-# cleanup
-rm -rf \
-	/tmp/*
-
-# permissions
-chown -R abc:abc \
-	/app/lidarr \
-	/config
+exec \
+	s6-setuidgid abc mono --debug /app/lidarr/Lidarr.exe \
+	-nobrowser -data=/config
