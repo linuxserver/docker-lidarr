@@ -1,0 +1,28 @@
+---
+
+# jenkins variables
+project_name: docker-lidarr
+external_type: custom_json
+release_type: stable
+release_tag: latest
+ls_branch: master
+repo_vars:
+  - JSON_URL = 'https://services.lidarr.audio/v1/update/develop/changes?os=linux'
+  - JSON_PATH = '.[0].version'
+  - BUILD_VERSION_ARG = 'LIDARR_RELEASE'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-lidarr'
+  - CONTAINER_NAME = 'lidarr'
+  - DOCKERHUB_IMAGE = 'linuxserver/lidarr'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/lidarr'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/lidarr'
+  - DIST_IMAGE = 'ubuntu'
+  - MULTIARCH='true'
+  - CI='true'
+  - CI_WEB='true'
+  - CI_PORT='8686'
+  - CI_SSL='false'
+  - CI_DELAY='120'
+  - CI_DOCKERENV='TZ=US/Pacific'
+  - CI_AUTH='user:password'
+  - CI_WEBPATH=''
