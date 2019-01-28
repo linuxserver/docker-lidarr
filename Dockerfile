@@ -13,10 +13,11 @@ ARG LIDARR_BRANCH="nightly"
 ENV XDG_CONFIG_HOME="/config/xdg"
 
 RUN \
- echo "**** install jq ****" && \
+ echo "**** install packages ****" && \
  apt-get update && \
- apt-get install -y \
-	jq && \
+ apt-get install --no-install-recommends -y \
+        libchromaprint-tools \
+        jq && \
  echo "**** install lidarr ****" && \
  mkdir -p /app/lidarr && \
  if [ -z ${LIDARR_RELEASE+x} ]; then \
