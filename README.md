@@ -9,9 +9,9 @@
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png?v=4&s=4000)][linuxserverurl]
 
 
-## Contact information:- 
+## Contact information:-
 
-| Type | Address/Details | 
+| Type | Address/Details |
 | :---: | --- |
 | Discord | [Discord](https://discord.gg/YWrKVTn) |
 | Forum | [Linuserver.io forum][forumurl] |
@@ -53,7 +53,7 @@ docker create \
 
 ## Parameters
 
-The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
+The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side.
 For example with a port -p external:internal - what this shows is the port mapping from internal to external of the container.
 So -p 8080:80 would expose port 80 from inside the container to be accessible from the host's IP on port 8080
 http://192.168.x.x:8080 would show you what's running INSIDE the container on port 80.
@@ -109,6 +109,7 @@ Access the webui at `<your-ip>:8686`, for more information check out [Lidarr][ap
 
 |  Date | Changes |
 | :---: | --- |
+| 26.01.19 |  Add pipeline logic and multi arch, switching to tagged release from auto updates |
 | 22.04.18 |  Switch this branch to the nightly versions, auto-updating on container start |
 | 17.03.18 |  Add ENV XDG_CONFIG_HOME="/config/xdg" to Dockerfile for signalr fix. |
 | 27.02.18 |  Use json to query for new version. |
