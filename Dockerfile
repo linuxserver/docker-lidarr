@@ -14,7 +14,6 @@ ENV XDG_CONFIG_HOME="/config/xdg"
 
 RUN \
  echo "**** install packages ****" && \
- echo "deb http://archive.ubuntu.com/ubuntu/ bionic-proposed main restricted" | tee /etc/apt/sources.list.d/proposed.list && \
  apt-get update && \
  apt-get install --no-install-recommends -y \
 	libchromaprint-tools \
