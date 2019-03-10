@@ -1,4 +1,4 @@
-FROM lsiobase/mono.arm64:xenial
+FROM lsiobase/mono:arm64v8-bionic
 
 # Add qemu to build on x86_64 systems
 COPY qemu-aarch64-static /usr/bin
@@ -17,6 +17,7 @@ ENV XDG_CONFIG_HOME="/config/xdg"
 
 RUN \
  echo "**** install packages ****" && \
+ echo "deb http://archive.ubuntu.com/ubuntu/ bionic-proposed main restricted" | tee /etc/apt/sources.list.d/proposed.list && \
  apt-get update && \
  apt-get install --no-install-recommends -y \
         libchromaprint-tools \

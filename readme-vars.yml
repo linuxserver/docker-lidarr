@@ -41,6 +41,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "08.03.19:", desc: "Rebase to Bionic, use proposed endpoint for libchromaprint." }
   - { date: "26.01.19:", desc: "Add pipeline logic and multi arch." }
   - { date: "22.04.18:", desc: "Switch to beta builds." }
   - { date: "17.03.18:", desc: "Add ENV XDG_CONFIG_HOME=\"/config/xdg\" to Dockerfile for signalr fix." }
