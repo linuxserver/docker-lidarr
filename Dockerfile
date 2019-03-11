@@ -21,17 +21,18 @@ RUN \
  echo "**** install lidarr ****" && \
  mkdir -p /app/lidarr && \
  if [ -z ${LIDARR_RELEASE+x} ]; then \
-	LIDARR_RELEASE=$(curl -sL "https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}/changes?os=linux" \
-	| jq -r '.[0].version'); \
+ LIDARR_JSON=$(curl -sL "https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}/changes?os=linux") && \
+ LIDARR_RELEASE=$(jq -n "$LIDARR_JSON" | jq -r '.[0].version') && \
+ LIDARR_URL=$(jq -n "$LIDARR_JSON" | jq -r '.[0].url'); \
  fi && \
- lidarr_url=$(curl -sL "https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}/changes?os=linux" \
-	| jq -r "first(.[] | select(.version == \"${LIDARR_RELEASE}\")) | .url") && \
+ set -ex && \
  curl -o \
  /tmp/lidarr.tar.gz -L \
-	"${lidarr_url}" && \
+	"${LIDARR_URL}" && \
  tar ixzf \
  /tmp/lidarr.tar.gz -C \
 	/app/lidarr --strip-components=1 && \
+ set +ex && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
