@@ -1,6 +1,6 @@
 adduser/now 3.116ubuntu1
 apt/now 1.6.8
-apt-transport-https/now 1.6.8
+apt-transport-https/now 1.6.10
 apt-utils/now 1.6.8
 base-files/now 10.1ubuntu2.4
 base-passwd/now 3.5.44
