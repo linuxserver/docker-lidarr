@@ -279,7 +279,7 @@ libncursesw56.1-1ubuntu1.18.04
 libnettle63.4-1
 libnghttp2-141.30.0-1ubuntu1
 libnpth01.5-3
-libnuma12.0.11-2.1
+libnuma12.0.11-2.1ubuntu0.1
 libnunit-cil-dev2.6.4+dfsg-1
 libnunit-console-runner2.6.3-cil2.6.4+dfsg-1
 libnunit-core2.6.3-cil2.6.4+dfsg-1
