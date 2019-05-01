@@ -28,7 +28,7 @@ findutils4.6.0+git+20170828-2
 fontconfig2.12.6-0ubuntu2
 fontconfig-config2.12.6-0ubuntu2
 fonts-dejavu-core2.37-1
-gcc-8-base8.2.0-1ubuntu2~18.04
+gcc-8-base8.3.0-6ubuntu1~18.04
 gnupg2.2.4-1ubuntu1.2
 gnupg-l10n2.2.4-1ubuntu1.2
 gnupg-utils2.2.4-1ubuntu1.2
@@ -86,7 +86,7 @@ libfdisk12.31.1-0.4ubuntu3.3
 libffi63.2.1-8
 libfontconfig12.12.6-0ubuntu2
 libfreetype62.8.1-2ubuntu2
-libgcc11:8.2.0-1ubuntu2~18.04
+libgcc11:8.3.0-6ubuntu1~18.04
 libgcrypt201.8.1-4ubuntu1.1
 libgdbm51.14.1-6
 libgdbm-compat41.14.1-6
@@ -98,7 +98,7 @@ libglib2.0-02.56.3-0ubuntu0.18.04.1
 libgme00.6.2-1
 libgmp102:6.1.2+dfsg-2
 libgnutls303.5.18-1ubuntu1
-libgomp18.2.0-1ubuntu2~18.04
+libgomp18.3.0-6ubuntu1~18.04
 libgpg-error01.27-6
 libgraphite2-31.3.11-2
 libgsm11.0.13-4build1
@@ -126,7 +126,7 @@ libldap-2.4-22.4.45+dfsg-1ubuntu1.1
 libldap-common2.4.45+dfsg-1ubuntu1.1
 liblz4-10.0~r131-2ubuntu3
 liblzma55.2.2-1.3
-libmediainfo0v518.12-1
+libmediainfo0v519.04-1
 libmms00.6.4-2
 libmono-2.0-dev5.20.1.19-0xamarin2+ubuntu1804b1
 libmono-accessibility4.0-cil5.20.1.19-0xamarin2+ubuntu1804b1
@@ -330,9 +330,9 @@ libsqlite3-03.22.0-1
 libss21.44.1-1ubuntu1.1
 libssh-gcrypt-40.8.0~20170825.94fa1e38-1ubuntu0.2
 libssl1.11.1.0g-2ubuntu4.3
-libstdc++68.2.0-1ubuntu2~18.04
+libstdc++68.3.0-6ubuntu1~18.04
 libswresample27:3.4.4-0ubuntu0.18.04.1
-libsystemd0237-3ubuntu10.19
+libsystemd0237-3ubuntu10.20
 libtasn1-64.13-2
 libthai00.1.27-2
 libthai-data0.1.27-2
@@ -340,7 +340,7 @@ libtheora01.1.1+dfsg.1-14
 libtiff54.0.9-5ubuntu0.2
 libtinfo56.1-1ubuntu1.18.04
 libtwolame00.3.13-3
-libudev1237-3ubuntu10.19
+libudev1237-3ubuntu10.20
 libunistring20.9.9-0ubuntu2
 libuuid12.31.1-0.4ubuntu3.3
 libva22.1.0-3
@@ -351,7 +351,7 @@ libvorbis0a1.3.5-4.2
 libvorbisenc21.3.5-4.2
 libvorbisfile31.3.5-4.2
 libvpx51.7.0-3
-libwavpack15.1.0-2ubuntu1.2
+libwavpack15.1.0-2ubuntu1.3
 libwebp60.6.1-2
 libwebpmux30.6.1-2
 libwind0-heimdal7.5.0+dfsg-1
@@ -378,7 +378,7 @@ login1:4.5-1ubuntu1
 lsb-base9.20170808ubuntu1
 make4.1-9.1ubuntu1
 mawk1.3.3-17ubuntu3
-mediainfo18.12-1
+mediainfo19.04-1
 mime-support3.60ubuntu1
 mono-4.0-gac5.20.1.19-0xamarin2+ubuntu1804b1
 mono-devel5.20.1.19-0xamarin2+ubuntu1804b1
@@ -415,7 +415,7 @@ shared-mime-info1.9-2
 sqlite33.22.0-1
 sysvinit-utils2.88dsf-59.10ubuntu1
 tar1.29b-2ubuntu0.1
-tzdata2018i-0ubuntu0.18.04
+tzdata2019a-0ubuntu0.18.04
 ubuntu-keyring2018.09.18.1~18.04.0
 ucf3.0038
 unzip6.0-21ubuntu1
