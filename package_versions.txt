@@ -53,9 +53,9 @@ libassuan02.5.1-2
 libattr11:2.4.47-2build1
 libaudit11:2.8.2-1ubuntu1
 libaudit-common1:2.8.2-1ubuntu1
-libavcodec577:3.4.4-0ubuntu0.18.04.1
-libavformat577:3.4.4-0ubuntu0.18.04.1
-libavutil557:3.4.4-0ubuntu0.18.04.1
+libavcodec577:3.4.6-0ubuntu0.18.04.1
+libavformat577:3.4.6-0ubuntu0.18.04.1
+libavutil557:3.4.6-0ubuntu0.18.04.1
 libbinutils2.30-21ubuntu1~18.04.1
 libblkid12.31.1-0.4ubuntu3.3
 libbluray21:1.0.2-3
@@ -331,7 +331,7 @@ libss21.44.1-1ubuntu1.1
 libssh-gcrypt-40.8.0~20170825.94fa1e38-1ubuntu0.2
 libssl1.11.1.0g-2ubuntu4.3
 libstdc++68.3.0-6ubuntu1~18.04
-libswresample27:3.4.4-0ubuntu0.18.04.1
+libswresample27:3.4.6-0ubuntu0.18.04.1
 libsystemd0237-3ubuntu10.21
 libtasn1-64.13-2
 libthai00.1.27-2
