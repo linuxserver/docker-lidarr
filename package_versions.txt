@@ -28,7 +28,7 @@ findutils4.6.0+git+20170828-2
 fontconfig2.12.6-0ubuntu2
 fontconfig-config2.12.6-0ubuntu2
 fonts-dejavu-core2.37-1
-gcc-8-base8.3.0-6ubuntu1~18.04
+gcc-8-base8.3.0-6ubuntu1~18.04.1
 gnupg2.2.4-1ubuntu1.2
 gnupg-l10n2.2.4-1ubuntu1.2
 gnupg-utils2.2.4-1ubuntu1.2
@@ -86,7 +86,7 @@ libfdisk12.31.1-0.4ubuntu3.3
 libffi63.2.1-8
 libfontconfig12.12.6-0ubuntu2
 libfreetype62.8.1-2ubuntu2
-libgcc11:8.3.0-6ubuntu1~18.04
+libgcc11:8.3.0-6ubuntu1~18.04.1
 libgcrypt201.8.1-4ubuntu1.1
 libgdbm51.14.1-6
 libgdbm-compat41.14.1-6
@@ -98,7 +98,7 @@ libglib2.0-02.56.4-0ubuntu0.18.04.2
 libgme00.6.2-1
 libgmp102:6.1.2+dfsg-2
 libgnutls303.5.18-1ubuntu1.1
-libgomp18.3.0-6ubuntu1~18.04
+libgomp18.3.0-6ubuntu1~18.04.1
 libgpg-error01.27-6
 libgraphite2-31.3.11-2
 libgsm11.0.13-4build1
@@ -330,7 +330,7 @@ libsqlite3-03.22.0-1
 libss21.44.1-1ubuntu1.1
 libssh-gcrypt-40.8.0~20170825.94fa1e38-1ubuntu0.2
 libssl1.11.1.0g-2ubuntu4.3
-libstdc++68.3.0-6ubuntu1~18.04
+libstdc++68.3.0-6ubuntu1~18.04.1
 libswresample27:3.4.6-0ubuntu0.18.04.1
 libsystemd0237-3ubuntu10.21
 libtasn1-64.13-2
