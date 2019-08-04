@@ -1,4 +1,4 @@
-FROM lsiobase/mono:amd64-bionic
+FROM lsiobase/mono:LTS
 
 # set version label
 ARG BUILD_DATE
