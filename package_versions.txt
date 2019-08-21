@@ -289,7 +289,7 @@ libnunit-mocks2.6.3-cil2.6.4+dfsg-1
 libnunit-util2.6.3-cil2.6.4+dfsg-1
 libogg01.3.2-1
 libonig46.7.0-1
-libopenjp2-72.3.0-1
+libopenjp2-72.3.0-2build0.18.04.1
 libopenmpt00.3.6-1
 libopus01.1.2-1ubuntu1
 libp11-kit00.23.9-2
