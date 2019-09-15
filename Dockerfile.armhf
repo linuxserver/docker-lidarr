@@ -5,11 +5,11 @@ ARG BUILD_DATE
 ARG VERSION
 ARG LIDARR_RELEASE
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="sparklyballs"
+LABEL maintainer="thelamer"
 
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
-ARG LIDARR_BRANCH="develop"
+ARG LIDARR_BRANCH="master"
 ENV XDG_CONFIG_HOME="/config/xdg"
 
 RUN \
