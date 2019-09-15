@@ -10,7 +10,7 @@ pipeline {
   environment {
     BUILDS_DISCORD=credentials('build_webhook_url')
     GITHUB_TOKEN=credentials('498b4638-2d02-4ce5-832d-8a57d01d97ab')
-    JSON_URL = 'https://services.lidarr.audio/v1/update/develop/changes?os=linux'
+    JSON_URL = 'https://services.lidarr.audio/v1/update/master/changes?os=linux'
     JSON_PATH = '.[0].version'
     BUILD_VERSION_ARG = 'LIDARR_RELEASE'
     LS_USER = 'linuxserver'
