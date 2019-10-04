@@ -37,7 +37,7 @@ pipeline {
         script{
           env.EXIT_STATUS = ''
           env.LS_RELEASE = sh(
-            script: '''docker run --rm alexeiled/skopeo sh -c 'skopeo inspect docker://docker.io/'${DOCKERHUB_IMAGE}':preview 2>/dev/null' | jq -r '.Labels.build_version' | awk '{print $3}' | grep '\\-ls' || : ''',
+            script: '''docker run --rm alexeiled/skopeo sh -c 'skopeo inspect docker://docker.io/'${DOCKERHUB_IMAGE}':netcore 2>/dev/null' | jq -r '.Labels.build_version' | awk '{print $3}' | grep '\\-ls' || : ''',
             returnStdout: true).trim()
           env.LS_RELEASE_NOTES = sh(
             script: '''cat readme-vars.yml | awk -F \\" '/date: "[0-9][0-9].[0-9][0-9].[0-9][0-9]:/ {print $4;exit;}' | sed -E ':a;N;$!ba;s/\\r{0,1}\\n/\\\\n/g' ''',
@@ -130,10 +130,10 @@ pipeline {
         }
       }
     }
-    // If this is a preview build use live docker endpoints
+    // If this is a netcore build use live docker endpoints
     stage("Set ENV live build"){
       when {
-        branch "preview"
+        branch "netcore"
         environment name: 'CHANGE_ID', value: ''
       }
       steps {
@@ -151,7 +151,7 @@ pipeline {
     // If this is a dev build use dev docker endpoints
     stage("Set ENV dev build"){
       when {
-        not {branch "preview"}
+        not {branch "netcore"}
         environment name: 'CHANGE_ID', value: ''
       }
       steps {
@@ -218,7 +218,7 @@ pipeline {
     // Use helper containers to render templated files
     stage('Update-Templates') {
       when {
-        branch "preview"
+        branch "netcore"
         environment name: 'CHANGE_ID', value: ''
         expression {
           env.CONTAINER_NAME != null
@@ -229,16 +229,16 @@ pipeline {
               set -e
               TEMPDIR=$(mktemp -d)
               docker pull linuxserver/jenkins-builder:latest
-              docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -e GITHUB_BRANCH=preview -v ${TEMPDIR}:/ansible/jenkins linuxserver/jenkins-builder:latest 
+              docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -e GITHUB_BRANCH=netcore -v ${TEMPDIR}:/ansible/jenkins linuxserver/jenkins-builder:latest 
               docker pull linuxserver/doc-builder:latest
-              docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -e GITHUB_BRANCH=preview -v ${TEMPDIR}:/ansible/readme linuxserver/doc-builder:latest
+              docker run --rm -e CONTAINER_NAME=${CONTAINER_NAME} -e GITHUB_BRANCH=netcore -v ${TEMPDIR}:/ansible/readme linuxserver/doc-builder:latest
               if [ "$(md5sum ${TEMPDIR}/${LS_REPO}/Jenkinsfile | awk '{ print $1 }')" != "$(md5sum Jenkinsfile | awk '{ print $1 }')" ] || \
                  [ "$(md5sum ${TEMPDIR}/${CONTAINER_NAME}/README.md | awk '{ print $1 }')" != "$(md5sum README.md | awk '{ print $1 }')" ] || \
                  [ "$(cat ${TEMPDIR}/${LS_REPO}/LICENSE | md5sum | cut -c1-8)" != "${LICENSE_TAG}" ] || \
                  [ "$(cat ${TEMPDIR}/${LS_REPO}/.github/FUNDING.yml | md5sum | cut -c1-8)" != "${FUNDING_TAG}" ]; then
                 mkdir -p ${TEMPDIR}/repo
                 git clone https://github.com/${LS_USER}/${LS_REPO}.git ${TEMPDIR}/repo/${LS_REPO}
-                git --git-dir ${TEMPDIR}/repo/${LS_REPO}/.git checkout -f preview
+                git --git-dir ${TEMPDIR}/repo/${LS_REPO}/.git checkout -f netcore
                 cp ${TEMPDIR}/${CONTAINER_NAME}/README.md ${TEMPDIR}/repo/${LS_REPO}/
                 cp ${TEMPDIR}/docker-${CONTAINER_NAME}/Jenkinsfile ${TEMPDIR}/repo/${LS_REPO}/
                 cp ${TEMPDIR}/docker-${CONTAINER_NAME}/LICENSE ${TEMPDIR}/repo/${LS_REPO}/
@@ -272,7 +272,7 @@ pipeline {
     // Exit the build if the Templated files were just updated
     stage('Template-exit') {
       when {
-        branch "preview"
+        branch "netcore"
         environment name: 'CHANGE_ID', value: ''
         environment name: 'FILES_UPDATED', value: 'true'
         expression {
@@ -371,7 +371,7 @@ pipeline {
     // Take the image we just built and dump package versions for comparison
     stage('Update-packages') {
       when {
-        branch "preview"
+        branch "netcore"
         environment name: 'CHANGE_ID', value: ''
         environment name: 'EXIT_STATUS', value: ''
       }
@@ -399,7 +399,7 @@ pipeline {
               echo "Package tag sha from current packages in buit container is ${NEW_PACKAGE_TAG} comparing to old ${PACKAGE_TAG} from github"
               if [ "${NEW_PACKAGE_TAG}" != "${PACKAGE_TAG}" ]; then
                 git clone https://github.com/${LS_USER}/${LS_REPO}.git ${TEMPDIR}/${LS_REPO}
-                git --git-dir ${TEMPDIR}/${LS_REPO}/.git checkout -f preview
+                git --git-dir ${TEMPDIR}/${LS_REPO}/.git checkout -f netcore
                 cp ${TEMPDIR}/package_versions.txt ${TEMPDIR}/${LS_REPO}/
                 cd ${TEMPDIR}/${LS_REPO}/
                 wait
@@ -423,7 +423,7 @@ pipeline {
     // Exit the build if the package file was just updated
     stage('PACKAGE-exit') {
       when {
-        branch "preview"
+        branch "netcore"
         environment name: 'CHANGE_ID', value: ''
         environment name: 'PACKAGE_UPDATED', value: 'true'
         environment name: 'EXIT_STATUS', value: ''
@@ -437,7 +437,7 @@ pipeline {
     // Exit the build if this is just a package check and there are no changes to push
     stage('PACKAGECHECK-exit') {
       when {
-        branch "preview"
+        branch "netcore"
         environment name: 'CHANGE_ID', value: ''
         environment name: 'PACKAGE_UPDATED', value: 'false'
         environment name: 'EXIT_STATUS', value: ''
@@ -522,12 +522,12 @@ pipeline {
           sh '''#! /bin/bash
              echo $DOCKERPASS | docker login -u $DOCKERUSER --password-stdin
              '''
-          sh "docker tag ${IMAGE}:${META_TAG} ${IMAGE}:preview"
-          sh "docker push ${IMAGE}:preview"
+          sh "docker tag ${IMAGE}:${META_TAG} ${IMAGE}:netcore"
+          sh "docker push ${IMAGE}:netcore"
           sh "docker push ${IMAGE}:${META_TAG}"
           sh '''docker rmi \
                 ${IMAGE}:${META_TAG} \
-                ${IMAGE}:preview || :'''
+                ${IMAGE}:netcore || :'''
                 
         }
       }
@@ -557,32 +557,32 @@ pipeline {
                   docker tag lsiodev/buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm32v7-${META_TAG}
                   docker tag lsiodev/buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} ${IMAGE}:arm64v8-${META_TAG}
                 fi'''
-          sh "docker tag ${IMAGE}:amd64-${META_TAG} ${IMAGE}:amd64-preview"
-          sh "docker tag ${IMAGE}:arm32v7-${META_TAG} ${IMAGE}:arm32v7-preview"
-          sh "docker tag ${IMAGE}:arm64v8-${META_TAG} ${IMAGE}:arm64v8-preview"
+          sh "docker tag ${IMAGE}:amd64-${META_TAG} ${IMAGE}:amd64-netcore"
+          sh "docker tag ${IMAGE}:arm32v7-${META_TAG} ${IMAGE}:arm32v7-netcore"
+          sh "docker tag ${IMAGE}:arm64v8-${META_TAG} ${IMAGE}:arm64v8-netcore"
           sh "docker push ${IMAGE}:amd64-${META_TAG}"
           sh "docker push ${IMAGE}:arm32v7-${META_TAG}"
           sh "docker push ${IMAGE}:arm64v8-${META_TAG}"
-          sh "docker push ${IMAGE}:amd64-preview"
-          sh "docker push ${IMAGE}:arm32v7-preview"
-          sh "docker push ${IMAGE}:arm64v8-preview"
-          sh "docker manifest push --purge ${IMAGE}:preview || :"
-          sh "docker manifest create ${IMAGE}:preview ${IMAGE}:amd64-preview ${IMAGE}:arm32v7-preview ${IMAGE}:arm64v8-preview"
-          sh "docker manifest annotate ${IMAGE}:preview ${IMAGE}:arm32v7-preview --os linux --arch arm"
-          sh "docker manifest annotate ${IMAGE}:preview ${IMAGE}:arm64v8-preview --os linux --arch arm64 --variant v8"
+          sh "docker push ${IMAGE}:amd64-netcore"
+          sh "docker push ${IMAGE}:arm32v7-netcore"
+          sh "docker push ${IMAGE}:arm64v8-netcore"
+          sh "docker manifest push --purge ${IMAGE}:netcore || :"
+          sh "docker manifest create ${IMAGE}:netcore ${IMAGE}:amd64-netcore ${IMAGE}:arm32v7-netcore ${IMAGE}:arm64v8-netcore"
+          sh "docker manifest annotate ${IMAGE}:netcore ${IMAGE}:arm32v7-netcore --os linux --arch arm"
+          sh "docker manifest annotate ${IMAGE}:netcore ${IMAGE}:arm64v8-netcore --os linux --arch arm64 --variant v8"
           sh "docker manifest push --purge ${IMAGE}:${META_TAG} || :"
           sh "docker manifest create ${IMAGE}:${META_TAG} ${IMAGE}:amd64-${META_TAG} ${IMAGE}:arm32v7-${META_TAG} ${IMAGE}:arm64v8-${META_TAG}"
           sh "docker manifest annotate ${IMAGE}:${META_TAG} ${IMAGE}:arm32v7-${META_TAG} --os linux --arch arm"
           sh "docker manifest annotate ${IMAGE}:${META_TAG} ${IMAGE}:arm64v8-${META_TAG} --os linux --arch arm64 --variant v8"
-          sh "docker manifest push --purge ${IMAGE}:preview"
+          sh "docker manifest push --purge ${IMAGE}:netcore"
           sh "docker manifest push --purge ${IMAGE}:${META_TAG}"
           sh '''docker rmi \
                 ${IMAGE}:amd64-${META_TAG} \
-                ${IMAGE}:amd64-preview \
+                ${IMAGE}:amd64-netcore \
                 ${IMAGE}:arm32v7-${META_TAG} \
-                ${IMAGE}:arm32v7-preview \
+                ${IMAGE}:arm32v7-netcore \
                 ${IMAGE}:arm64v8-${META_TAG} \
-                ${IMAGE}:arm64v8-preview \
+                ${IMAGE}:arm64v8-netcore \
                 lsiodev/buildcache:arm32v7-${COMMIT_SHA}-${BUILD_NUMBER} \
                 lsiodev/buildcache:arm64v8-${COMMIT_SHA}-${BUILD_NUMBER} || :'''
         }
@@ -591,7 +591,7 @@ pipeline {
     // If this is a public release tag it in the LS Github
     stage('Github-Tag-Push-Release') {
       when {
-        branch "preview"
+        branch "netcore"
         expression {
           env.LS_RELEASE != env.EXT_RELEASE_CLEAN + '-ls' + env.LS_TAG_NUMBER
         }
@@ -603,14 +603,14 @@ pipeline {
         sh '''curl -H "Authorization: token ${GITHUB_TOKEN}" -X POST https://api.github.com/repos/${LS_USER}/${LS_REPO}/git/tags \
         -d '{"tag":"'${EXT_RELEASE_CLEAN}'-ls'${LS_TAG_NUMBER}'",\
              "object": "'${COMMIT_SHA}'",\
-             "message": "Tagging Release '${EXT_RELEASE_CLEAN}'-ls'${LS_TAG_NUMBER}' to preview",\
+             "message": "Tagging Release '${EXT_RELEASE_CLEAN}'-ls'${LS_TAG_NUMBER}' to netcore",\
              "type": "commit",\
              "tagger": {"name": "LinuxServer Jenkins","email": "jenkins@linuxserver.io","date": "'${GITHUB_DATE}'"}}' '''
         echo "Pushing New release for Tag"
         sh '''#! /bin/bash
               echo "Data change at JSON endpoint ${JSON_URL}" > releasebody.json
               echo '{"tag_name":"'${EXT_RELEASE_CLEAN}'-ls'${LS_TAG_NUMBER}'",\
-                     "target_commitish": "preview",\
+                     "target_commitish": "netcore",\
                      "name": "'${EXT_RELEASE_CLEAN}'-ls'${LS_TAG_NUMBER}'",\
                      "body": "**LinuxServer Changes:**\\n\\n'${LS_RELEASE_NOTES}'\\n**Remote Changes:**\\n\\n' > start
               printf '","draft": false,"prerelease": true}' >> releasebody.json

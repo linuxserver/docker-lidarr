@@ -1,15 +1,15 @@
-FROM lsiobase/mono:arm32v7-LTS
+FROM lsiobase/ubuntu:arm32v7-bionic
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
 ARG LIDARR_RELEASE
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="sparklyballs"
+LABEL maintainer="thelamer"
 
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
-ARG LIDARR_BRANCH="nightly"
+ARG LIDARR_BRANCH="netcore"
 ENV XDG_CONFIG_HOME="/config/xdg"
 
 RUN \
@@ -17,15 +17,16 @@ RUN \
  apt-get update && \
  apt-get install --no-install-recommends -y \
         libchromaprint-tools \
-        jq && \
+        libsqlite3-dev \
+	jq && \
  echo "**** install lidarr ****" && \
  mkdir -p /app/lidarr && \
  if [ -z ${LIDARR_RELEASE+x} ]; then \
-	LIDARR_RELEASE=$(curl -sL "https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}/changes?os=linux" \
+	LIDARR_RELEASE=$(curl -sL "https://services.lidarr.audio/v1/update/nightly/changes?os=linux" \
 	| jq -r '.[0].version'); \
  fi && \
- lidarr_url=$(curl -sL "https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}/changes?os=linux" \
-	| jq -r "first(.[] | select(.version == \"${LIDARR_RELEASE}\")) | .url") && \
+ lidarr_url=$(curl -sL "https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}?version=${LIDARR_RELEASE}&os=linux&runtime=netcore&arch=arm" \
+	| jq -r '.updatePackage.url') && \
  curl -o \
  /tmp/lidarr.tar.gz -L \
 	"${lidarr_url}" && \
@@ -34,6 +35,7 @@ RUN \
 	/app/lidarr --strip-components=1 && \
  echo "**** cleanup ****" && \
  rm -rf \
+	/app/lidarr/Lidarr.Update \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
