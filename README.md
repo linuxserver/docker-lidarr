@@ -116,7 +116,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London. |
-| `-e UMASK_SET=022` | control permissions of files and directories created by Sonarr |
+| `-e UMASK_SET=022` | control permissions of files and directories created by Lidarr. |
 | `-v /config` | Configuration files for Lidarr. |
 | `-v /music` | Music files. |
 | `-v /downloads` | Path to your download folder for music. |
