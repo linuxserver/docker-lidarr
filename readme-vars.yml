@@ -28,7 +28,7 @@ param_env_vars:
 # optional env variables
 opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "UMASK_SET", env_value: "022", desc: "control permissions of files and directories created by Sonarr"}
+  - { env_var: "UMASK_SET", env_value: "022", desc: "control permissions of files and directories created by Lidarr."}
 
 param_usage_include_vols: true
 param_volumes:
