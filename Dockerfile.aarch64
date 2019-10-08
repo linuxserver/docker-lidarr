@@ -16,9 +16,8 @@ RUN \
  echo "**** install packages ****" && \
  apt-get update && \
  apt-get install --no-install-recommends -y \
-        libchromaprint-tools \
-        libsqlite3-dev \
-	jq && \
+	jq \
+	libicu60 && \
  echo "**** install lidarr ****" && \
  mkdir -p /app/lidarr && \
  if [ -z ${LIDARR_RELEASE+x} ]; then \
