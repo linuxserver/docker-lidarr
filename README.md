@@ -206,6 +206,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **29.10.19:** - Switch preview branch to netcore builds.
 * **01.08.19:** - Rebase to Linuxserver LTS mono version.
 * **13.06.19:** - Add env variable for setting umask.
 * **23.03.19:** - Switching to new Base images, shift to arm32v7 tag.
