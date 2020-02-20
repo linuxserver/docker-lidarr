@@ -79,7 +79,7 @@ libdebconfclient00.213ubuntu1
 libdpkg-perl1.19.0.5ubuntu2.3
 libdrm22.4.99-1ubuntu1~18.04.2
 libdrm-common2.4.99-1ubuntu1~18.04.2
-libexif120.6.21-4
+libexif120.6.21-4ubuntu0.1
 libexpat12.2.5-3ubuntu0.2
 libext2fs21.44.1-1ubuntu1.3
 libfdisk12.31.1-0.4ubuntu3.5
@@ -332,7 +332,7 @@ libssh-gcrypt-40.8.0~20170825.94fa1e38-1ubuntu0.5
 libssl1.11.1.1-1ubuntu2.1~18.04.5
 libstdc++68.3.0-6ubuntu1~18.04.1
 libswresample27:3.4.6-0ubuntu0.18.04.1
-libsystemd0237-3ubuntu10.33
+libsystemd0237-3ubuntu10.38
 libtasn1-64.13-2
 libthai00.1.27-2
 libthai-data0.1.27-2
@@ -340,7 +340,7 @@ libtheora01.1.1+dfsg.1-14
 libtiff54.0.9-5ubuntu0.3
 libtinfo56.1-1ubuntu1.18.04
 libtwolame00.3.13-3
-libudev1237-3ubuntu10.33
+libudev1237-3ubuntu10.38
 libunistring20.9.9-0ubuntu2
 libuuid12.31.1-0.4ubuntu3.5
 libva22.1.0-3
