@@ -77,9 +77,9 @@ docker create \
   -e TZ=Europe/London \
   -e UMASK_SET=022 `#optional` \
   -p 8686:8686 \
-  -v </path/to/appdata/config>:/config \
-  -v </path/to/music>:/music \
-  -v </path/to/downloads>:/downloads \
+  -v /path/to/appdata/config:/config \
+  -v /path/to/music:/music \
+  -v /path/to/downloads:/downloads \
   --restart unless-stopped \
   linuxserver/lidarr
 ```
@@ -102,9 +102,9 @@ services:
       - TZ=Europe/London
       - UMASK_SET=022 #optional
     volumes:
-      - </path/to/appdata/config>:/config
-      - </path/to/music>:/music
-      - </path/to/downloads>:/downloads
+      - /path/to/appdata/config:/config
+      - /path/to/music:/music
+      - /path/to/downloads:/downloads
     ports:
       - 8686:8686
     restart: unless-stopped
@@ -122,8 +122,8 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London. |
 | `-e UMASK_SET=022` | control permissions of files and directories created by Lidarr. |
 | `-v /config` | Configuration files for Lidarr. |
-| `-v /music` | Music files. |
-| `-v /downloads` | Path to your download folder for music. |
+| `-v /music` | Music files (See note in Application setup). |
+| `-v /downloads` | Path to your download folder for music (See note in Application setup). |
 
 ## Environment variables from files (Docker secrets)
 
@@ -155,6 +155,8 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 ## Application Setup
 
 Access the webui at `<your-ip>:8686`, for more information check out [Lidarr](https://github.com/lidarr/Lidarr).
+Special Note: Following our current folder structure will result in an inability to hardlink from your downloads to your Music folder because they are on seperate volumes. To support hardlinking, simply ensure that the Music and downloads data are on a single volume. For example, if you have /mnt/storage/Music and /mnt/storage/downloads/completed/Music, you would want something like /mnt/storage:/media for your volume. Then you can hardlink from /media/downloads/completed to /media/Music.
+Another item to keep in mind, is that within lidarr itself, you should then map your torrent client folder to your lidarr folder: Settings -> Download Client -> advanded -> remote path mappings. I input the host of my download client (matches the download client defined) remote path is /downloads/Music (relative to the internal container path) and local path is /media/downloads/completed/Music, assuming you have folders to seperate your downloaded data types.
 
 
 
