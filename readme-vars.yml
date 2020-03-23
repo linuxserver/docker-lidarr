@@ -32,9 +32,9 @@ opt_param_env_vars:
 
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "</path/to/appdata/config>", desc: "Configuration files for Lidarr." }
-  - { vol_path: "/music", vol_host_path: "</path/to/music>", desc: "Music files (See note in Application setup)." }
-  - { vol_path: "/downloads", vol_host_path: "</path/to/downloads>", desc: "Path to your download folder for music (See note in Application setup)." }
+  - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Configuration files for Lidarr." }
+  - { vol_path: "/music", vol_host_path: "/path/to/music", desc: "Music files (See note in Application setup)." }
+  - { vol_path: "/downloads", vol_host_path: "/path/to/downloads", desc: "Path to your download folder for music (See note in Application setup)." }
 param_usage_include_ports: true
 param_ports:
   - { external_port: "8686", internal_port: "8686", port_desc: "Application WebUI" }
