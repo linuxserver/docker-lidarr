@@ -8,7 +8,7 @@ bash4.4.18-2ubuntu1.2
 binutils2.30-21ubuntu1~18.04.2
 binutils-common2.30-21ubuntu1~18.04.2
 binutils-x86-64-linux-gnu2.30-21ubuntu1~18.04.2
-bsdutils1:2.31.1-0.4ubuntu3.5
+bsdutils1:2.31.1-0.4ubuntu3.6
 bzip21.0.6-8.1ubuntu0.2
 ca-certificates20180409
 ca-certificates-mono5.20.1.34-0xamarin4+ubuntu1804b1
@@ -23,12 +23,12 @@ dirmngr2.2.4-1ubuntu1.2
 dpkg1.19.0.5ubuntu2.3
 dpkg-dev1.19.0.5ubuntu2.3
 e2fsprogs1.44.1-1ubuntu1.3
-fdisk2.31.1-0.4ubuntu3.5
+fdisk2.31.1-0.4ubuntu3.6
 findutils4.6.0+git+20170828-2
 fontconfig2.12.6-0ubuntu2
 fontconfig-config2.12.6-0ubuntu2
 fonts-dejavu-core2.37-1
-gcc-8-base8.3.0-26ubuntu1~18.04
+gcc-8-base8.4.0-1ubuntu1~18.04
 gnupg2.2.4-1ubuntu1.2
 gnupg-l10n2.2.4-1ubuntu1.2
 gnupg-utils2.2.4-1ubuntu1.2
@@ -57,7 +57,7 @@ libavcodec577:3.4.6-0ubuntu0.18.04.1
 libavformat577:3.4.6-0ubuntu0.18.04.1
 libavutil557:3.4.6-0ubuntu0.18.04.1
 libbinutils2.30-21ubuntu1~18.04.2
-libblkid12.31.1-0.4ubuntu3.5
+libblkid12.31.1-0.4ubuntu3.6
 libbluray21:1.0.2-3
 libbsd00.8.7-1ubuntu0.1
 libbz2-1.01.0.6-8.1ubuntu0.2
@@ -82,11 +82,11 @@ libdrm-common2.4.99-1ubuntu1~18.04.2
 libexif120.6.21-4ubuntu0.1
 libexpat12.2.5-3ubuntu0.2
 libext2fs21.44.1-1ubuntu1.3
-libfdisk12.31.1-0.4ubuntu3.5
+libfdisk12.31.1-0.4ubuntu3.6
 libffi63.2.1-8
 libfontconfig12.12.6-0ubuntu2
 libfreetype62.8.1-2ubuntu2
-libgcc11:8.3.0-26ubuntu1~18.04
+libgcc11:8.4.0-1ubuntu1~18.04
 libgcrypt201.8.1-4ubuntu1.2
 libgdbm51.14.1-6
 libgdbm-compat41.14.1-6
@@ -94,11 +94,11 @@ libgdiplus5.6.1-0xamarin1+ubuntu1804b1
 libgdk-pixbuf2.0-02.36.11-2
 libgdk-pixbuf2.0-common2.36.11-2
 libgif75.1.4-2ubuntu0.1
-libglib2.0-02.56.4-0ubuntu0.18.04.4
+libglib2.0-02.56.4-0ubuntu0.18.04.6
 libgme00.6.2-1
 libgmp102:6.1.2+dfsg-2
 libgnutls303.5.18-1ubuntu1.3
-libgomp18.3.0-26ubuntu1~18.04
+libgomp18.4.0-1ubuntu1~18.04
 libgpg-error01.27-6
 libgraphite2-31.3.11-2
 libgsm11.0.13-4build1
@@ -271,7 +271,7 @@ libmono-webbrowser4.0-cil5.20.1.34-0xamarin4+ubuntu1804b1
 libmono-webmatrix-data4.0-cil5.20.1.34-0xamarin4+ubuntu1804b1
 libmono-windowsbase4.0-cil5.20.1.34-0xamarin4+ubuntu1804b1
 libmono-xbuild-tasks4.0-cil5.20.1.34-0xamarin4+ubuntu1804b1
-libmount12.31.1-0.4ubuntu3.5
+libmount12.31.1-0.4ubuntu3.6
 libmp3lame03.100-2
 libmpg123-01.25.10-1
 libncurses56.1-1ubuntu1.18.04
@@ -322,7 +322,7 @@ libsemanage12.7-2build2
 libsemanage-common2.7-2build2
 libsepol12.7-1
 libshine33.1.1-1
-libsmartcols12.31.1-0.4ubuntu3.5
+libsmartcols12.31.1-0.4ubuntu3.6
 libsnappy1v51.1.7-1
 libsoxr00.1.2-3
 libspeex11.2~rc1.2-1ubuntu2
@@ -330,7 +330,7 @@ libsqlite3-03.22.0-1ubuntu0.3
 libss21.44.1-1ubuntu1.3
 libssh-gcrypt-40.8.0~20170825.94fa1e38-1ubuntu0.5
 libssl1.11.1.1-1ubuntu2.1~18.04.5
-libstdc++68.3.0-26ubuntu1~18.04
+libstdc++68.4.0-1ubuntu1~18.04
 libswresample27:3.4.6-0ubuntu0.18.04.1
 libsystemd0237-3ubuntu10.39
 libtasn1-64.13-2
@@ -342,7 +342,7 @@ libtinfo56.1-1ubuntu1.18.04
 libtwolame00.3.13-3
 libudev1237-3ubuntu10.39
 libunistring20.9.9-0ubuntu2
-libuuid12.31.1-0.4ubuntu3.5
+libuuid12.31.1-0.4ubuntu3.6
 libva22.1.0-3
 libva-drm22.1.0-3
 libva-x11-22.1.0-3
@@ -390,7 +390,7 @@ mono-runtime-common5.20.1.34-0xamarin4+ubuntu1804b1
 mono-runtime-sgen5.20.1.34-0xamarin4+ubuntu1804b1
 mono-vbnc4.7-0xamarin1+ubuntu1804b1
 mono-xbuild5.20.1.34-0xamarin4+ubuntu1804b1
-mount2.31.1-0.4ubuntu3.5
+mount2.31.1-0.4ubuntu3.6
 multiarch-support2.27-3ubuntu1
 ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
@@ -420,6 +420,6 @@ tzdata2019c-0ubuntu0.18.04
 ubuntu-keyring2018.09.18.1~18.04.0
 ucf3.0038
 unzip6.0-21ubuntu1
-util-linux2.31.1-0.4ubuntu3.5
+util-linux2.31.1-0.4ubuntu3.6
 xz-utils5.2.2-1.3
 zlib1g1:1.2.11.dfsg-0ubuntu2
