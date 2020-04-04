@@ -19,7 +19,7 @@ RUN \
 	jq \
 	libicu60 && \
  echo "**** install lidarr ****" && \
- mkdir -p /app/lidarr && \
+ mkdir -p /app/lidarr/bin && \
  if [ -z ${LIDARR_RELEASE+x} ]; then \
 	LIDARR_RELEASE=$(curl -sL "https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}/changes?os=linux" \
 	| jq -r '.[0].version'); \
@@ -29,10 +29,11 @@ RUN \
 	"https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}/updatefile?version=${LIDARR_RELEASE}&os=linux&runtime=netcore&arch=x64" && \
  tar ixzf \
  /tmp/lidarr.tar.gz -C \
-	/app/lidarr --strip-components=1 && \
+	/app/lidarr/bin --strip-components=1 && \
+ echo "UpdateMethod=docker\nBranch=${LIDARR_BRANCH}\nPackageVersion=${VERSION}\nPackageAuthor=linuxserver.io" > /app/lidarr/package_info && \
  echo "**** cleanup ****" && \
  rm -rf \
-	/app/lidarr/Lidarr.Update \
+	/app/lidarr/bin/Lidarr.Update \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/*

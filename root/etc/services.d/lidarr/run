@@ -1,10 +1,8 @@
 #!/usr/bin/with-contenv bash
 
-# cd /app/lidarr || exit
-
 UMASK_SET=${UMASK_SET:-022}
 umask "$UMASK_SET"
 
 exec \
-	s6-setuidgid abc /app/lidarr/Lidarr \
+	s6-setuidgid abc /app/lidarr/bin/Lidarr \
 	-nobrowser -data=/config
