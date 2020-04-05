@@ -2,5 +2,5 @@
 
 # permissions
 chown -R abc:abc \
-	/app/lidarr \
+	/app/lidarr/bin \
 	/config
