@@ -7,7 +7,7 @@
 [![GitHub](https://img.shields.io/static/v1.svg?style=flat-square&color=E68523&label=linuxserver.io&message=GitHub&logo=github&logoColor=FFFFFF)](https://github.com/linuxserver "view the source for all of our repositories.")
 [![Open Collective](https://img.shields.io/opencollective/all/linuxserver.svg?style=flat-square&color=E68523&label=Supporters&logo=open%20collective&logoColor=FFFFFF)](https://opencollective.com/linuxserver "please consider helping us by either donating or contributing to our budget")
 
-The [LinuxServer.io](https://linuxserver.io) team brings you another container release featuring :-
+The [LinuxServer.io](https://linuxserver.io) team brings you another container release featuring:
 
  * regular and timely application updates
  * easy user mappings (PGID, PUID)
@@ -91,7 +91,7 @@ Compatible with docker-compose v2 schemas.
 
 ```
 ---
-version: "2"
+version: "2.1"
 services:
   lidarr:
     image: linuxserver/lidarr
@@ -156,6 +156,11 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 
 Access the webui at `<your-ip>:8686`, for more information check out [Lidarr](https://github.com/lidarr/Lidarr).
 
+
+## Docker Mods
+[![Docker Mods](https://img.shields.io/badge/dynamic/yaml?style=for-the-badge&color=E68523&label=mods&query=%24.mods%5B%27lidarr%27%5D.mod_count&url=https%3A%2F%2Fraw.githubusercontent.com%2Flinuxserver%2Fdocker-mods%2Fmaster%2Fmod-list.yml)](https://mods.linuxserver.io/?mod=lidarr "view available mods for this container.")
+
+We publish various [Docker Mods](https://github.com/linuxserver/docker-mods) to enable additional functionality within the containers. The list of Mods available for this image (if any) can be accessed via the dynamic badge above.
 
 
 ## Support Info
@@ -222,6 +227,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.04.20:** - Move app to /app.
 * **29.10.19:** - Switch preview branch to netcore builds.
 * **01.08.19:** - Rebase to Linuxserver LTS mono version.
 * **13.06.19:** - Add env variable for setting umask.
