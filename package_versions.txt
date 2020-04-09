@@ -328,7 +328,7 @@ libsoxr00.1.2-3
 libspeex11.2~rc1.2-1ubuntu2
 libsqlite3-03.22.0-1ubuntu0.3
 libss21.44.1-1ubuntu1.3
-libssh-gcrypt-40.8.0~20170825.94fa1e38-1ubuntu0.5
+libssh-gcrypt-40.8.0~20170825.94fa1e38-1ubuntu0.6
 libssl1.11.1.1-1ubuntu2.1~18.04.5
 libstdc++68.4.0-1ubuntu1~18.04
 libswresample27:3.4.6-0ubuntu0.18.04.1
