@@ -1,11 +1,11 @@
 #!/usr/bin/with-contenv bash
 
-# cd /app/lidarr || exit
+# cd /app/lidarr/bin || exit
 
 UMASK_SET=${UMASK_SET:-022}
 umask "$UMASK_SET"
 
 
 exec \
-	s6-setuidgid abc mono --debug /app/lidarr/Lidarr.exe \
+	s6-setuidgid abc mono --debug /app/lidarr/bin/Lidarr.exe \
 	-nobrowser -data=/config
