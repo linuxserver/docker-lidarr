@@ -50,6 +50,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "18.04.20:", desc: "Removed /downloads and /music volumes from Dockerfiles." }
   - { date: "05.04.20:", desc: "Move app to /app." }
   - { date: "01.08.19:", desc: "Rebase to Linuxserver LTS mono version." }
   - { date: "13.06.19:", desc: "Add env variable for setting umask." }

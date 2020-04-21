@@ -43,4 +43,4 @@ COPY root/ /
 
 # ports and volumes
 EXPOSE 8686
-VOLUME /config /downloads /music
+VOLUME /config
