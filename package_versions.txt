@@ -14,7 +14,7 @@ ca-certificates20190110~18.04.1
 ca-certificates-mono5.20.1.34-0xamarin4+ubuntu1804b1
 cli-common0.9+xamarin8+ubuntu1804b1
 coreutils8.28-1ubuntu1
-curl7.58.0-2ubuntu3.9
+curl7.58.0-2ubuntu3.10
 dash0.5.8-2.10
 debconf1.5.66ubuntu1
 debianutils4.8.4
@@ -70,9 +70,9 @@ libchromaprint-tools1.4.3-1
 libcom-err21.44.1-1ubuntu1.3
 libcroco30.6.12-2
 libcrystalhd31:0.0~git20110715.fdd2f19-12
-libcurl3-gnutls7.58.0-2ubuntu3.9
-libcurl47.58.0-2ubuntu3.9
-libcurl4-openssl-dev7.58.0-2ubuntu3.9
+libcurl3-gnutls7.58.0-2ubuntu3.10
+libcurl47.58.0-2ubuntu3.10
+libcurl4-openssl-dev7.58.0-2ubuntu3.10
 libdatrie10.2.10-7
 libdb5.35.3.28-13.1ubuntu1.1
 libdebconfclient00.213ubuntu1
