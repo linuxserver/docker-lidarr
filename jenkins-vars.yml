@@ -4,8 +4,8 @@
 project_name: docker-lidarr
 external_type: custom_json
 release_type: prerelease
-release_tag: preview
-ls_branch: preview
+release_tag: nightly
+ls_branch: nightly
 repo_vars:
   - JSON_URL = 'https://services.lidarr.audio/v1/update/nightly/changes?os=linux'
   - JSON_PATH = '.[0].version'
@@ -28,4 +28,3 @@ repo_vars:
   - CI_WEBPATH=''
 sponsor_links:
   - { name: "Lidarr", url: "https://opencollective.com/lidarr" }
-  
