@@ -46,6 +46,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "27.09.20:", desc: "Move preview branch/tag to nightly." }
   - { date: "05.04.20:", desc: "Move app to /app." }
   - { date: "29.10.19:", desc: "Switch preview branch to netcore builds." }
   - { date: "01.08.19:", desc: "Rebase to Linuxserver LTS mono version." }
