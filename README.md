@@ -231,6 +231,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **27.09.20:** - Move preview branch/tag to nightly.
 * **05.04.20:** - Move app to /app.
 * **29.10.19:** - Switch preview branch to netcore builds.
 * **01.08.19:** - Rebase to Linuxserver LTS mono version.
