@@ -32,6 +32,7 @@ RUN \
  tar ixzf \
  /tmp/lidarr.tar.gz -C \
 	/app/lidarr/bin --strip-components=1 && \
+ echo "UpdateMethod=docker\nBranch=${LIDARR_BRANCH}\nPackageVersion=${VERSION}\nPackageAuthor=linuxserver.io" > /app/lidarr/package_info && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
