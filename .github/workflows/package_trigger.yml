@@ -1,0 +1,22 @@
+name: Package Trigger Main
+
+on:
+  workflow_dispatch:
+
+jobs:
+  package-trigger-master:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.3
+
+      - name: Package Trigger
+        if: github.ref == 'refs/heads/master'
+        run: |
+          if [ -n "${{ secrets.PAUSE_PACKAGE_TRIGGER_LIDARR_MASTER }}" ]; then
+            echo "Github secret PAUSE_PACKAGE_TRIGGER_LIDARR_MASTER is set; skipping trigger."
+            exit 0
+          fi
+          echo "Package trigger running off of master branch. To disable, set a Github secret named \"PAUSE_PACKAGE_TRIGGER_LIDARR_MASTER\"."
+          curl -X POST \
+            https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-lidarr/job/master/buildWithParameters?PACKAGE_CHECK=true \
+            --user ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_TOKEN }}
