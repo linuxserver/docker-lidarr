@@ -21,12 +21,12 @@ RUN \
  echo "**** install lidarr ****" && \
  mkdir -p /app/lidarr/bin && \
  if [ -z ${LIDARR_RELEASE+x} ]; then \
-	LIDARR_RELEASE=$(curl -sL "https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}/changes?os=linux" \
+	LIDARR_RELEASE=$(curl -sL "https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/changes?os=linux" \
 	| jq -r '.[0].version'); \
  fi && \
  curl -o \
  /tmp/lidarr.tar.gz -L \
-	"https://services.lidarr.audio/v1/update/${LIDARR_BRANCH}/updatefile?version=${LIDARR_RELEASE}&os=linux&runtime=netcore&arch=x64" && \
+	"https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/updatefile?version=${LIDARR_RELEASE}&os=linux&runtime=netcore&arch=x64" && \
  tar ixzf \
  /tmp/lidarr.tar.gz -C \
 	/app/lidarr/bin --strip-components=1 && \
