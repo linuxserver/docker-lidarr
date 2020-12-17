@@ -27,6 +27,7 @@ jobs:
               "username": "Github Actions"}' ${{ secrets.DISCORD_WEBHOOK }}
             exit 1
           fi
+          EXT_RELEASE=$(echo ${EXT_RELEASE} | sed 's/[~,%@+;:/]//g')
           echo "**** External version: ${EXT_RELEASE} ****"
           echo "**** Retrieving last pushed version ****"
           image="linuxserver/lidarr"
@@ -61,6 +62,9 @@ jobs:
           echo "**** Last pushed version: ${IMAGE_VERSION} ****"
           if [ "${EXT_RELEASE}" == "${IMAGE_VERSION}" ]; then
             echo "**** Version ${EXT_RELEASE} already pushed, exiting ****"
+            exit 0
+          elif [ $(curl -s https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-lidarr/job/nightly/lastBuild/api/json | jq -r '.building') == "true" ]; then
+            echo "**** New version ${EXT_RELEASE} found; but there already seems to be an active build on Jenkins; exiting ****"
             exit 0
           else
             echo "**** New version ${EXT_RELEASE} found; old version was ${IMAGE_VERSION}. Triggering new build ****"
