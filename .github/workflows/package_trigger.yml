@@ -16,6 +16,10 @@ jobs:
             echo "**** Github secret PAUSE_PACKAGE_TRIGGER_LIDARR_MASTER is set; skipping trigger. ****"
             exit 0
           fi
+          if [ $(curl -s https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-lidarr/job/master/lastBuild/api/json | jq -r '.building') == "true" ]; then
+            echo "**** There already seems to be an active build on Jenkins; skipping package trigger ****"
+            exit 0
+          fi
           echo "**** Package trigger running off of master branch. To disable, set a Github secret named \"PAUSE_PACKAGE_TRIGGER_LIDARR_MASTER\". ****"
           response=$(curl -iX POST \
             https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-lidarr/job/master/buildWithParameters?PACKAGE_CHECK=true \
