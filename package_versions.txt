@@ -351,7 +351,7 @@ libvorbis0a1.3.5-4.2
 libvorbisenc21.3.5-4.2
 libvorbisfile31.3.5-4.2
 libvpx51.7.0-3ubuntu0.18.04.1
-libwavpack15.1.0-2ubuntu1.4
+libwavpack15.1.0-2ubuntu1.5
 libwebp60.6.1-2
 libwebpmux30.6.1-2
 libwind0-heimdal7.5.0+dfsg-1
