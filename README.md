@@ -84,7 +84,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - UMASK_SET=022 #optional
     volumes:
       - /path/to/appdata/config:/config
       - /path/to/music:/music
@@ -102,7 +101,6 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
-  -e UMASK_SET=022 `#optional` \
   -p 8686:8686 \
   -v /path/to/appdata/config:/config \
   -v /path/to/music:/music \
@@ -122,7 +120,6 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London. |
-| `-e UMASK_SET=022` | control permissions of files and directories created by Lidarr |
 | `-v /config` | Configuration files for Lidarr. |
 | `-v /music` | Music files (See note in Application setup). |
 | `-v /downloads` | Path to your download folder for music (See note in Application setup). |
@@ -239,6 +236,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **20.01.21:** - Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information.
 * **27.09.20:** - Move preview branch/tag to nightly.
 * **05.04.20:** - Move app to /app.
 * **29.10.19:** - Switch preview branch to netcore builds.
