@@ -26,9 +26,7 @@ param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
 # optional env variables
-opt_param_usage_include_env: true
-opt_param_env_vars:
-  - { env_var: "UMASK_SET", env_value: "022", desc: "control permissions of files and directories created by Lidarr"}
+opt_param_usage_include_env: false
 
 param_usage_include_vols: true
 param_volumes:
@@ -50,6 +48,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "20.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }
   - { date: "27.09.20:", desc: "Move preview branch/tag to nightly." }
   - { date: "05.04.20:", desc: "Move app to /app." }
   - { date: "29.10.19:", desc: "Switch preview branch to netcore builds." }
