@@ -17,6 +17,7 @@ available_architectures:
 development_versions: true
 development_versions_items:
   - { tag: "latest", desc: "Stable Lidarr releases." }
+  - { tag: "develop", desc: "Develop Lidarr Releases." }
   - { tag: "nightly", desc: "Nightly Lidarr Releases." }
 
 # container parameters
@@ -48,6 +49,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "25.01.21:", desc: "Publish `develop` tag." }
   - { date: "20.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }
   - { date: "27.09.20:", desc: "Move preview branch/tag to nightly." }
   - { date: "05.04.20:", desc: "Move app to /app." }

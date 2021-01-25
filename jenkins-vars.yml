@@ -4,10 +4,10 @@
 project_name: docker-lidarr
 external_type: custom_json
 release_type: prerelease
-release_tag: nightly
-ls_branch: nightly
+release_tag: develop
+ls_branch: develop
 repo_vars:
-  - JSON_URL = 'https://lidarr.servarr.com/v1/update/nightly/changes?os=linux'
+  - JSON_URL = 'https://lidarr.servarr.com/v1/update/develop/changes?os=linux'
   - JSON_PATH = '.[0].version'
   - BUILD_VERSION_ARG = 'LIDARR_RELEASE'
   - LS_USER = 'linuxserver'

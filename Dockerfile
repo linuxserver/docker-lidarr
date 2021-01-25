@@ -9,7 +9,7 @@ LABEL maintainer="thelamer"
 
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
-ARG LIDARR_BRANCH="nightly"
+ARG LIDARR_BRANCH="develop"
 ENV XDG_CONFIG_HOME="/config/xdg"
 
 RUN \
