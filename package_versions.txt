@@ -51,8 +51,8 @@ libapt-pkg5.01.6.12ubuntu0.2
 libasn1-8-heimdal7.5.0+dfsg-1
 libassuan02.5.1-2
 libattr11:2.4.47-2build1
-libaudit11:2.8.2-1ubuntu1
-libaudit-common1:2.8.2-1ubuntu1
+libaudit11:2.8.2-1ubuntu1.1
+libaudit-common1:2.8.2-1ubuntu1.1
 libavcodec577:3.4.8-0ubuntu0.2
 libavformat577:3.4.8-0ubuntu0.2
 libavutil557:3.4.8-0ubuntu0.2
