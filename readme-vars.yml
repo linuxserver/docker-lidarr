@@ -3,7 +3,7 @@
 # project information
 project_name: lidarr
 project_url: "https://github.com/lidarr/Lidarr"
-project_logo: "https://github.com/lidarr/Lidarr/blob/develop/Logo/400.png"
+project_logo: "https://github.com/lidarr/Lidarr/raw/develop/Logo/400.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 
