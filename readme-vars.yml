@@ -49,6 +49,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "18.04.21:", desc: "Switch `latest` tag to net core." }
   - { date: "25.01.21:", desc: "Publish `develop` tag." }
   - { date: "20.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }
   - { date: "18.04.20:", desc: "Removed /downloads and /music volumes from Dockerfiles." }
