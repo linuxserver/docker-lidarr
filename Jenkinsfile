@@ -16,7 +16,7 @@ pipeline {
     GITHUB_TOKEN=credentials('498b4638-2d02-4ce5-832d-8a57d01d97ab')
     GITLAB_TOKEN=credentials('b6f0f1dd-6952-4cf6-95d1-9c06380283f0')
     GITLAB_NAMESPACE=credentials('gitlab-namespace-id')
-    JSON_URL = 'https://lidarr.servarr.com/v1/update/master/changes?os=linux'
+    JSON_URL = 'https://lidarr.servarr.com/v1/update/master/changes?runtime=netcore%26os=linux'
     JSON_PATH = '.[0].version'
     BUILD_VERSION_ARG = 'LIDARR_RELEASE'
     LS_USER = 'linuxserver'

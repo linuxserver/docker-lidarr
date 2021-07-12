@@ -1,5 +1,4 @@
 ---
-
 # jenkins variables
 project_name: docker-lidarr
 external_type: custom_json
@@ -7,7 +6,7 @@ release_type: stable
 release_tag: latest
 ls_branch: master
 repo_vars:
-  - JSON_URL = 'https://lidarr.servarr.com/v1/update/master/changes?os=linux'
+  - JSON_URL = 'https://lidarr.servarr.com/v1/update/master/changes?runtime=netcore%26os=linux'
   - JSON_PATH = '.[0].version'
   - BUILD_VERSION_ARG = 'LIDARR_RELEASE'
   - LS_USER = 'linuxserver'

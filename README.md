@@ -74,6 +74,14 @@ Special Note: Following our current folder structure will result in an inability
 
 Another item to keep in mind, is that within lidarr itself, you should then map your download client folder to your lidarr folder: Settings -> Download Client -> advanced -> remote path mappings. I input the host of my download client (matches the download client defined) remote path is /downloads/Music (relative to the internal container path) and local path is /media/downloads/completed/Music, assuming you have folders to seperate your downloaded data types.
 
+### Media folders
+
+We have set `/music` and `/downloads` as ***optional paths***, this is because it is the easiest way to get started. While easy to use, it has some drawbacks. Mainly losing the ability to hardlink (TL;DR a way for a file to exist in multiple places on the same file system while only consuming one file worth of space), or atomic move (TL;DR instant file moves, rather than copy+delete) files while processing content.
+
+Use the optional paths if you dont understand, or dont want hardlinks/atomic moves.
+
+The folks over at servarr.com wrote a good [write-up](https://wiki.servarr.com/docker-guide#consistent-and-well-planned-paths) on how to get started with this.
+
 ## Usage
 
 Here are some example snippets to help you get started creating a container.
@@ -93,8 +101,8 @@ services:
       - TZ=Europe/London
     volumes:
       - /path/to/appdata/config:/config
-      - /path/to/music:/music
-      - /path/to/downloads:/downloads
+      - /path/to/music:/music #optional
+      - /path/to/downloads:/downloads #optional
     ports:
       - 8686:8686
     restart: unless-stopped
@@ -110,8 +118,8 @@ docker run -d \
   -e TZ=Europe/London \
   -p 8686:8686 \
   -v /path/to/appdata/config:/config \
-  -v /path/to/music:/music \
-  -v /path/to/downloads:/downloads \
+  -v /path/to/music:/music `#optional` \
+  -v /path/to/downloads:/downloads `#optional` \
   --restart unless-stopped \
   ghcr.io/linuxserver/lidarr
 ```
@@ -239,6 +247,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **11.07.21:** - Make the paths clearer to the user.
 * **18.04.21:** - Switch `latest` tag to net core.
 * **25.01.21:** - Publish `develop` tag.
 * **20.01.21:** - Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information.
