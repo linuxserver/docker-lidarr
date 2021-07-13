@@ -31,6 +31,8 @@ opt_param_usage_include_env: false
 param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Configuration files for Lidarr." }
+opt_param_usage_include_vols: true
+opt_param_volumes:
   - { vol_path: "/music", vol_host_path: "/path/to/music", desc: "Music files (See note in Application setup)." }
   - { vol_path: "/downloads", vol_host_path: "/path/to/downloads", desc: "Path to your download folder for music (See note in Application setup)." }
 param_usage_include_ports: true
@@ -46,8 +48,17 @@ app_setup_block: |
 
   Another item to keep in mind, is that within lidarr itself, you should then map your download client folder to your lidarr folder: Settings -> Download Client -> advanced -> remote path mappings. I input the host of my download client (matches the download client defined) remote path is /downloads/Music (relative to the internal container path) and local path is /media/downloads/completed/Music, assuming you have folders to seperate your downloaded data types.
 
+  ### Media folders
+
+  We have set `/music` and `/downloads` as ***optional paths***, this is because it is the easiest way to get started. While easy to use, it has some drawbacks. Mainly losing the ability to hardlink (TL;DR a way for a file to exist in multiple places on the same file system while only consuming one file worth of space), or atomic move (TL;DR instant file moves, rather than copy+delete) files while processing content.
+
+  Use the optional paths if you dont understand, or dont want hardlinks/atomic moves.
+
+  The folks over at servarr.com wrote a good [write-up](https://wiki.servarr.com/docker-guide#consistent-and-well-planned-paths) on how to get started with this.
+
 # changelog
 changelogs:
+  - { date: "11.07.21:", desc: "Make the paths clearer to the user." }
   - { date: "20.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }
   - { date: "27.09.20:", desc: "Move preview branch/tag to nightly." }
   - { date: "05.04.20:", desc: "Move app to /app." }
