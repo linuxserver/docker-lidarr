@@ -17,6 +17,7 @@ RUN \
   apt-get update && \
   apt-get install --no-install-recommends -y \
     jq \
+    libchromaprint-tools \
     libicu60 && \
   echo "**** install lidarr ****" && \
   mkdir -p /app/lidarr/bin && \
