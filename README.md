@@ -246,6 +246,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **01.08.21:** - Add libchromaprint-tools.
 * **11.07.21:** - Make the paths clearer to the user.
 * **20.01.21:** - Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information.
 * **27.09.20:** - Move preview branch/tag to nightly.
