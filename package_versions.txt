@@ -67,7 +67,7 @@ libgcc11:8.4.0-1ubuntu1~18.04
 libgcrypt201.8.1-4ubuntu1.3
 libgdk-pixbuf2.0-02.36.11-2
 libgdk-pixbuf2.0-common2.36.11-2
-libglib2.0-02.56.4-0ubuntu0.18.04.8
+libglib2.0-02.56.4-0ubuntu0.18.04.9
 libgme00.6.2-1
 libgmp102:6.1.2+dfsg-2
 libgnutls303.5.18-1ubuntu1.5
@@ -143,7 +143,7 @@ libspeex11.2~rc1.2-1ubuntu2
 libsqlite3-03.22.0-1ubuntu0.4
 libss21.44.1-1ubuntu1.3
 libssh-gcrypt-40.8.0~20170825.94fa1e38-1ubuntu0.7
-libssl1.11.1.1-1ubuntu2.1~18.04.13
+libssl1.11.1.1-1ubuntu2.1~18.04.14
 libstdc++68.4.0-1ubuntu1~18.04
 libswresample27:3.4.8-0ubuntu0.2
 libsystemd0237-3ubuntu10.52
@@ -194,7 +194,7 @@ mount2.31.1-0.4ubuntu3.7
 multiarch-support2.27-3ubuntu1.4
 ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
-openssl1.1.1-1ubuntu2.1~18.04.13
+openssl1.1.1-1ubuntu2.1~18.04.14
 passwd1:4.5-1ubuntu2
 perl-base5.26.1-6ubuntu0.5
 procps2:3.3.12-3ubuntu1.2
