@@ -18,6 +18,7 @@ development_versions: true
 development_versions_items:
   - { tag: "latest", desc: "Stable Lidarr releases." }
   - { tag: "nightly", desc: "Nightly Lidarr Releases." }
+  - { tag: "nightly-alpine", desc: "Nightly Lidarr Releases using our Alpine baseimage." }  
 
 # container parameters
 common_param_env_vars_enabled: true #PGID, PUID, etc, you can set it to 'optional'
@@ -58,6 +59,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "30.12.21:", desc: "Add nightly-alpine branch." }
   - { date: "01.08.21:", desc: "Add libchromaprint-tools." }
   - { date: "11.07.21:", desc: "Make the paths clearer to the user." }
   - { date: "20.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }
