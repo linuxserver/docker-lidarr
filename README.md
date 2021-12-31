@@ -67,6 +67,7 @@ This image provides various versions that are available via tags. `latest` tag u
 | latest | Stable Lidarr releases. |
 | develop | Develop Lidarr Releases. |
 | nightly | Nightly Lidarr Releases. |
+| nightly-alpine | Nightly Lidarr Releases using our Alpine baseimage. |
 
 ## Application Setup
 
@@ -249,6 +250,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **30.12.21:** - Add nightly-alpine branch.
 * **01.08.21:** - Add libchromaprint-tools.
 * **11.07.21:** - Make the paths clearer to the user.
 * **18.04.21:** - Switch `latest` tag to net core.
