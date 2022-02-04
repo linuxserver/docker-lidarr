@@ -31,7 +31,7 @@ RUN \
   tar xzf \
     /tmp/lidarr.tar.gz -C \
     /app/lidarr/bin --strip-components=1 && \
-  echo -e "UpdateMethod=docker\nBranch=${LIDARR_BRANCH}\nPackageVersion=${VERSION}\nPackageAuthor=linuxserver.io\nPackageGlobalMessage=Warn: This image is now based on Alpine. Custom scripts using apt-get will need to be updated to use apk" > /app/lidarr/package_info && \
+  echo -e "UpdateMethod=docker\nBranch=${LIDARR_BRANCH}\nPackageVersion=${VERSION}\nPackageAuthor=[linuxserver.io](https://www.linuxserver.io/)\nPackageGlobalMessage=Warn: This image is now based on Alpine. Custom scripts using apt-get will need to be updated to use apk" > /app/lidarr/package_info && \
   echo "**** cleanup ****" && \
   rm -rf \
     /app/lidarr/bin/Lidarr.Update \
