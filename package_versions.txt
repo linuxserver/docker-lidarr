@@ -5,13 +5,13 @@ aom-libs-3.2.0-r0
 apk-tools-2.12.7-r3
 bash-5.1.8-r0
 brotli-libs-1.0.9-r5
-busybox-1.34.1-r3
+busybox-1.34.1-r4
 ca-certificates-20211220-r0
 ca-certificates-bundle-20211220-r0
 chromaprint-1.5.0-r0
 coreutils-9.0-r2
 curl-7.80.0-r0
-expat-2.4.3-r0
+expat-2.4.4-r0
 ffmpeg-libs-4.4.1-r2
 fontconfig-2.13.1-r4
 freetype-2.11.0-r0
@@ -27,7 +27,7 @@ lame-3.100-r0
 libacl-2.2.53-r0
 libass-0.15.2-r0
 libattr-2.5.1-r1
-libblkid-2.37.2-r1
+libblkid-2.37.3-r0
 libbsd-0.11.3-r1
 libbz2-1.0.8-r1
 libc-utils-0.7.2-r3
@@ -41,7 +41,7 @@ libgomp-10.3.1_git20211027-r0
 libintl-0.21-r0
 libjpeg-turbo-2.1.2-r0
 libmd-1.0.3-r0
-libmount-2.37.2-r1
+libmount-2.37.3-r0
 libogg-1.3.5-r0
 libpciaccess-0.16-r0
 libpng-1.6.37-r1
@@ -54,7 +54,7 @@ libstdc++-10.3.1_git20211027-r0
 libtasn1-4.18.0-r0
 libtheora-1.1.1-r16
 libunistring-0.9.10-r1
-libuuid-2.37.2-r1
+libuuid-2.37.3-r0
 libva-2.13.0-r0
 libvdpau-1.4-r0
 libvorbis-1.3.7-r0
@@ -86,7 +86,7 @@ shadow-4.8.1-r1
 skalibs-2.11.0.0-r0
 soxr-0.1.3-r2
 sqlite-libs-3.36.0-r0
-ssl_client-1.34.1-r3
+ssl_client-1.34.1-r4
 tzdata-2021e-r0
 utmps-0.1.0.3-r0
 v4l-utils-libs-1.22.1-r1
