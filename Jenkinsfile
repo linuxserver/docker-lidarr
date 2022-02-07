@@ -17,8 +17,6 @@ pipeline {
     GITLAB_TOKEN=credentials('b6f0f1dd-6952-4cf6-95d1-9c06380283f0')
     GITLAB_NAMESPACE=credentials('gitlab-namespace-id')
     SCARF_TOKEN=credentials('scarf_api_key')
-    JSON_URL = 'https://lidarr.servarr.com/v1/update/nightly/changes?runtime=netcore%26os=linux'
-    JSON_PATH = '.[0].version'
     BUILD_VERSION_ARG = 'LIDARR_RELEASE'
     LS_USER = 'linuxserver'
     LS_REPO = 'docker-lidarr'
@@ -26,7 +24,7 @@ pipeline {
     DOCKERHUB_IMAGE = 'linuxserver/lidarr'
     DEV_DOCKERHUB_IMAGE = 'lsiodev/lidarr'
     PR_DOCKERHUB_IMAGE = 'lspipepr/lidarr'
-    DIST_IMAGE = 'ubuntu'
+    DIST_IMAGE = 'alpine'
     MULTIARCH='true'
     CI='true'
     CI_WEB='true'
@@ -101,16 +99,16 @@ pipeline {
     /* ########################
        External Release Tagging
        ######################## */
-    // If this is a custom json endpoint parse the return to get external tag
-    stage("Set ENV custom_json"){
-     steps{
-       script{
-         env.EXT_RELEASE = sh(
-           script: '''curl -s ${JSON_URL} | jq -r ". | ${JSON_PATH}" ''',
-           returnStdout: true).trim()
-         env.RELEASE_LINK = env.JSON_URL
-       }
-     }
+    // If this is a custom command to determine version use that command
+    stage("Set tag custom bash"){
+      steps{
+        script{
+          env.EXT_RELEASE = sh(
+            script: ''' curl -sL https://lidarr.servarr.com/v1/update/nightly/changes?runtime=netcore%26os=linuxmusl | jq -r '.[0].version' ''',
+            returnStdout: true).trim()
+            env.RELEASE_LINK = 'custom_command'
+        }
+      }
     }
     // Sanitize the release tag and strip illegal docker or github characters
     stage("Sanitize tag"){
@@ -911,7 +909,7 @@ pipeline {
              "tagger": {"name": "LinuxServer Jenkins","email": "jenkins@linuxserver.io","date": "'${GITHUB_DATE}'"}}' '''
         echo "Pushing New release for Tag"
         sh '''#! /bin/bash
-              echo "Data change at JSON endpoint ${JSON_URL}" > releasebody.json
+              echo "Updating to ${EXT_RELEASE_CLEAN}" > releasebody.json
               echo '{"tag_name":"'${META_TAG}'",\
                      "target_commitish": "nightly",\
                      "name": "'${META_TAG}'",\
