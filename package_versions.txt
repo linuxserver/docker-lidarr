@@ -139,7 +139,7 @@ libshine33.1.1-1
 libsmartcols12.31.1-0.4ubuntu3.7
 libsnappy1v51.1.7-1
 libsoxr00.1.2-3
-libspeex11.2~rc1.2-1ubuntu2
+libspeex11.2~rc1.2-1ubuntu2.1
 libsqlite3-03.22.0-1ubuntu0.4
 libss21.44.1-1ubuntu1.3
 libssh-gcrypt-40.8.0~20170825.94fa1e38-1ubuntu0.7
