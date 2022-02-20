@@ -27,7 +27,7 @@ RUN \
   fi && \
   curl -o \
   /tmp/lidarr.tar.gz -L \
-    "https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/updatefile?version=${LIDARR_RELEASE}&os=linuxmusl&runtime=netcore&arch=x64" && \
+    "https://lidarr.servarr.com/v1/update/${LIDARR_BRANCH}/updatefile?version=${LIDARR_RELEASE}&os=linuxmusl&runtime=netcore&arch=arm64" && \
   tar xzf \
     /tmp/lidarr.tar.gz -C \
     /app/lidarr/bin --strip-components=1 && \
