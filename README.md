@@ -249,6 +249,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **01.05.22:** - Rebase master branch to Focal.
 * **04.02.22:** - Rebase nightly branch to Alpine, deprecate nightly-alpine branch.
 * **30.12.21:** - Add nightly-alpine branch.
 * **01.08.21:** - Add libchromaprint-tools.

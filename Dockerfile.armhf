@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-ubuntu:bionic
+FROM ghcr.io/linuxserver/baseimage-ubuntu:focal
 
 # set version label
 ARG BUILD_DATE
@@ -18,7 +18,7 @@ RUN \
   apt-get install --no-install-recommends -y \
     jq \
     libchromaprint-tools \
-    libicu60 && \
+    libicu66 && \
   echo "**** install lidarr ****" && \
   mkdir -p /app/lidarr/bin && \
   if [ -z ${LIDARR_RELEASE+x} ]; then \

@@ -59,6 +59,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "01.05.22:", desc: "Rebase master branch to Focal." }
   - { date: "04.02.22:", desc: "Rebase nightly branch to Alpine, deprecate nightly-alpine branch." }
   - { date: "30.12.21:", desc: "Add nightly-alpine branch." }
   - { date: "01.08.21:", desc: "Add libchromaprint-tools." }
