@@ -1,13 +1,12 @@
 ---
 # jenkins variables
 project_name: docker-lidarr
-external_type: custom_json
+external_type: na
+custom_version_command: curl -sL "https://lidarr.servarr.com/v1/update/develop/changes?runtime=netcore&os=linuxmusl" | jq -r '.[0].version'
 release_type: prerelease
 release_tag: develop
 ls_branch: develop
 repo_vars:
-  - JSON_URL = 'https://lidarr.servarr.com/v1/update/develop/changes?runtime=netcore%26os=linux'
-  - JSON_PATH = '.[0].version'
   - BUILD_VERSION_ARG = 'LIDARR_RELEASE'
   - LS_USER = 'linuxserver'
   - LS_REPO = 'docker-lidarr'
@@ -15,7 +14,7 @@ repo_vars:
   - DOCKERHUB_IMAGE = 'linuxserver/lidarr'
   - DEV_DOCKERHUB_IMAGE = 'lsiodev/lidarr'
   - PR_DOCKERHUB_IMAGE = 'lspipepr/lidarr'
-  - DIST_IMAGE = 'ubuntu'
+  - DIST_IMAGE = 'alpine'
   - MULTIARCH='true'
   - CI='true'
   - CI_WEB='true'
