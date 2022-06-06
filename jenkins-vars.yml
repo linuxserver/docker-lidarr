@@ -6,7 +6,7 @@ release_type: stable
 release_tag: latest
 ls_branch: master
 repo_vars:
-  - JSON_URL = 'https://lidarr.servarr.com/v1/update/master/changes?runtime=netcore%26os=linux'
+  - JSON_URL = 'https://lidarr.servarr.com/v1/update/master/changes?runtime=netcore%26os=linuxmusl'
   - JSON_PATH = '.[0].version'
   - BUILD_VERSION_ARG = 'LIDARR_RELEASE'
   - LS_USER = 'linuxserver'
@@ -15,7 +15,7 @@ repo_vars:
   - DOCKERHUB_IMAGE = 'linuxserver/lidarr'
   - DEV_DOCKERHUB_IMAGE = 'lsiodev/lidarr'
   - PR_DOCKERHUB_IMAGE = 'lspipepr/lidarr'
-  - DIST_IMAGE = 'ubuntu'
+  - DIST_IMAGE = 'alpine'
   - MULTIARCH='true'
   - CI='true'
   - CI_WEB='true'
