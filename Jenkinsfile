@@ -17,7 +17,7 @@ pipeline {
     GITLAB_TOKEN=credentials('b6f0f1dd-6952-4cf6-95d1-9c06380283f0')
     GITLAB_NAMESPACE=credentials('gitlab-namespace-id')
     SCARF_TOKEN=credentials('scarf_api_key')
-    JSON_URL = 'https://lidarr.servarr.com/v1/update/master/changes?runtime=netcore%26os=linux'
+    JSON_URL = 'https://lidarr.servarr.com/v1/update/master/changes?runtime=netcore%26os=linuxmusl'
     JSON_PATH = '.[0].version'
     BUILD_VERSION_ARG = 'LIDARR_RELEASE'
     LS_USER = 'linuxserver'
@@ -26,7 +26,7 @@ pipeline {
     DOCKERHUB_IMAGE = 'linuxserver/lidarr'
     DEV_DOCKERHUB_IMAGE = 'lsiodev/lidarr'
     PR_DOCKERHUB_IMAGE = 'lspipepr/lidarr'
-    DIST_IMAGE = 'ubuntu'
+    DIST_IMAGE = 'alpine'
     MULTIARCH='true'
     CI='true'
     CI_WEB='true'
