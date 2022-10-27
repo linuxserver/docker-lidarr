@@ -65,6 +65,7 @@ This image provides various versions that are available via tags. Please read th
 | Tag | Available | Description |
 | :----: | :----: |--- |
 | latest | ✅ | Stable Lidarr releases. |
+| develop | ✅ | Develop Lidarr Releases. |
 | nightly | ✅ | Nightly Lidarr Releases. |
 
 ## Application Setup
@@ -248,6 +249,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **27.10.22:** - Rebase nightly Alpine 3.16, migrate to s6v3.
 * **04.02.22:** - Rebase nightly branch to Alpine.
 * **30.12.21:** - Add nightly-alpine branch.
 * **01.08.21:** - Add libchromaprint-tools.
