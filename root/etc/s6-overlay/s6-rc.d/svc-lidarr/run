@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+exec \
+    s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z localhost 8686" \
+        cd /app/lidarr/bin s6-setuidgid abc /app/lidarr/bin/Lidarr \
+        -nobrowser -data=/config
