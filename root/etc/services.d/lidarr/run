@@ -1,5 +1,0 @@
-#!/usr/bin/with-contenv bash
-
-exec \
-    s6-setuidgid abc /app/lidarr/bin/Lidarr \
-    -nobrowser -data=/config
