@@ -249,6 +249,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **06.05.22:** - Rebase develop branch to Alpine 3.17, migrate to s6v3.
 * **06.05.22:** - Rebase develop branch to Alpine.
 * **01.08.21:** - Add libchromaprint-tools.
 * **11.07.21:** - Make the paths clearer to the user.
