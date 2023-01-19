@@ -1,4 +1,6 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:3.15
+# syntax=docker/dockerfile:1
+
+FROM ghcr.io/linuxserver/baseimage-alpine:3.17
 
 # set version label
 ARG BUILD_DATE
@@ -15,8 +17,6 @@ RUN \
   echo "**** install packages ****" && \
   apk add -U --upgrade --no-cache \
     chromaprint \
-    curl \
-    jq \
     icu-libs \
     sqlite-libs && \
   echo "**** install lidarr ****" && \
