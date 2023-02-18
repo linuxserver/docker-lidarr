@@ -1,7 +1,7 @@
 alpine-baselayout-3.4.0-r0
 alpine-baselayout-data-3.4.0-r0
 alpine-keys-2.4-r1
-alpine-release-3.17.1-r0
+alpine-release-3.17.2-r0
 alsa-lib-1.2.8-r0
 aom-libs-3.5.0-r0
 apk-tools-2.12.10-r1
@@ -62,7 +62,7 @@ libsndfile-1.1.0-r2
 libsodium-1.0.18-r2
 libsrt-1.5.1-r0
 libssh-0.10.4-r0
-libssl3-3.0.7-r2
+libssl3-3.0.8-r0
 libstdc++-12.2.1_git20220924-r4
 libtasn1-4.19.0-r0
 libtheora-1.1.1-r16
