@@ -2,7 +2,7 @@ name: Package Trigger Scheduler
 
 on:
   schedule:
-    - cron:  '54 14 * * 6'
+    - cron:  '12 1 * * 3'
   workflow_dispatch:
 
 jobs:
