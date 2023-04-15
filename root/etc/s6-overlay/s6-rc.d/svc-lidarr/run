@@ -2,6 +2,6 @@
 # shellcheck shell=bash
 
 exec \
-    s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z localhost 8686" \
+    s6-notifyoncheck -d -n 300 -w 1000 \
         cd /app/lidarr/bin s6-setuidgid abc /app/lidarr/bin/Lidarr \
         -nobrowser -data=/config
