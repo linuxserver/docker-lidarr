@@ -2,7 +2,7 @@
 # jenkins variables
 project_name: docker-lidarr
 external_type: na
-custom_version_command: curl -sL https://lidarr.servarr.com/v1/update/master/changes?runtime=netcore%26os=linuxmusl | jq -r '.[0].version'
+custom_version_command: curl -sL "https://lidarr.servarr.com/v1/update/master/changes?runtime=netcore%26os=linuxmusl" | jq -r '.[0].version'
 release_type: stable
 release_tag: latest
 ls_branch: master
