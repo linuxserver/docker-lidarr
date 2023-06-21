@@ -20,7 +20,7 @@ jobs:
           echo "**** External trigger running off of master branch. To disable this trigger, set a Github secret named \"PAUSE_EXTERNAL_TRIGGER_LIDARR_MASTER\". ****"
           echo "External trigger running off of master branch. To disable this trigger, set a Github secret named \`PAUSE_EXTERNAL_TRIGGER_LIDARR_MASTER\`" >> $GITHUB_STEP_SUMMARY
           echo "**** Retrieving external version ****"
-          EXT_RELEASE=$(curl -s "https://lidarr.servarr.com/v1/update/master/changes?runtime=netcore%26os=linuxmusl" | jq -r '. | .[0].version')
+          EXT_RELEASE=$(curl -sL https://lidarr.servarr.com/v1/update/master/changes?runtime=netcore%26os=linuxmusl | jq -r '.[0].version')
           if [ -z "${EXT_RELEASE}" ] || [ "${EXT_RELEASE}" == "null" ]; then
             echo "**** Can't retrieve external version, exiting ****"
             FAILURE_REASON="Can't retrieve external version for lidarr branch master"
