@@ -197,8 +197,8 @@ ffmpeg-libswresample                                                           6
 gmp                                                                            6.2.1-r3                apk     
 gnutls                                                                         3.8.0-r2                apk     
 hwdata-pci                                                                     0.370-r0                apk     
-icu-data-en                                                                    73.2-r0                 apk     
-icu-libs                                                                       73.2-r0                 apk     
+icu-data-en                                                                    73.2-r1                 apk     
+icu-libs                                                                       73.2-r1                 apk     
 jq                                                                             1.6-r3                  apk     
 lame-libs                                                                      3.100-r5                apk     
 lcms2                                                                          2.15-r2                 apk     
