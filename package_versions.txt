@@ -56,7 +56,7 @@ Mono.Nat                                                                       3
 Mono.Posix.NETStandard                                                         5.20.1.34-servarr20     dotnet  
 MonoTorrent                                                                    2.0.7                   dotnet  
 NETStandard.Library                                                            1.6.1                   dotnet  
-NLog                                                                           5.0.4                   dotnet  
+NLog                                                                           5.2.0                   dotnet  
 NLog.Extensions.Logging                                                        5.0.4                   dotnet  
 NLog.Targets.Syslog                                                            7.0.0                   dotnet  
 Newtonsoft.Json                                                                13.0.2                  dotnet  
