@@ -208,7 +208,7 @@ libbluray                                                                      1
 libbsd                                                                         0.11.7-r1               apk     
 libbz2                                                                         1.0.8-r5                apk     
 libc-utils                                                                     0.7.2-r5                apk     
-libcrypto3                                                                     3.1.1-r2                apk     
+libcrypto3                                                                     3.1.1-r3                apk     
 libcurl                                                                        8.1.2-r0                apk     
 libdav1d                                                                       1.2.1-r0                apk     
 libdrm                                                                         2.4.115-r4              apk     
