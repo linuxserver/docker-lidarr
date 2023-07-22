@@ -189,7 +189,7 @@ chromaprint                                                                    1
 chromaprint-libs                                                               1.5.1-r6                apk     
 cjson                                                                          1.7.15-r4               apk     
 coreutils                                                                      9.3-r1                  apk     
-curl                                                                           8.1.2-r0                apk     
+curl                                                                           8.2.0-r1                apk     
 ffmpeg-libavcodec                                                              6.0-r15                 apk     
 ffmpeg-libavformat                                                             6.0-r15                 apk     
 ffmpeg-libavutil                                                               6.0-r15                 apk     
@@ -209,7 +209,7 @@ libbsd                                                                         0
 libbz2                                                                         1.0.8-r5                apk     
 libc-utils                                                                     0.7.2-r5                apk     
 libcrypto3                                                                     3.1.1-r3                apk     
-libcurl                                                                        8.1.2-r0                apk     
+libcurl                                                                        8.2.0-r1                apk     
 libdav1d                                                                       1.2.1-r0                apk     
 libdrm                                                                         2.4.115-r4              apk     
 libffi                                                                         3.4.4-r2                apk     
@@ -231,7 +231,7 @@ librist                                                                        0
 libsodium                                                                      1.0.18-r3               apk     
 libsrt                                                                         1.5.2-r0                apk     
 libssh                                                                         0.10.5-r0               apk     
-libssl3                                                                        3.1.1-r2                apk     
+libssl3                                                                        3.1.1-r3                apk     
 libstdc++                                                                      12.2.1_git20220924-r10  apk     
 libtasn1                                                                       4.19.0-r1               apk     
 libtheora                                                                      1.1.1-r17               apk     
@@ -258,7 +258,7 @@ musl-utils                                                                     1
 ncurses-terminfo-base                                                          6.4_p20230506-r0        apk     
 netcat-openbsd                                                                 1.219-r1                apk     
 nettle                                                                         3.8.1-r2                apk     
-nghttp2-libs                                                                   1.53.0-r0               apk     
+nghttp2-libs                                                                   1.55.1-r0               apk     
 numactl                                                                        2.0.16-r4               apk     
 onevpl-libs                                                                    2023.2.1-r0             apk     
 oniguruma                                                                      6.9.8-r1                apk     
