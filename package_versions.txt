@@ -30,14 +30,14 @@ Ical.Net                                                    1.0.0.0             
 ImpromptuInterface                                          7.0.1.0                 dotnet  
 Json.NET .NET 6.0                                           13.0.2.27524            dotnet  
 Kveer.XmlRPC                                                1.2.0.0                 dotnet  
-Lidarr                                                      2.0.1.3758              dotnet  
-Lidarr.Api.V1                                               2.0.1.3758              dotnet  
-Lidarr.Common                                               2.0.1.3758              dotnet  
-Lidarr.Core                                                 2.0.1.3758              dotnet  
-Lidarr.Host                                                 2.0.1.3758              dotnet  
-Lidarr.Http                                                 2.0.1.3758              dotnet  
-Lidarr.Mono                                                 2.0.1.3758              dotnet  
-Lidarr.SignalR                                              2.0.1.3758              dotnet  
+Lidarr                                                      2.0.1.3761              dotnet  
+Lidarr.Api.V1                                               2.0.1.3761              dotnet  
+Lidarr.Common                                               2.0.1.3761              dotnet  
+Lidarr.Core                                                 2.0.1.3761              dotnet  
+Lidarr.Host                                                 2.0.1.3761              dotnet  
+Lidarr.Http                                                 2.0.1.3761              dotnet  
+Lidarr.Mono                                                 2.0.1.3761              dotnet  
+Lidarr.SignalR                                              2.0.1.3761              dotnet  
 MailKit                                                     3.6.0.0                 dotnet  
 Microsoft.AspNetCore                                        6.0.2123.36438          dotnet  
 Microsoft.AspNetCore.Antiforgery                            6.0.2123.36438          dotnet  
@@ -437,7 +437,7 @@ libvdpau                                                    1.5-r1              
 libvorbis                                                   1.3.7-r1                apk     
 libvpx                                                      1.13.0-r2               apk     
 libwebp                                                     1.3.2-r0                apk     
-libx11                                                      1.8.4-r4                apk     
+libx11                                                      1.8.7-r0                apk     
 libxau                                                      1.0.11-r2               apk     
 libxcb                                                      1.15-r1                 apk     
 libxdmcp                                                    1.1.4-r2                apk     
