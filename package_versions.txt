@@ -1,6 +1,7 @@
 NAME                                                        VERSION                 TYPE   
 BouncyCastle.Crypto                                         1.9.0.1                 dotnet  
 Dapper                                                      2.0.123.33578           dotnet  
+Diacritical                                                 1.0.4.0                 dotnet  
 DryIoc net6.0                                               5.4.1.0                 dotnet  
 DryIoc.Microsoft.DependencyInjection net6.0                 6.2.0.0                 dotnet  
 Dynamitey                                                   2.0.9.136               dotnet  
@@ -30,14 +31,14 @@ Ical.Net                                                    1.0.0.0             
 ImpromptuInterface                                          7.0.1.0                 dotnet  
 Json.NET .NET 6.0                                           13.0.2.27524            dotnet  
 Kveer.XmlRPC                                                1.2.0.0                 dotnet  
-Lidarr                                                      2.0.1.3761              dotnet  
-Lidarr.Api.V1                                               2.0.1.3761              dotnet  
-Lidarr.Common                                               2.0.1.3761              dotnet  
-Lidarr.Core                                                 2.0.1.3761              dotnet  
-Lidarr.Host                                                 2.0.1.3761              dotnet  
-Lidarr.Http                                                 2.0.1.3761              dotnet  
-Lidarr.Mono                                                 2.0.1.3761              dotnet  
-Lidarr.SignalR                                              2.0.1.3761              dotnet  
+Lidarr                                                      2.0.1.3764              dotnet  
+Lidarr.Api.V1                                               2.0.1.3764              dotnet  
+Lidarr.Common                                               2.0.1.3764              dotnet  
+Lidarr.Core                                                 2.0.1.3764              dotnet  
+Lidarr.Host                                                 2.0.1.3764              dotnet  
+Lidarr.Http                                                 2.0.1.3764              dotnet  
+Lidarr.Mono                                                 2.0.1.3764              dotnet  
+Lidarr.SignalR                                              2.0.1.3764              dotnet  
 MailKit                                                     3.6.0.0                 dotnet  
 Microsoft.AspNetCore                                        6.0.2123.36438          dotnet  
 Microsoft.AspNetCore.Antiforgery                            6.0.2123.36438          dotnet  
