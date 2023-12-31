@@ -13,7 +13,7 @@ Ical.Net                                                    1.0.0.0             
 ImpromptuInterface                                          7.0.1.0                                                             dotnet  
 Json.NET                                                    13.0.2.27524                                                        dotnet  
 Kveer.XmlRPC                                                1.2.0.0                                                             dotnet  
-Lidarr                                                      2.1.2.3883                                                          dotnet  
+Lidarr                                                      2.1.2.3885                                                          dotnet  
 MailKit                                                     3.6.0.0                                                             dotnet  
 Microsoft.AspNetCore                                        6.0.2523.52315                                                      dotnet  
 Microsoft.AspNetCore.Antiforgery                            6.0.2523.52315                                                      dotnet  
@@ -95,6 +95,8 @@ Microsoft.AspNetCore.SignalR.Protocols.Json                 6.0.2523.52315      
 Microsoft.AspNetCore.StaticFiles                            6.0.2523.52315                                                      dotnet  
 Microsoft.AspNetCore.WebSockets                             6.0.2523.52315                                                      dotnet  
 Microsoft.AspNetCore.WebUtilities                           6.0.2523.52315                                                      dotnet  
+Microsoft.Bcl.AsyncInterfaces                               6.0.21.52210                                                        dotnet  
+Microsoft.Bcl.TimeProvider                                  8.0.23.53103                                                        dotnet  
 Microsoft.CSharp                                            6.0.2523.51912                                                      dotnet  
 Microsoft.Data.SqlClient                                    2.0.20168.4                                                         dotnet  
 Microsoft.Extensions.Caching.Abstractions                   6.0.21.52210                                                        dotnet  
@@ -165,7 +167,9 @@ NLog.Extensions.Logging v5.0.4                              5.0.4.221           
 NLog.Targets.Syslog                                         7.0.0.0                                                             dotnet  
 NodaTime                                                    3.0.0.0                                                             dotnet  
 Npgsql                                                      7.0.6.0                                                             dotnet  
+Polly                                                       8.2.0.2702                                                          dotnet  
 Polly.Contrib.WaitAndRetry                                  1.1.1.0+7596d2dacf22d88bbd814bc49c28424fb6e921e9                    dotnet  
+Polly.Core                                                  8.2.0.2702                                                          dotnet  
 ReusableTasks                                               2.0.0-master+2aa9a10                                                dotnet  
 Sentry                                                      3.25.0.0                                                            dotnet  
 SixLabors.ImageSharp                                        3.0.1.0                                                             dotnet  
