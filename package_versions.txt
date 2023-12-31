@@ -13,7 +13,7 @@ Ical.Net                                                    1.0.0.0             
 ImpromptuInterface                                          7.0.1.0                                                             dotnet  
 Json.NET                                                    13.0.2.27524                                                        dotnet  
 Kveer.XmlRPC                                                1.2.0.0                                                             dotnet  
-Lidarr                                                      2.1.2.3879                                                          dotnet  
+Lidarr                                                      2.1.2.3883                                                          dotnet  
 MailKit                                                     3.6.0.0                                                             dotnet  
 Microsoft.AspNetCore                                        6.0.2523.52315                                                      dotnet  
 Microsoft.AspNetCore.Antiforgery                            6.0.2523.52315                                                      dotnet  
@@ -447,7 +447,7 @@ soxr                                                        0.1.3-r5            
 sqlite-libs                                                 3.41.2-r2                                                           apk     
 ssl_client                                                  1.36.1-r5                                                           apk     
 svt-av1-libs                                                1.6.0-r0                                                            apk     
-tzdata                                                      2023c-r1                                                            apk     
+tzdata                                                      2023d-r0                                                            apk     
 utmps-libs                                                  0.1.2.1-r1                                                          apk     
 wayland-libs-client                                         1.22.0-r2                                                           apk     
 x264-libs                                                   0.164_git20220602-r1                                                apk     
