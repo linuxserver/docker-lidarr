@@ -13,7 +13,7 @@ Ical.Net                                                    1.0.0.0             
 ImpromptuInterface                                          7.0.1.0                                                             dotnet  
 Json.NET                                                    13.0.3.27908                                                        dotnet  
 Kveer.XmlRPC                                                1.2.0.0                                                             dotnet  
-Lidarr                                                      2.1.3.3913                                                          dotnet  
+Lidarr                                                      2.1.3.3918                                                          dotnet  
 MailKit                                                     3.6.0.0                                                             dotnet  
 Microsoft.AspNetCore                                        6.0.2523.52315                                                      dotnet  
 Microsoft.AspNetCore.Antiforgery                            6.0.2523.52315                                                      dotnet  
@@ -384,7 +384,7 @@ libbluray                                                   1.3.4-r0            
 libbsd                                                      0.11.7-r1                                                           apk     
 libbz2                                                      1.0.8-r5                                                            apk     
 libc-utils                                                  0.7.2-r5                                                            apk     
-libcrypto3                                                  3.1.4-r1                                                            apk     
+libcrypto3                                                  3.1.4-r3                                                            apk     
 libcurl                                                     8.5.0-r0                                                            apk     
 libdav1d                                                    1.2.1-r0                                                            apk     
 libdrm                                                      2.4.115-r4                                                          apk     
