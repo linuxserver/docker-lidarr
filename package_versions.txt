@@ -407,7 +407,7 @@ librist                                                     0.2.7-r0            
 libsodium                                                   1.0.18-r3                                                           apk     
 libsrt                                                      1.5.2-r0                                                            apk     
 libssh                                                      0.10.5-r0                                                           apk     
-libssl3                                                     3.1.4-r3                                                            apk     
+libssl3                                                     3.1.4-r4                                                            apk     
 libstdc++                                                   12.2.1_git20220924-r10                                              apk     
 libtasn1                                                    4.19.0-r1                                                           apk     
 libtheora                                                   1.1.1-r17                                                           apk     
