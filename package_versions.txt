@@ -13,7 +13,7 @@ Ical.Net                                                    1.0.0.0             
 ImpromptuInterface                                          7.0.1.0                                                             dotnet  
 Json.NET                                                    13.0.3.27908                                                        dotnet  
 Kveer.XmlRPC                                                1.2.0.0                                                             dotnet  
-Lidarr                                                      2.1.6.3977                                                          dotnet  
+Lidarr                                                      2.1.6.3982                                                          dotnet  
 MailKit                                                     3.6.0.0                                                             dotnet  
 Microsoft.AspNetCore                                        6.0.2523.52315                                                      dotnet  
 Microsoft.AspNetCore.Antiforgery                            6.0.2523.52315                                                      dotnet  
