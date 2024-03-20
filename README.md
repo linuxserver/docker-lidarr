@@ -71,15 +71,15 @@ This image provides various versions that are available via tags. Please read th
 
 Access the webui at `<your-ip>:8686`, for more information check out [Lidarr](https://github.com/lidarr/Lidarr).
 
-Special Note: Following our current folder structure will result in an inability to hardlink from your downloads to your Music folder because they are on seperate volumes. To support hardlinking, simply ensure that the Music and downloads data are on a single volume. For example, if you have /mnt/storage/Music and /mnt/storage/downloads/completed/Music, you would want something like /mnt/storage:/media for your volume. Then you can hardlink from /media/downloads/completed to /media/Music.
+Special Note: Following our current folder structure will result in an inability to hardlink from your downloads to your Music folder because they are on separate volumes. To support hardlinking, simply ensure that the Music and downloads data are on a single volume. For example, if you have /mnt/storage/Music and /mnt/storage/downloads/completed/Music, you would want something like /mnt/storage:/media for your volume. Then you can hardlink from /media/downloads/completed to /media/Music.
 
-Another item to keep in mind, is that within lidarr itself, you should then map your download client folder to your lidarr folder: Settings -> Download Client -> advanced -> remote path mappings. I input the host of my download client (matches the download client defined) remote path is /downloads/Music (relative to the internal container path) and local path is /media/downloads/completed/Music, assuming you have folders to seperate your downloaded data types.
+Another item to keep in mind, is that within Lidarr itself, you should then map your download client folder to your Lidarr folder: Settings -> Download Client -> advanced -> remote path mappings. I input the host of my download client (matches the download client defined) remote path is /downloads/Music (relative to the internal container path) and local path is /media/downloads/completed/Music, assuming you have folders to separate your downloaded data types.
 
 ### Media folders
 
 We have set `/music` and `/downloads` as ***optional paths***, this is because it is the easiest way to get started. While easy to use, it has some drawbacks. Mainly losing the ability to hardlink (TL;DR a way for a file to exist in multiple places on the same file system while only consuming one file worth of space), or atomic move (TL;DR instant file moves, rather than copy+delete) files while processing content.
 
-Use the optional paths if you dont understand, or dont want hardlinks/atomic moves.
+Use the optional paths if you don't understand, or don't want hardlinks/atomic moves.
 
 The folks over at servarr.com wrote a good [write-up](https://wiki.servarr.com/docker-guide#consistent-and-well-planned-paths) on how to get started with this.
 
@@ -100,7 +100,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /path/to/appdata/config:/config
+      - /path/to/lidarr/config:/config
       - /path/to/music:/music #optional
       - /path/to/downloads:/downloads #optional
     ports:
@@ -117,7 +117,7 @@ docker run -d \
   -e PGID=1000 \
   -e TZ=Etc/UTC \
   -p 8686:8686 \
-  -v /path/to/appdata/config:/config \
+  -v /path/to/lidarr/config:/config \
   -v /path/to/music:/music `#optional` \
   -v /path/to/downloads:/downloads `#optional` \
   --restart unless-stopped \
@@ -299,6 +299,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **20.03.24:** - Rebase to Alpine 3.19.
 * **06.06.23:** - Rebase nightly to Alpine 3.18.
 * **19.12.22:** - Rebase nightly to Alpine 3.17.
 * **27.10.22:** - Rebase nightly to Alpine 3.16, migrate to s6v3.
