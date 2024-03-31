@@ -13,7 +13,7 @@ Ical.Net                                                    1.0.0.0             
 ImpromptuInterface                                          7.0.1.0                                                     dotnet                        
 Json.NET                                                    13.0.3.27908                                                dotnet                        
 Kveer.XmlRPC                                                1.2.0.0                                                     dotnet                        
-Lidarr                                                      2.2.4.4100                                                  dotnet      (+7 duplicates)   
+Lidarr                                                      2.2.4.4115                                                  dotnet      (+7 duplicates)   
 MailKit                                                     3.6.0.0                                                     dotnet                        
 Microsoft.AspNetCore                                        6.0.2523.52315                                              dotnet                        
 Microsoft.AspNetCore.Antiforgery                            6.0.2523.52315                                              dotnet                        
@@ -366,7 +366,7 @@ bitstream-io                                                1.6.0               
 brotli-libs                                                 1.1.0-r1                                                    apk                           
 busybox                                                     1.36.1-r15                                                  apk                           
 busybox-binsh                                               1.36.1-r15                                                  apk                           
-c-ares                                                      1.24.0-r1                                                   apk                           
+c-ares                                                      1.27.0-r0                                                   apk                           
 ca-certificates                                             20240226-r0                                                 apk                           
 ca-certificates-bundle                                      20240226-r0                                                 apk                           
 cfg-if                                                      1.0.0                                                       rust-crate                    
@@ -465,7 +465,7 @@ linux-pam                                                   1.5.3-r7            
 linux-raw-sys                                               0.3.7                                                       rust-crate                    
 log                                                         0.4.17                                                      rust-crate                    
 maybe-rayon                                                 0.1.1                                                       rust-crate                    
-mbedtls                                                     2.28.7-r0                                                   apk                           
+mbedtls                                                     2.28.8-r0                                                   apk                           
 memchr                                                      2.5.0                                                       rust-crate                    
 memoffset                                                   0.8.0                                                       rust-crate                    
 minimal-lexical                                             0.2.1                                                       rust-crate                    
