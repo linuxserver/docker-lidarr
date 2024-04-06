@@ -13,7 +13,7 @@ Ical.Net                                                    1.0.0.0             
 ImpromptuInterface                                          7.0.1.0                                                     dotnet                        
 Json.NET                                                    13.0.3.27908                                                dotnet                        
 Kveer.XmlRPC                                                1.2.0.0                                                     dotnet                        
-Lidarr                                                      2.2.4.4120                                                  dotnet      (+7 duplicates)   
+Lidarr                                                      2.2.4.4125                                                  dotnet      (+7 duplicates)   
 MailKit                                                     3.6.0.0                                                     dotnet                        
 Microsoft.AspNetCore                                        6.0.2523.52315                                              dotnet                        
 Microsoft.AspNetCore.Antiforgery                            6.0.2523.52315                                              dotnet                        
@@ -355,7 +355,7 @@ alpine-keys                                                 2.4-r1              
 alpine-release                                              3.19.1-r0                                                   apk                           
 anyhow                                                      1.0.71                                                      rust-crate                    
 aom-libs                                                    3.7.1-r0                                                    apk                           
-apk-tools                                                   2.14.0-r5                                                   apk                           
+apk-tools                                                   2.14.3-r1                                                   apk                           
 arg_enum_proc_macro                                         0.3.2                                                       rust-crate                    
 arrayvec                                                    0.7.2                                                       rust-crate                    
 av-metrics                                                  0.9.0                                                       rust-crate                    
