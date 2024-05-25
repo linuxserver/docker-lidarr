@@ -33,6 +33,7 @@ RUN \
     /tmp/lidarr.tar.gz -C \
     /app/lidarr/bin --strip-components=1 && \
   echo -e "UpdateMethod=docker\nBranch=${LIDARR_BRANCH}\nPackageVersion=${VERSION}\nPackageAuthor=[linuxserver.io](https://www.linuxserver.io/)" > /app/lidarr/package_info && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   rm -rf \
     /app/lidarr/bin/Lidarr.Update \
