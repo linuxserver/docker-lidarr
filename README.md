@@ -102,7 +102,7 @@ services:
     volumes:
       - /path/to/lidarr/config:/config
       - /path/to/music:/music #optional
-      - /path/to/downloads:/downloads #optional
+      - /path/to/download-client-downloads:/downloads #optional
     ports:
       - 8686:8686
     restart: unless-stopped
@@ -119,7 +119,7 @@ docker run -d \
   -p 8686:8686 \
   -v /path/to/lidarr/config:/config \
   -v /path/to/music:/music `#optional` \
-  -v /path/to/downloads:/downloads `#optional` \
+  -v /path/to/download-client-downloads:/downloads `#optional` \
   --restart unless-stopped \
   lscr.io/linuxserver/lidarr:develop
 ```
@@ -299,6 +299,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **26.05.24:** - Rebase to Alpine 3.20.
 * **20.03.24:** - Rebase to Alpine 3.19.
 * **06.06.23:** - Rebase develop to Alpine 3.18.
 * **06.05.22:** - Rebase develop branch to Alpine 3.17, migrate to s6v3.

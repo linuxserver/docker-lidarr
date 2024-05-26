@@ -29,7 +29,7 @@ param_volumes:
 opt_param_usage_include_vols: true
 opt_param_volumes:
   - { vol_path: "/music", vol_host_path: "/path/to/music", desc: "Music files (See note in Application setup)." }
-  - { vol_path: "/downloads", vol_host_path: "/path/to/downloads", desc: "Path to your download folder for music (See note in Application setup)." }
+  - { vol_path: "/downloads", vol_host_path: "/path/to/download-client-downloads", desc: "Path to your download folder for music (See note in Application setup)." }
 param_usage_include_ports: true
 param_ports:
   - { external_port: "8686", internal_port: "8686", port_desc: "Application WebUI" }
@@ -53,6 +53,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "26.05.24:", desc: "Rebase to Alpine 3.20." }
   - { date: "20.03.24:", desc: "Rebase to Alpine 3.19." }
   - { date: "06.06.23:", desc: "Rebase develop to Alpine 3.18." }
   - { date: "06.05.22:", desc: "Rebase develop branch to Alpine 3.17, migrate to s6v3." }
