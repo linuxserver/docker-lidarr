@@ -11,7 +11,7 @@ LABEL maintainer="Roxedus,thespad"
 
 # environment settings
 ARG LIDARR_BRANCH="develop"
-  ENV XDG_CONFIG_HOME="/config/xdg" \
+ENV XDG_CONFIG_HOME="/config/xdg" \
   COMPlus_EnableDiagnostics=0 \
   TMPDIR=/run/lidarr-temp
 
