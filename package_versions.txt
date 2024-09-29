@@ -13,7 +13,7 @@ IPAddressRange                                              6.0.0.0             
 Ical.Net                                                    1.0.0.0                                                     dotnet                    
 ImpromptuInterface                                          7.0.1.0                                                     dotnet                    
 Json.NET                                                    13.0.3.27908                                                dotnet                    
-Lidarr                                                      2.6.1.4370                                                  dotnet  (+7 duplicates)   
+Lidarr                                                      2.6.2.4379                                                  dotnet  (+7 duplicates)   
 MailKit                                                     3.6.0.0                                                     dotnet                    
 Microsoft.AspNetCore                                        6.0.3224.31405                                              dotnet                    
 Microsoft.AspNetCore.Antiforgery                            6.0.3224.31405                                              dotnet                    
@@ -361,7 +361,7 @@ bash                                                        5.2.26-r0           
 brotli-libs                                                 1.1.0-r2                                                    apk                       
 busybox                                                     1.36.1-r29                                                  apk                       
 busybox-binsh                                               1.36.1-r29                                                  apk                       
-c-ares                                                      1.28.1-r0                                                   apk                       
+c-ares                                                      1.33.1-r0                                                   apk                       
 ca-certificates                                             20240705-r0                                                 apk                       
 ca-certificates-bundle                                      20240705-r0                                                 apk                       
 catatonit                                                   0.2.0-r0                                                    apk                       
