@@ -439,7 +439,7 @@ libxml2                                                     2.12.7-r0           
 libxslt                                                     1.1.39-r1                                                   apk                       
 libzmq                                                      4.3.5-r2                                                    apk                       
 linux-pam                                                   1.6.0-r0                                                    apk                       
-mbedtls                                                     3.6.1-r0                                                    apk                       
+mbedtls                                                     3.6.2-r0                                                    apk                       
 mpg123-libs                                                 1.32.6-r0                                                   apk                       
 mscorlib                                                    6.0.3224.31407                                              dotnet                    
 musl                                                        1.2.5-r0                                                    apk                       
