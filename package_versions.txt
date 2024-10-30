@@ -440,7 +440,7 @@ libxslt                                                     1.1.39-r1           
 libzmq                                                      4.3.5-r2                                                    apk                       
 linux-pam                                                   1.6.0-r0                                                    apk                       
 mbedtls                                                     3.6.2-r0                                                    apk                       
-mpg123-libs                                                 1.32.6-r0                                                   apk                       
+mpg123-libs                                                 1.32.8-r0                                                   apk                       
 mscorlib                                                    6.0.3524.45918                                              dotnet                    
 musl                                                        1.2.5-r0                                                    apk                       
 musl-utils                                                  1.2.5-r0                                                    apk                       
