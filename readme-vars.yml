@@ -6,36 +6,30 @@ project_url: "https://github.com/lidarr/Lidarr"
 project_logo: "https://github.com/lidarr/Lidarr/blob/develop/Logo/400.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
-  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # development version
 development_versions: true
 development_versions_items:
-  - { tag: "latest", desc: "Stable Lidarr releases." }
-  - { tag: "develop", desc: "Develop Lidarr Releases." }
-  - { tag: "nightly", desc: "Nightly Lidarr Releases." }
-
+  - {tag: "latest", desc: "Stable Lidarr releases."}
+  - {tag: "develop", desc: "Develop Lidarr Releases."}
+  - {tag: "nightly", desc: "Nightly Lidarr Releases."}
 # container parameters
 common_param_env_vars_enabled: true #PGID, PUID, etc, you can set it to 'optional'
 param_container_name: "{{ project_name }}"
-
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Configuration files for Lidarr." }
+  - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Configuration files for Lidarr."}
 opt_param_usage_include_vols: true
 opt_param_volumes:
-  - { vol_path: "/music", vol_host_path: "/path/to/music", desc: "Music files (See note in Application setup)." }
-  - { vol_path: "/downloads", vol_host_path: "/path/to/downloads", desc: "Path to your download folder for music (See note in Application setup)." }
+  - {vol_path: "/music", vol_host_path: "/path/to/music", desc: "Music files (See note in Application setup)."}
+  - {vol_path: "/downloads", vol_host_path: "/path/to/downloads", desc: "Path to your download folder for music (See note in Application setup)."}
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "8686", internal_port: "8686", port_desc: "Application WebUI" }
-
+  - {external_port: "8686", internal_port: "8686", port_desc: "Application WebUI"}
 readonly_supported: true
-
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -52,28 +46,70 @@ app_setup_block: |
   Use the optional paths if you don't understand, or don't want hardlinks/atomic moves.
 
   The folks over at servarr.com wrote a good [write-up](https://wiki.servarr.com/docker-guide#consistent-and-well-planned-paths) on how to get started with this.
-
+# init diagram
+init_diagram: |
+  "lidarr:nightly": {
+    docker-mods
+    base {
+      fix-attr +\nlegacy cont-init
+    }
+    docker-mods -> base
+    legacy-services
+    custom services
+    init-services -> legacy-services
+    init-services -> custom services
+    custom services -> legacy-services
+    legacy-services -> ci-service-check
+    init-migrations -> init-adduser
+    init-os-end -> init-config
+    init-config -> init-config-end
+    init-lidarr-config -> init-config-end
+    init-os-end -> init-crontab-config
+    init-mods-end -> init-custom-files
+    base -> init-envfile
+    init-config -> init-lidarr-config
+    base -> init-migrations
+    base -> init-mods
+    init-config-end -> init-mods
+    init-mods -> init-mods-end
+    init-mods-package-install -> init-mods-end
+    init-mods -> init-mods-package-install
+    base -> init-os-end
+    init-adduser -> init-os-end
+    init-envfile -> init-os-end
+    init-migrations -> init-os-end
+    init-custom-files -> init-services
+    init-mods-end -> init-services
+    init-services -> svc-cron
+    svc-cron -> legacy-services
+    init-services -> svc-lidarr
+    svc-lidarr -> legacy-services
+  }
+  Base Images: {
+    "baseimage-alpine:3.20"
+  }
+  "lidarr:nightly" <- Base Images
 # changelog
 changelogs:
-  - { date: "25.05.24:", desc: "Rebase to Alpine 3.20." }
-  - { date: "20.03.24:", desc: "Rebase to Alpine 3.19." }
-  - { date: "06.06.23:", desc: "Rebase nightly to Alpine 3.18." }
-  - { date: "19.12.22:", desc: "Rebase nightly to Alpine 3.17." }
-  - { date: "27.10.22:", desc: "Rebase nightly to Alpine 3.16, migrate to s6v3." }
-  - { date: "04.02.22:", desc: "Rebase nightly branch to Alpine." }
-  - { date: "30.12.21:", desc: "Add nightly-alpine branch." }
-  - { date: "01.08.21:", desc: "Add libchromaprint-tools." }
-  - { date: "11.07.21:", desc: "Make the paths clearer to the user." }
-  - { date: "20.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information." }
-  - { date: "27.09.20:", desc: "Move preview branch/tag to nightly." }
-  - { date: "05.04.20:", desc: "Move app to /app." }
-  - { date: "29.10.19:", desc: "Switch preview branch to netcore builds." }
-  - { date: "01.08.19:", desc: "Rebase to Linuxserver LTS mono version." }
-  - { date: "13.06.19:", desc: "Add env variable for setting umask." }
-  - { date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag." }
-  - { date: "08.03.19:", desc: "Rebase to Bionic, use proposed endpoint for libchromaprint." }
-  - { date: "26.01.19:", desc: "Add pipeline logic and multi arch." }
-  - { date: "22.04.18:", desc: "Switch to beta builds." }
-  - { date: "17.03.18:", desc: "Add ENV XDG_CONFIG_HOME=\"/config/xdg\" to Dockerfile for signalr fix." }
-  - { date: "27.02.18:", desc: "Use json to query for new version." }
-  - { date: "23.02.18:", desc: "Initial Release." }
+  - {date: "25.05.24:", desc: "Rebase to Alpine 3.20."}
+  - {date: "20.03.24:", desc: "Rebase to Alpine 3.19."}
+  - {date: "06.06.23:", desc: "Rebase nightly to Alpine 3.18."}
+  - {date: "19.12.22:", desc: "Rebase nightly to Alpine 3.17."}
+  - {date: "27.10.22:", desc: "Rebase nightly to Alpine 3.16, migrate to s6v3."}
+  - {date: "04.02.22:", desc: "Rebase nightly branch to Alpine."}
+  - {date: "30.12.21:", desc: "Add nightly-alpine branch."}
+  - {date: "01.08.21:", desc: "Add libchromaprint-tools."}
+  - {date: "11.07.21:", desc: "Make the paths clearer to the user."}
+  - {date: "20.01.21:", desc: "Deprecate `UMASK_SET` in favor of UMASK in baseimage, see above for more information."}
+  - {date: "27.09.20:", desc: "Move preview branch/tag to nightly."}
+  - {date: "05.04.20:", desc: "Move app to /app."}
+  - {date: "29.10.19:", desc: "Switch preview branch to netcore builds."}
+  - {date: "01.08.19:", desc: "Rebase to Linuxserver LTS mono version."}
+  - {date: "13.06.19:", desc: "Add env variable for setting umask."}
+  - {date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag."}
+  - {date: "08.03.19:", desc: "Rebase to Bionic, use proposed endpoint for libchromaprint."}
+  - {date: "26.01.19:", desc: "Add pipeline logic and multi arch."}
+  - {date: "22.04.18:", desc: "Switch to beta builds."}
+  - {date: "17.03.18:", desc: "Add ENV XDG_CONFIG_HOME=\"/config/xdg\" to Dockerfile for signalr fix."}
+  - {date: "27.02.18:", desc: "Use json to query for new version."}
+  - {date: "23.02.18:", desc: "Initial Release."}
