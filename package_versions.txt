@@ -373,7 +373,7 @@ coreutils                                                   9.5-r2              
 coreutils-env                                               9.5-r2                                                      apk                       
 coreutils-fmt                                               9.5-r2                                                      apk                       
 coreutils-sha512sum                                         9.5-r2                                                      apk                       
-curl                                                        8.11.1-r0                                                   apk                       
+curl                                                        8.12.0-r0                                                   apk                       
 ffmpeg-libavcodec                                           6.1.2-r1                                                    apk                       
 ffmpeg-libavformat                                          6.1.2-r1                                                    apk                       
 ffmpeg-libavutil                                            6.1.2-r1                                                    apk                       
@@ -392,8 +392,8 @@ libattr                                                     2.5.2-r2            
 libbluray                                                   1.3.4-r1                                                    apk                       
 libbsd                                                      0.12.2-r0                                                   apk                       
 libbz2                                                      1.0.8-r6                                                    apk                       
-libcrypto3                                                  3.3.2-r4                                                    apk                       
-libcurl                                                     8.11.1-r0                                                   apk                       
+libcrypto3                                                  3.3.3-r0                                                    apk                       
+libcurl                                                     8.12.0-r0                                                   apk                       
 libdav1d                                                    1.5.0-r0                                                    apk                       
 libdeflate                                                  1.22-r0                                                     apk                       
 libdrm                                                      2.4.123-r1                                                  apk                       
@@ -420,7 +420,7 @@ libsharpyuv                                                 1.4.0-r0            
 libsodium                                                   1.0.20-r0                                                   apk                       
 libsrt                                                      1.5.3-r0                                                    apk                       
 libssh                                                      0.11.1-r0                                                   apk                       
-libssl3                                                     3.3.2-r4                                                    apk                       
+libssl3                                                     3.3.3-r0                                                    apk                       
 libstdc++                                                   14.2.0-r4                                                   apk                       
 libtheora                                                   1.1.1-r18                                                   apk                       
 libunistring                                                1.2-r0                                                      apk                       
@@ -464,7 +464,7 @@ scanelf                                                     1.3.8-r1            
 shadow                                                      4.16.0-r1                                                   apk                       
 skalibs-libs                                                2.14.3.0-r0                                                 apk                       
 soxr                                                        0.1.3-r7                                                    apk                       
-sqlite-libs                                                 3.47.1-r0                                                   apk                       
+sqlite-libs                                                 3.48.0-r0                                                   apk                       
 ssl_client                                                  1.37.0-r12                                                  apk                       
 tzdata                                                      2024b-r1                                                    apk                       
 utmps-libs                                                  0.1.2.3-r2                                                  apk                       
