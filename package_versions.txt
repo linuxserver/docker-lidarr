@@ -13,7 +13,7 @@ IPAddressRange                                              6.1.0.0             
 Ical.Net                                                    4.3.1+5889b14d90ccd3cd32b54229029dab52495a09b0              dotnet                    
 ImpromptuInterface                                          7.0.1.0                                                     dotnet                    
 Json.NET                                                    13.0.3.27908                                                dotnet                    
-Lidarr                                                      2.10.0.4556                                                 dotnet  (+7 duplicates)   
+Lidarr                                                      2.10.0.4560                                                 dotnet  (+7 duplicates)   
 MailKit                                                     4.8.0.0                                                     dotnet                    
 Microsoft.AspNetCore                                        6.0.3524.46214                                              dotnet                    
 Microsoft.AspNetCore.Antiforgery                            6.0.3524.46214                                              dotnet                    
@@ -443,7 +443,7 @@ linux-pam                                                   1.6.1-r1            
 mbedtls                                                     3.6.2-r0                                                    apk                       
 mpg123-libs                                                 1.32.9-r0                                                   apk                       
 mscorlib                                                    6.0.3524.45918                                              dotnet                    
-musl                                                        1.2.5-r8                                                    apk                       
+musl                                                        1.2.5-r9                                                    apk                       
 musl-utils                                                  1.2.5-r8                                                    apk                       
 ncurses-terminfo-base                                       6.5_p20241006-r3                                            apk                       
 netcat-openbsd                                              1.226.1.1-r0                                                apk                       
