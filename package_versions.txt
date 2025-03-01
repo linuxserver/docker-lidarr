@@ -13,7 +13,7 @@ IPAddressRange                                              6.1.0.0             
 Ical.Net                                                    4.3.1+5889b14d90ccd3cd32b54229029dab52495a09b0              dotnet                    
 ImpromptuInterface                                          7.0.1.0                                                     dotnet                    
 Json.NET                                                    13.0.3.27908                                                dotnet                    
-Lidarr                                                      2.10.1.4576                                                 dotnet  (+7 duplicates)   
+Lidarr                                                      2.10.1.4577                                                 dotnet  (+7 duplicates)   
 MailKit                                                     4.8.0.0                                                     dotnet                    
 Microsoft.AspNetCore                                        6.0.3524.46214                                              dotnet                    
 Microsoft.AspNetCore.Antiforgery                            6.0.3524.46214                                              dotnet                    
@@ -397,7 +397,7 @@ libcurl                                                     8.12.1-r0           
 libdav1d                                                    1.5.0-r0                                                    apk                       
 libdeflate                                                  1.22-r0                                                     apk                       
 libdrm                                                      2.4.123-r1                                                  apk                       
-libffi                                                      3.4.6-r0                                                    apk                       
+libffi                                                      3.4.7-r0                                                    apk                       
 libgcc                                                      14.2.0-r4                                                   apk                       
 libgcrypt                                                   1.10.3-r1                                                   apk                       
 libgomp                                                     14.2.0-r4                                                   apk                       
