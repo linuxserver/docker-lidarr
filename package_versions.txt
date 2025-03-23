@@ -13,7 +13,7 @@ IPAddressRange                                              6.1.0.0             
 Ical.Net                                                    4.3.1+5889b14d90ccd3cd32b54229029dab52495a09b0              dotnet                    
 ImpromptuInterface                                          7.0.1.0                                                     dotnet                    
 Json.NET                                                    13.0.3.27908                                                dotnet                    
-Lidarr                                                      2.11.0.4603                                                 dotnet  (+7 duplicates)   
+Lidarr                                                      2.11.0.4604                                                 dotnet  (+7 duplicates)   
 MailKit                                                     4.8.0.0                                                     dotnet                    
 Microsoft.AspNetCore                                        6.0.3524.46214                                              dotnet                    
 Microsoft.AspNetCore.Antiforgery                            6.0.3524.46214                                              dotnet                    
@@ -162,12 +162,12 @@ MimeKit                                                     4.8.0.0             
 Mono.Nat                                                    3.0.1                                                       dotnet                    
 Mono.Posix.NETStandard                                      1.0.0.0                                                     dotnet                    
 MonoTorrent                                                 2.0.7                                                       dotnet                    
-NLog v5.3.4                                                 5.3.4.2778                                                  dotnet                    
-NLog.Extensions.Logging v5.3.15                             5.3.15.614                                                  dotnet                    
-NLog.Layouts.ClefJsonLayout                                 1.0.2.0                                                     dotnet                    
+NLog v5.4.0                                                 5.4.0.3182                                                  dotnet                    
+NLog.Extensions.Logging v5.4.0                              5.4.0.625                                                   dotnet                    
+NLog.Layouts.ClefJsonLayout                                 1.0.3.0                                                     dotnet                    
 NLog.Targets.Syslog                                         7.0.0.0                                                     dotnet                    
 NodaTime                                                    3.2.0.0                                                     dotnet                    
-Npgsql                                                      7.0.9.0                                                     dotnet                    
+Npgsql                                                      7.0.10.0                                                    dotnet                    
 Polly                                                       8.5.2.4319                                                  dotnet                    
 Polly.Contrib.WaitAndRetry                                  1.1.1.0+7596d2dacf22d88bbd814bc49c28424fb6e921e9            dotnet                    
 Polly.Core                                                  8.5.2.4319                                                  dotnet                    
