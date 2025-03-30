@@ -13,7 +13,7 @@ IPAddressRange                                              6.1.0.0             
 Ical.Net                                                    4.3.1+5889b14d90ccd3cd32b54229029dab52495a09b0              dotnet                    
 ImpromptuInterface                                          7.0.1.0                                                     dotnet                    
 Json.NET                                                    13.0.3.27908                                                dotnet                    
-Lidarr                                                      2.11.1.4611                                                 dotnet  (+7 duplicates)   
+Lidarr                                                      2.11.1.4612                                                 dotnet  (+7 duplicates)   
 MailKit                                                     4.8.0.0                                                     dotnet                    
 Microsoft.AspNetCore                                        6.0.3524.46214                                              dotnet                    
 Microsoft.AspNetCore.Antiforgery                            6.0.3524.46214                                              dotnet                    
