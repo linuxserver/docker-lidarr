@@ -13,7 +13,7 @@ IPAddressRange                                              6.1.0.0             
 Ical.Net                                                    4.3.1+5889b14d90ccd3cd32b54229029dab52495a09b0              dotnet                    
 ImpromptuInterface                                          7.0.1.0                                                     dotnet                    
 Json.NET                                                    13.0.3.27908                                                dotnet                    
-Lidarr                                                      2.11.0.4610                                                 dotnet  (+7 duplicates)   
+Lidarr                                                      2.11.1.4611                                                 dotnet  (+7 duplicates)   
 MailKit                                                     4.8.0.0                                                     dotnet                    
 Microsoft.AspNetCore                                        6.0.3524.46214                                              dotnet                    
 Microsoft.AspNetCore.Antiforgery                            6.0.3524.46214                                              dotnet                    
@@ -466,7 +466,7 @@ skalibs-libs                                                2.14.3.0-r0         
 soxr                                                        0.1.3-r7                                                    apk                       
 sqlite-libs                                                 3.48.0-r0                                                   apk                       
 ssl_client                                                  1.37.0-r12                                                  apk                       
-tzdata                                                      2025a-r0                                                    apk                       
+tzdata                                                      2025b-r0                                                    apk                       
 utmps-libs                                                  0.1.2.3-r2                                                  apk                       
 wayland-libs-client                                         1.23.1-r0                                                   apk                       
 x264-libs                                                   0.164.3108-r0                                               apk                       
