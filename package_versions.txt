@@ -127,7 +127,7 @@ bash                                                         5.2.37-r0          
 brotli-libs                                                  1.1.0-r2             apk                      
 busybox                                                      1.37.0-r12           apk                      
 busybox-binsh                                                1.37.0-r12           apk                      
-c-ares                                                       1.34.3-r0            apk                      
+c-ares                                                       1.34.5-r0            apk                      
 ca-certificates                                              20241121-r1          apk                      
 ca-certificates-bundle                                       20241121-r1          apk                      
 catatonit                                                    0.2.0-r0             apk                      
@@ -144,7 +144,7 @@ ffmpeg-libavformat                                           6.1.2-r1           
 ffmpeg-libavutil                                             6.1.2-r1             apk                      
 ffmpeg-libswresample                                         6.1.2-r1             apk                      
 findutils                                                    4.10.0-r0            apk                      
-giflib                                                       5.2.2-r0             apk                      
+giflib                                                       5.2.2-r1             apk                      
 hwdata-pci                                                   0.393-r0             apk                      
 icu-data-en                                                  74.2-r0              apk                      
 icu-libs                                                     74.2-r0              apk                      
