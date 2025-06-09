@@ -7,7 +7,7 @@ DryIoc.dll                                                   5.4.3              
 Dynamitey                                                    2.0.9.136            dotnet  (+3 duplicates)  
 Equ                                                          2.3.0                dotnet  (+5 duplicates)  
 FluentValidation                                             9.5.4                dotnet  (+5 duplicates)  
-IPAddressRange                                               6.1.0                dotnet  (+7 duplicates)  
+IPAddressRange                                               6.2.0                dotnet  (+7 duplicates)  
 Ical.Net                                                     4.3.1                dotnet  (+2 duplicates)  
 ImpromptuInterface                                           7.0.1                dotnet  (+3 duplicates)  
 Lidarr                                                       1.0.0                dotnet                   
@@ -96,7 +96,7 @@ Servarr.FluentMigrator.Runner.SqlAnywhere                    3.3.2.9            
 Servarr.FluentMigrator.Runner.SqlServer                      3.3.2.9              dotnet  (+5 duplicates)  
 Servarr.FluentMigrator.Runner.SqlServerCe                    3.3.2.9              dotnet  (+5 duplicates)  
 SharpZipLib                                                  1.4.2                dotnet  (+7 duplicates)  
-SixLabors.ImageSharp                                         3.1.7                dotnet  (+5 duplicates)  
+SixLabors.ImageSharp                                         3.1.9                dotnet  (+5 duplicates)  
 SpotifyAPI.Web                                               5.1.1                dotnet  (+5 duplicates)  
 Swashbuckle.AspNetCore.Annotations                           6.6.2                dotnet  (+2 duplicates)  
 Swashbuckle.AspNetCore.Swagger                               6.6.2                dotnet  (+2 duplicates)  
