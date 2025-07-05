@@ -78,7 +78,7 @@ init_diagram: |
     svc-lidarr -> legacy-services
   }
   Base Images: {
-    "baseimage-alpine:3.21"
+    "baseimage-alpine:3.22"
   }
   "lidarr:nightly" <- Base Images
 # changelog
