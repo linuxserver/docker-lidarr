@@ -177,8 +177,8 @@ getrandom                                                    0.2.12             
 giflib                                                       5.2.2-r1             apk                          
 heck                                                         0.4.1                rust-crate                   
 hwdata-pci                                                   0.395-r0             apk                          
-icu-data-en                                                  76.1-r0              apk                          
-icu-libs                                                     76.1-r0              apk                          
+icu-data-en                                                  76.1-r1              apk                          
+icu-libs                                                     76.1-r1              apk                          
 imath                                                        3.1.12-r0            apk                          
 interpolate_name                                             0.2.4                rust-crate                   
 itertools                                                    0.10.5               rust-crate                   
