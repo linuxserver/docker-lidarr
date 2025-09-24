@@ -121,7 +121,7 @@ alpine-baselayout                                            3.7.0-r0           
 alpine-baselayout-data                                       3.7.0-r0             apk                          
 alpine-keys                                                  2.5-r0               apk                          
 alpine-release                                               3.22.1-r0            apk                          
-anstream                                                     0.6.5                rust-crate                   
+anstream                                                     0.6.8                rust-crate                   
 anstyle                                                      1.0.4                rust-crate                   
 anstyle-parse                                                0.2.3                rust-crate                   
 anstyle-query                                                1.0.2                rust-crate                   
@@ -282,7 +282,7 @@ rand                                                         0.8.5              
 rand_chacha                                                  0.3.1                rust-crate                   
 rand_core                                                    0.6.4                rust-crate                   
 rav1e                                                        0.7.1                rust-crate                   
-rav1e-libs                                                   0.7.1-r0             apk                          
+rav1e-libs                                                   0.7.1-r1             apk                          
 rayon                                                        1.8.0                rust-crate                   
 rayon-core                                                   1.12.0               rust-crate                   
 readline                                                     8.2.13-r1            apk                          
