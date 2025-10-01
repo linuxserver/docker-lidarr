@@ -168,7 +168,7 @@ coreutils-env                                                9.7-r1             
 coreutils-fmt                                                9.7-r1               apk                          
 coreutils-sha512sum                                          9.7-r1               apk                          
 crossbeam                                                    0.8.4                rust-crate                   
-crossbeam-channel                                            0.5.11               rust-crate                   
+crossbeam-channel                                            0.5.14               rust-crate                   
 crossbeam-deque                                              0.8.5                rust-crate                   
 crossbeam-epoch                                              0.9.18               rust-crate                   
 crossbeam-queue                                              0.3.11               rust-crate                   
@@ -206,7 +206,7 @@ libbluray                                                    1.3.4-r1           
 libbsd                                                       0.12.2-r0            apk                          
 libbz2                                                       1.0.8-r6             apk                          
 libc                                                         0.2.155              rust-crate                   
-libcrypto3                                                   3.5.2-r0             apk                          
+libcrypto3                                                   3.5.4-r0             apk                          
 libcurl                                                      8.14.1-r1            apk                          
 libdav1d                                                     1.5.1-r0             apk                          
 libdeflate                                                   1.23-r0              apk                          
@@ -232,7 +232,7 @@ libsharpyuv                                                  1.5.0-r0           
 libsodium                                                    1.0.20-r0            apk                          
 libsrt                                                       1.5.3-r1             apk                          
 libssh                                                       0.11.2-r0            apk                          
-libssl3                                                      3.5.2-r0             apk                          
+libssl3                                                      3.5.4-r0             apk                          
 libstdc++                                                    14.2.0-r6            apk                          
 libtheora                                                    1.1.1-r18            apk                          
 libunistring                                                 1.3-r0               apk                          
@@ -292,7 +292,7 @@ rand                                                         0.8.5              
 rand_chacha                                                  0.3.1                rust-crate                   
 rand_core                                                    0.6.4                rust-crate                   
 rav1e                                                        0.7.1                rust-crate                   
-rav1e-libs                                                   0.7.1-r1             apk                          
+rav1e-libs                                                   0.7.1-r2             apk                          
 rayon                                                        1.8.0                rust-crate                   
 rayon-core                                                   1.12.0               rust-crate                   
 readline                                                     8.2.13-r1            apk                          
