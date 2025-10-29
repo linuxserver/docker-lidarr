@@ -156,7 +156,7 @@ catatonit                                                    0.2.1-r0           
 cfg-if                                                       1.0.0                rust-crate                   
 chromaprint                                                  1.5.1-r8             apk                          
 chromaprint-libs                                             1.5.1-r8             apk                          
-cjson                                                        1.7.18-r1            apk                          
+cjson                                                        1.7.19-r0            apk                          
 clap                                                         4.4.14               rust-crate                   
 clap_builder                                                 4.4.14               rust-crate                   
 clap_complete                                                4.4.6                rust-crate                   
