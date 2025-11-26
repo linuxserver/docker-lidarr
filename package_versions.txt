@@ -147,8 +147,8 @@ bash                                                         5.2.37-r0          
 bitflags                                                     2.4.1                rust-crate                   
 bitstream-io                                                 2.2.0                rust-crate                   
 brotli-libs                                                  1.1.0-r2             apk                          
-busybox                                                      1.37.0-r19           apk                          
-busybox-binsh                                                1.37.0-r19           apk                          
+busybox                                                      1.37.0-r20           apk                          
+busybox-binsh                                                1.37.0-r20           apk                          
 c-ares                                                       1.34.5-r0            apk                          
 ca-certificates                                              20250911-r0          apk                          
 ca-certificates-bundle                                       20250911-r0          apk                          
@@ -195,7 +195,7 @@ interpolate_name                                             0.2.4              
 itertools                                                    0.10.5               rust-crate                   
 itertools                                                    0.12.0               rust-crate                   
 ivf                                                          0.1.3                rust-crate                   
-jq                                                           1.8.0-r0             apk                          
+jq                                                           1.8.1-r0             apk                          
 lab                                                          0.11.0               rust-crate                   
 lame-libs                                                    3.100-r5             apk                          
 lazy_static                                                  1.4.0                rust-crate                   
@@ -316,7 +316,7 @@ simd_helpers                                                 0.1.0              
 skalibs-libs                                                 2.14.4.0-r0          apk                          
 soxr                                                         0.1.3-r7             apk                          
 sqlite-libs                                                  3.49.2-r1            apk                          
-ssl_client                                                   1.37.0-r19           apk                          
+ssl_client                                                   1.37.0-r20           apk                          
 syn                                                          2.0.48               rust-crate                   
 terminal_size                                                0.3.0                rust-crate                   
 thiserror                                                    1.0.56               rust-crate                   
