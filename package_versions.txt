@@ -230,7 +230,7 @@ libproc2                                                     4.0.4-r3           
 libpsl                                                       0.21.5-r3            apk                          
 librist                                                      0.2.10-r1            apk                          
 libsharpyuv                                                  1.5.0-r0             apk                          
-libsodium                                                    1.0.20-r0            apk                          
+libsodium                                                    1.0.20-r1            apk                          
 libsrt                                                       1.5.3-r1             apk                          
 libssh                                                       0.11.2-r0            apk                          
 libssl3                                                      3.5.4-r0             apk                          
