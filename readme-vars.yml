@@ -83,6 +83,7 @@ init_diagram: |
   "lidarr:develop" <- Base Images
 # changelog
 changelogs:
+  - {date: "15.01.26:", desc: "Rebase to Alpine 3.23."}
   - {date: "20.12.24:", desc: "Rebase to Alpine 3.22."}
   - {date: "20.12.24:", desc: "Rebase to Alpine 3.21."}
   - {date: "26.05.24:", desc: "Rebase to Alpine 3.20."}
