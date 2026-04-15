@@ -210,7 +210,7 @@ libbluray                                                    1.4.0-r0           
 libbsd                                                       0.12.2-r0            apk                          
 libbz2                                                       1.0.8-r6             apk                          
 libc                                                         0.2.172              rust-crate                   
-libcrypto3                                                   3.5.5-r0             apk                          
+libcrypto3                                                   3.5.6-r0             apk                          
 libcurl                                                      8.17.0-r1            apk                          
 libdav1d                                                     1.5.2-r0             apk                          
 libdrm                                                       2.4.131-r0           apk                          
@@ -232,8 +232,8 @@ librist                                                      0.2.10-r1          
 libsharpyuv                                                  1.6.0-r0             apk                          
 libsodium                                                    1.0.20-r1            apk                          
 libsrt                                                       1.5.3-r1             apk                          
-libssh                                                       0.11.3-r0            apk                          
-libssl3                                                      3.5.5-r0             apk                          
+libssh                                                       0.11.4-r0            apk                          
+libssl3                                                      3.5.6-r0             apk                          
 libstdc++                                                    15.2.0-r2            apk                          
 libtheora                                                    1.2.0-r0             apk                          
 libudfread                                                   1.2.0-r0             apk                          
@@ -262,8 +262,8 @@ mbedtls                                                      3.6.6-r0           
 memchr                                                       2.7.5                rust-crate                   
 minimal-lexical                                              0.2.1                rust-crate                   
 mpg123-libs                                                  1.33.3-r0            apk                          
-musl                                                         1.2.5-r21            apk                          
-musl-utils                                                   1.2.5-r21            apk                          
+musl                                                         1.2.5-r23            apk                          
+musl-utils                                                   1.2.5-r23            apk                          
 ncurses-terminfo-base                                        6.5_p20251123-r0     apk                          
 netcat-openbsd                                               1.234.1-r0           apk                          
 new_debug_unreachable                                        1.0.6                rust-crate                   
