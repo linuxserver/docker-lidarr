@@ -47,3 +47,4 @@ Temporary Items
 test-config/
 build.log
 *.patch
+.vscode/

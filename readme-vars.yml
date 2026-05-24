@@ -118,3 +118,4 @@ changelogs:
   - {date: "17.03.18:", desc: "Add ENV XDG_CONFIG_HOME=\"/config/xdg\" to Dockerfile for signalr fix."}
   - {date: "27.02.18:", desc: "Use json to query for new version."}
   - {date: "23.02.18:", desc: "Initial Release."}
+  - {date: "24.05.26:", desc: "Fix Jenkinsfile credentials and update templates"}
