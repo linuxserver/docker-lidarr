@@ -1,5 +1,4 @@
 ---
-
 # project information
 project_name: lidarr
 project_url: "https://github.com/lidarr/Lidarr"
@@ -7,42 +6,52 @@ project_logo: "https://github.com/lidarr/Lidarr/raw/develop/Logo/400.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 project_categories: "Media Management,Music"
+
 # supported architectures
 available_architectures:
   - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
   - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
+
 # development version
 development_versions: true
 development_versions_items:
   - {tag: "latest", desc: "Stable Lidarr releases."}
   - {tag: "develop", desc: "Develop Lidarr Releases."}
   - {tag: "nightly", desc: "Nightly Lidarr Releases."}
+
 # container parameters
-common_param_env_vars_enabled: true #PGID, PUID, etc, you can set it to 'optional'
+common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
   - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Configuration files for Lidarr."}
+
 opt_param_usage_include_vols: true
 opt_param_volumes:
   - {vol_path: "/music", vol_host_path: "/path/to/music", desc: "Music files (See note in Application setup)."}
   - {vol_path: "/downloads", vol_host_path: "/path/to/downloads", desc: "Path to your download folder for music (See note in Application setup)."}
+
 param_usage_include_ports: true
 param_ports:
   - {external_port: "8686", internal_port: "8686", port_desc: "Application WebUI"}
+
 readonly_supported: true
 nonroot_supported: true
+
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
   Access the webui at `<your-ip>:8686`, for more information check out [Lidarr]({{ project_url }}).
+
 readme_media: true
+
 # init diagram
 init_diagram: |
-  "lidarr:latest": {
+  "{{ project_name }}:latest": {
     docker-mods
     base {
-      fix-attr +\nlegacy cont-init
+      fix-attr +
+      legacy cont-init
     }
     docker-mods -> base
     legacy-services
@@ -77,7 +86,8 @@ init_diagram: |
   Base Images: {
     "baseimage-alpine:3.23"
   }
-  "lidarr:latest" <- Base Images
+  "{{ project_name }}:latest" <- Base Images
+
 # changelog
 changelogs:
   - {date: "15.01.26:", desc: "Rebase to Alpine 3.23."}

@@ -2,47 +2,105 @@ name: External Trigger Scheduler
 
 on:
   schedule:
-    - cron:  '30 * * * *'
+    - cron: '30 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: external-trigger-scheduler
+  cancel-in-progress: false
+
 jobs:
   external-trigger-scheduler:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: '0'
+          fetch-depth: 0
 
       - name: External Trigger Scheduler
+        shell: bash
         run: |
-          printf "# External trigger scheduler for docker-lidarr\n\n" >> $GITHUB_STEP_SUMMARY
-          printf "Found the branches:\n\n%s\n" "$(git for-each-ref --format='- %(refname:lstrip=3)' refs/remotes)" >> $GITHUB_STEP_SUMMARY
-          for br in $(git for-each-ref --format='%(refname:lstrip=3)' refs/remotes)
-          do
-            if [[ "${br}" == "HEAD" ]]; then
-              printf "\nSkipping %s.\n" ${br} >> $GITHUB_STEP_SUMMARY
+          set -euo pipefail
+
+          printf "# External trigger scheduler for docker-lidarr\n\n" >> "$GITHUB_STEP_SUMMARY"
+
+          printf "Found the branches:\n\n%s\n" \
+            "$(git for-each-ref --format='- %(refname:lstrip=3)' refs/remotes/origin)" \
+            >> "$GITHUB_STEP_SUMMARY"
+
+          while IFS= read -r br; do
+
+            # Skip HEAD / empty
+            if [[ -z "${br}" || "${br}" == "HEAD" ]]; then
+              printf "\nSkipping %s.\n" "${br}" >> "$GITHUB_STEP_SUMMARY"
               continue
             fi
-            printf "\n## Evaluating \`%s\`\n\n" ${br} >> $GITHUB_STEP_SUMMARY
-            ls_jenkins_vars=$(curl -sX GET https://raw.githubusercontent.com/linuxserver/docker-lidarr/${br}/jenkins-vars.yml)
-            ls_branch=$(echo "${ls_jenkins_vars}" | yq -r '.ls_branch')
-            ls_trigger=$(echo "${ls_jenkins_vars}" | yq -r '.external_type')
-            if [[ "${br}" == "${ls_branch}" ]] && [[ "${ls_trigger}" != "os" ]]; then
-              echo "Branch appears to be live and trigger is not os; checking workflow." >> $GITHUB_STEP_SUMMARY
-              if curl -sfX GET https://raw.githubusercontent.com/linuxserver/docker-lidarr/${br}/.github/workflows/external_trigger.yml > /dev/null 2>&1; then
-                echo "Triggering external trigger workflow for branch." >> $GITHUB_STEP_SUMMARY
-                curl -iX POST \
-                  -H "Authorization: token ${{ secrets.CR_PAT }}" \
-                  -H "Accept: application/vnd.github.v3+json" \
-                  -d "{\"ref\":\"refs/heads/${br}\"}" \
-                  https://api.github.com/repos/linuxserver/docker-lidarr/actions/workflows/external_trigger.yml/dispatches
-              else
-                echo "Skipping branch due to no external trigger workflow present." >> $GITHUB_STEP_SUMMARY
-              fi
-            else
-              echo "Skipping branch due to being detected as dev branch or having no external version." >> $GITHUB_STEP_SUMMARY
+
+            printf "\n## Evaluating \`%s\`\n\n" "${br}" >> "$GITHUB_STEP_SUMMARY"
+
+            # ---- FETCH jenkins-vars.yml (SAFE) ----
+            ls_jenkins_vars=$(curl \
+              --fail \
+              --silent \
+              --show-error \
+              --location \
+              "https://raw.githubusercontent.com/linuxserver/docker-lidarr/${br}/jenkins-vars.yml" || true)
+
+            if [[ -z "${ls_jenkins_vars}" ]]; then
+              echo "⚠ Failed to fetch jenkins-vars.yml for ${br}, skipping" >> "$GITHUB_STEP_SUMMARY"
+              continue
             fi
-          done
+
+            ls_branch=$(echo "${ls_jenkins_vars}" | yq -r '.ls_branch // empty')
+            ls_trigger=$(echo "${ls_jenkins_vars}" | yq -r '.external_type // empty')
+
+            # ---- VALIDATION ----
+            if [[ -z "${ls_branch}" ]]; then
+              echo "⚠ Invalid jenkins-vars.yml (missing ls_branch), skipping ${br}" >> "$GITHUB_STEP_SUMMARY"
+              continue
+            fi
+
+            if [[ "${br}" == "${ls_branch}" && "${ls_trigger:-}" != "os" ]]; then
+
+              echo "Branch is live and trigger allowed; checking workflow." >> "$GITHUB_STEP_SUMMARY"
+
+              # ---- CHECK WORKFLOW EXISTS ----
+              if curl \
+                --fail \
+                --silent \
+                --show-error \
+                --location \
+                -I \
+                "https://raw.githubusercontent.com/linuxserver/docker-lidarr/${br}/.github/workflows/external_trigger.yml" \
+                > /dev/null 2>&1; then
+
+                echo "Triggering workflow for ${br}" >> "$GITHUB_STEP_SUMMARY"
+
+                curl \
+                  --fail \
+                  --silent \
+                  --show-error \
+                  --location \
+                  -X POST \
+                  -H "Authorization: Bearer ${{ secrets.CR_PAT }}" \
+                  -H "Accept: application/vnd.github+json" \
+                  -d "{\"ref\":\"refs/heads/${br}\"}" \
+                  "https://api.github.com/repos/linuxserver/docker-lidarr/actions/workflows/external_trigger.yml/dispatches"
+
+              else
+                echo "Skipping ${br} - no external_trigger.yml" >> "$GITHUB_STEP_SUMMARY"
+              fi
+
+            else
+              echo "Skipping ${br} (not live branch or os trigger)" >> "$GITHUB_STEP_SUMMARY"
+            fi
+
+          done < <(
+            git for-each-ref \
+              --format='%(refname:lstrip=3)' \
+              refs/remotes/origin
+          )

@@ -274,6 +274,7 @@ pipeline {
       steps {
         withCredentials([
           string(credentialsId: 'ci-tests-s3-key-id', variable: 'S3_KEY'),
+          // FIXED: Removed tab character from credentialsId
           string(credentialsId: 'ci-tests-s3-secret-access-key', variable: 'S3_SECRET')
         ]) {
           script{
@@ -581,7 +582,12 @@ pipeline {
       }
       steps {
         echo "Running on node: ${NODE_NAME}"
-        sh "sed -r -i 's|(^FROM .*)|\\1\\n\\nENV LSIO_FIRST_PARTY=true|g' Dockerfile"
+        // IMPROVED: Check if LSIO_FIRST_PARTY already exists before adding
+        sh '''#!/bin/bash
+              if ! grep -q "ENV LSIO_FIRST_PARTY" Dockerfile; then
+                sed -r -i 's|(^FROM .*)|\\1\\n\\nENV LSIO_FIRST_PARTY=true|g' Dockerfile
+              fi
+           '''
         sh "docker buildx build \
           --label \"org.opencontainers.image.created=${GITHUB_DATE}\" \
           --label \"org.opencontainers.image.authors=linuxserver.io\" \
@@ -650,7 +656,12 @@ pipeline {
         stage('Build X86') {
           steps {
             echo "Running on node: ${NODE_NAME}"
-            sh "sed -r -i 's|(^FROM .*)|\\1\\n\\nENV LSIO_FIRST_PARTY=true|g' Dockerfile"
+            // IMPROVED: Check if LSIO_FIRST_PARTY already exists before adding
+            sh '''#!/bin/bash
+                  if ! grep -q "ENV LSIO_FIRST_PARTY" Dockerfile; then
+                    sed -r -i 's|(^FROM .*)|\\1\\n\\nENV LSIO_FIRST_PARTY=true|g' Dockerfile
+                  fi
+               '''
             sh "docker buildx build \
               --label \"org.opencontainers.image.created=${GITHUB_DATE}\" \
               --label \"org.opencontainers.image.authors=linuxserver.io\" \
@@ -712,7 +723,12 @@ pipeline {
           }
           steps {
             echo "Running on node: ${NODE_NAME}"
-            sh "sed -r -i 's|(^FROM .*)|\\1\\n\\nENV LSIO_FIRST_PARTY=true|g' Dockerfile.aarch64"
+            // IMPROVED: Check if LSIO_FIRST_PARTY already exists before adding
+            sh '''#!/bin/bash
+                  if ! grep -q "ENV LSIO_FIRST_PARTY" Dockerfile.aarch64; then
+                    sed -r -i 's|(^FROM .*)|\\1\\n\\nENV LSIO_FIRST_PARTY=true|g' Dockerfile.aarch64
+                  fi
+               '''
             sh "docker buildx build \
               --label \"org.opencontainers.image.created=${GITHUB_DATE}\" \
               --label \"org.opencontainers.image.authors=linuxserver.io\" \
@@ -806,7 +822,7 @@ pipeline {
                 git --git-dir ${TEMPDIR}/${LS_REPO}/.git checkout -f master
                 cp ${TEMPDIR}/package_versions.txt ${TEMPDIR}/${LS_REPO}/
                 cd ${TEMPDIR}/${LS_REPO}/
-                wait
+                # FIXED: Removed unnecessary 'wait' command
                 git add package_versions.txt
                 git commit -m 'Bot Updating Package Versions'
                 git pull https://LinuxServer-CI:${GITHUB_TOKEN}@github.com/${LS_USER}/${LS_REPO}.git master
@@ -868,7 +884,8 @@ pipeline {
       steps {
         withCredentials([
           string(credentialsId: 'ci-tests-s3-key-id', variable: 'S3_KEY'),
-          string(credentialsId: 'ci-tests-s3-secret-access-key	', variable: 'S3_SECRET')
+          // FIXED: Removed tab character from credentialsId
+          string(credentialsId: 'ci-tests-s3-secret-access-key', variable: 'S3_SECRET')
         ]) {
           script{
             env.CI_URL = 'https://ci-tests.linuxserver.io/' + env.IMAGE + '/' + env.META_TAG + '/index.html'
@@ -961,6 +978,8 @@ pipeline {
         script{
           env.PUSH_ATTEMPTED = 'true'
         }
+        // IMPROVED: Adding a milestone to prevent concurrent manifest pushes
+        milestone(ordinal: 1, label: 'Multiarch push started')
         retry_backoff(5,5) {
           sh '''#! /bin/bash
                 set -e

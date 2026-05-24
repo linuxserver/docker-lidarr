@@ -1,43 +1,54 @@
-<!--- Provide a general summary of your changes in the Title above -->
+<!-- Provide a general summary of your changes in the Title above -->
 
 [linuxserverurl]: https://linuxserver.io
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
+---
 
-<!--- Before submitting a pull request please check the following -->
+<!-- Before submitting a pull request please check the following -->
 
-<!---  If this is a fix for a typo (in code, documentation, or the README) please file an issue and let us sort it out. We do not need a PR  -->
-<!---  Ask yourself if this modification is something the whole userbase will benefit from, if this is a specific change for corner case functionality or plugins please look at making a Docker Mod or local script  https://blog.linuxserver.io/2019/09/14/customizing-our-containers/ -->
-<!---  That if the PR is addressing an existing issue include, closes #<issue number> , in the body of the PR commit message   -->
-<!---  You have included links to any files / patches etc your PR may be using in the body of the PR commit message -->
-<!--- We maintain a changelog of major revisions to the container at the end of readme-vars.yml in the root of this repository, please add your changes there if appropriate -->
+<!--
+If this is a fix for a typo (in code, documentation, or README), please file an issue instead of a PR.
+We do not need PRs for minor typo fixes.
 
+Ask yourself if this change benefits the whole userbase.
+Corner-case features or plugin-specific changes may be better suited as a Docker Mod or local script:
+https://blog.linuxserver.io/2019/09/14/customizing-our-containers/
 
-<!--- Coding guidelines: -->
-<!--- 1. Installed packages in the Dockerfiles should be in alphabetical order -->
-<!--- 2. Changes to Dockerfile should be replicated in Dockerfile.armhf and Dockerfile.aarch64 if applicable -->
-<!--- 3. Indentation style (tabs vs 4 spaces vs 1 space) should match the rest of the document -->
-<!--- 4. Readme is auto generated from readme-vars.yml, make your changes there -->
+If your PR addresses an existing issue, include: closes #<issue number> in the PR description.
 
-------------------------------
+Ensure any external patches/links are included in the PR description.
 
- - [ ] I have read the [contributing](https://github.com/linuxserver/docker-lidarr/blob/master/.github/CONTRIBUTING.md) guideline and understand that I have made the correct modifications
+If you modify behavior, update changelog in readme-vars.yml when appropriate.
+-->
 
-------------------------------
+---
 
-<!--- We welcome all PR’s though this doesn’t guarantee it will be accepted. -->
+<!-- Coding guidelines:
 
-## Description:
-<!--- Describe your changes in detail -->
+1. Installed packages in Dockerfiles should be in alphabetical order.
+2. Changes to Dockerfile must be mirrored in Dockerfile.armhf and Dockerfile.aarch64 if applicable.
+3. Keep indentation consistent with surrounding code.
+4. README is auto-generated from readme-vars.yml — do not edit directly.
+-->
 
-## Benefits of this PR and context:
-<!--- Please explain why we should accept this PR. If this fixes an outstanding bug, please reference the issue # -->
+---
 
-## How Has This Been Tested?
-<!--- Please describe in detail how you tested your changes. -->
-<!--- Include details of your testing environment, and the tests you ran to -->
-<!--- see how your change affects other areas of the code, etc. -->
+- [ ] I have read the contributing guidelines and understand the required changes:
+https://github.com/linuxserver/docker-lidarr/blob/master/.github/CONTRIBUTING.md
 
+---
 
-## Source / References:
-<!--- Please include any forum posts/github links relevant to the PR -->
+<!-- We welcome all PRs, but acceptance is not guaranteed. -->
+
+## Description
+<!-- Describe your changes in detail -->
+
+## Benefits and context
+<!-- Why should this PR be accepted? Reference issues if applicable -->
+
+## How has this been tested?
+<!-- Include test steps, environment, and validation details -->
+
+## Source / References
+<!-- Links, issues, upstream sources -->

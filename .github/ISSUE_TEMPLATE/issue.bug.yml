@@ -1,76 +1,79 @@
-# Based on the issue template
 name: Bug report
-description: Create a report to help us improve
-title: "[BUG] <title>"
-labels: [Bug]
+description: Create a report to help improve the container
+title: "[BUG] "
+labels:
+  - bug
+
 body:
   - type: checkboxes
     attributes:
-      label: Is there an existing issue for this?
-      description: Please search to see if an issue already exists for the bug you encountered.
+      label: Existing issue check
+      description: Search existing issues before creating a new one.
       options:
-        - label: I have searched the existing issues
+        - label: I searched existing issues
           required: true
-  - type: textarea
+
+  - type: input
     attributes:
-      label: Current Behavior
-      description: Tell us what happens instead of the expected behavior.
+      label: Container version
+      placeholder: lscr.io/linuxserver/lidarr:latest
     validations:
       required: true
+
   - type: textarea
     attributes:
-      label: Expected Behavior
-      description: Tell us what should happen.
+      label: Current behavior
+      description: What is happening?
     validations:
-      required: false
+      required: true
+
   - type: textarea
     attributes:
-      label: Steps To Reproduce
-      description: Steps to reproduce the behavior.
+      label: Expected behavior
+      description: What should happen?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
       placeholder: |
-        1. In this environment...
-        2. With this config...
-        3. Run '...'
-        4. See error...
+        1. Deploy container
+        2. Open web UI
+        3. Trigger action
+        4. Observe error
     validations:
       required: true
+
   - type: textarea
     attributes:
       label: Environment
-      description: |
-        examples:
-          - **OS**: Ubuntu 20.04
-          - **How docker service was installed**: distro's packagemanager
       value: |
         - OS:
-        - How docker service was installed:
-      render: markdown
+        - Docker version:
+        - Docker compose version:
     validations:
-      required: false
+      required: true
+
   - type: dropdown
     attributes:
       label: CPU architecture
       options:
-        - x86-64
+        - x86_64
         - arm64
     validations:
       required: true
+
   - type: textarea
     attributes:
-      label: Docker creation
-      description: |
-        Command used to create docker container
-        Provide your docker create/run command or compose yaml snippet, or a screenshot of settings if using a gui to create the container
-      render: bash
+      label: Docker compose
+      render: yaml
     validations:
       required: true
+
   - type: textarea
     attributes:
-      description: |
-        Provide a full docker log, output of "docker logs lidarr"
       label: Container logs
-      placeholder: |
-        Output of `docker logs lidarr`
       render: bash
     validations:
       required: true

@@ -1,3 +1,4 @@
 github: linuxserver
 open_collective: linuxserver
-custom: ["https://opencollective.com/lidarr",]
+custom:
+  - https://opencollective.com/lidarr

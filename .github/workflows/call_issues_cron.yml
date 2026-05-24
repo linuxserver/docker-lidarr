@@ -1,7 +1,8 @@
 name: Mark stale issues and pull requests
+
 on:
   schedule:
-    - cron:  '48 20 * * *'
+    - cron: '48 20 * * *'
   workflow_dispatch:
 
 permissions:
@@ -12,5 +13,7 @@ jobs:
     permissions:
       issues: write
       pull-requests: write
+
     uses: linuxserver/github-workflows/.github/workflows/issues-cron.yml@v1
+
     secrets: inherit

@@ -1,4 +1,5 @@
 name: Permission check
+
 on:
   pull_request_target:
     paths:
@@ -6,6 +7,9 @@ on:
       - '**/finish'
       - '**/check'
       - 'root/migrations/*'
+
+permissions:
+  contents: read
 
 jobs:
   permission_check:

@@ -1,11 +1,21 @@
-#!/bin/bash
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+PORT=8686
 
 if [[ -f /config/config.xml ]]; then
-    PORT=$(xmlstarlet sel -T -t -v /Config/Port /config/config.xml)
+    PORT=$(xmlstarlet sel \
+        -T \
+        -t \
+        -v /Config/Port \
+        /config/config.xml 2>/dev/null || echo 8686)
 fi
 
-if [[ $(curl -sL "http://localhost:${PORT:-8686}/ping" | jq -r '.status' 2>/dev/null) = "OK" ]]; then
-    exit 0
-else
-    exit 1
-fi
+STATUS=$(curl \
+    --silent \
+    --fail \
+    --max-time 5 \
+    "http://localhost:${PORT}/ping" \
+    | jq -r '.status' 2>/dev/null)
+
+[[ "${STATUS}" == "OK" ]]

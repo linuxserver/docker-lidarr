@@ -1,6 +1,12 @@
 .git
-.gitignore
 .github
+.gitignore
 .gitattributes
-READMETEMPLATE.md
+
 README.md
+READMETEMPLATE.md
+
+# build junk
+**/*.md~
+**/*.swp
+**/.DS_Store
