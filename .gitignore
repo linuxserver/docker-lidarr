@@ -42,3 +42,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .jenkins-external
+
+# Test artifacts - DO NOT COMMIT
+test-config/
+build.log
+*.patch
