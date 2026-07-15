@@ -320,7 +320,7 @@ syn                                                          2.0.102            
 terminal_size                                                0.4.2                rust-crate                   
 thiserror                                                    1.0.69               rust-crate                   
 thiserror                                                    2.0.12               rust-crate                   
-tzdata                                                       2026b-r0             apk                          
+tzdata                                                       2026c-r0             apk                          
 unicode-ident                                                1.0.18               rust-crate                   
 unicode-width                                                0.2.1                rust-crate                   
 utf8parse                                                    0.2.2                rust-crate                   
