@@ -234,7 +234,7 @@ librist                                                      0.2.15-r0          
 libsharpyuv                                                  1.6.0-r0             apk                          
 libsodium                                                    1.0.22-r0            apk                          
 libsrt                                                       1.5.3-r1             apk                          
-libssh                                                       0.12.0-r0            apk                          
+libssh                                                       0.12.1-r0            apk                          
 libssl3                                                      3.5.7-r0             apk                          
 libstdc++                                                    15.2.0-r5            apk                          
 libtheora                                                    1.2.0-r1             apk                          
