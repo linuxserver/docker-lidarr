@@ -89,7 +89,7 @@ Polly                                                        8.6.6              
 Polly.Contrib.WaitAndRetry                                   1.1.1                dotnet      (+5 duplicates)  
 Polly.Core                                                   8.6.6                dotnet      (+5 duplicates)  
 ReusableTasks                                                4.0.0                dotnet      (+5 duplicates)  
-Sentry                                                       4.0.2                dotnet      (+4 duplicates)  
+Sentry                                                       5.16.3               dotnet      (+4 duplicates)  
 SharpZipLib                                                  1.4.2                dotnet      (+4 duplicates)  
 SixLabors.ImageSharp                                         3.1.12               dotnet      (+5 duplicates)  
 SourceGear.sqlite3                                           3.53.4               dotnet      (+7 duplicates)  
