@@ -89,7 +89,7 @@ Polly                                                        8.6.6              
 Polly.Contrib.WaitAndRetry                                   1.1.1                dotnet      (+5 duplicates)  
 Polly.Core                                                   8.6.6                dotnet      (+5 duplicates)  
 ReusableTasks                                                4.0.0                dotnet      (+5 duplicates)  
-Sentry                                                       4.0.2                dotnet      (+4 duplicates)  
+Sentry                                                       5.16.3               dotnet      (+4 duplicates)  
 SharpZipLib                                                  1.4.2                dotnet      (+4 duplicates)  
 SixLabors.ImageSharp                                         3.1.12               dotnet      (+5 duplicates)  
 SourceGear.sqlite3                                           3.53.4               dotnet      (+7 duplicates)  
@@ -138,7 +138,7 @@ anstyle-parse                                                0.2.7              
 anstyle-query                                                1.1.3                rust-crate                   
 anyhow                                                       1.0.98               rust-crate                   
 aom-libs                                                     3.14.1-r0            apk                          
-apk-tools                                                    3.0.7-r0             apk                          
+apk-tools                                                    3.0.8-r0             apk                          
 arg_enum_proc_macro                                          0.3.4                rust-crate                   
 arrayvec                                                     0.7.6                rust-crate                   
 as-slice                                                     0.2.1                rust-crate                   
@@ -176,7 +176,7 @@ crossbeam-deque                                              0.8.6              
 crossbeam-epoch                                              0.9.18               rust-crate                   
 crossbeam-queue                                              0.3.12               rust-crate                   
 crossbeam-utils                                              0.8.21               rust-crate                   
-curl                                                         8.21.0-r0            apk                          
+curl                                                         8.22.0-r0            apk                          
 either                                                       1.15.0               rust-crate                   
 equator                                                      0.4.2                rust-crate                   
 errno                                                        0.3.12               rust-crate                   
@@ -196,19 +196,19 @@ is_terminal_polyfill                                         1.70.1             
 itertools                                                    0.10.5               rust-crate                   
 itertools                                                    0.14.0               rust-crate                   
 ivf                                                          0.1.4                rust-crate                   
-jq                                                           1.8.1-r0             apk                          
+jq                                                           1.8.2-r0             apk                          
 lab                                                          0.11.0               rust-crate                   
 lame-libs                                                    3.100-r5             apk                          
 lcms2                                                        2.19-r0              apk                          
 libSvtAv1Enc                                                 4.1.0-r0             apk                          
-libapk                                                       3.0.7-r0             apk                          
+libapk                                                       3.0.8-r0             apk                          
 libattr                                                      2.5.2-r2             apk                          
 libbluray                                                    1.4.0-r0             apk                          
 libbsd                                                       0.12.2-r0            apk                          
 libbz2                                                       1.0.8-r6             apk                          
 libc                                                         0.2.172              rust-crate                   
 libcrypto3                                                   3.5.8-r0             apk                          
-libcurl                                                      8.21.0-r0            apk                          
+libcurl                                                      8.22.0-r0            apk                          
 libdav1d                                                     1.5.3-r0             apk                          
 libdrm                                                       2.4.134-r0           apk                          
 libdvdcss                                                    1.4.3-r0             apk                          
