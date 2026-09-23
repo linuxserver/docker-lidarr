@@ -109,7 +109,7 @@ aligned-vec                                                  0.6.4              
 alpine-baselayout                                            3.7.2-r1             apk                          
 alpine-baselayout-data                                       3.7.2-r1             apk                          
 alpine-keys                                                  2.6-r0               apk                          
-alpine-release                                               3.24.1-r0            apk                          
+alpine-release                                               3.24.2-r0            apk                          
 anstream                                                     0.6.19               rust-crate                   
 anstyle                                                      1.0.11               rust-crate                   
 anstyle-parse                                                0.2.7                rust-crate                   
@@ -130,8 +130,8 @@ brotli-libs                                                  1.2.0-r1           
 busybox                                                      1.37.0-r31           apk                          
 busybox-binsh                                                1.37.0-r31           apk                          
 c-ares                                                       1.34.8-r0            apk                          
-ca-certificates                                              20260611-r0          apk                          
-ca-certificates-bundle                                       20260611-r0          apk                          
+ca-certificates                                              20260909-r0          apk                          
+ca-certificates-bundle                                       20260909-r0          apk                          
 catatonit                                                    0.2.1-r0             apk                          
 cfg-if                                                       1.0.1                rust-crate                   
 chromaprint                                                  1.6.0-r0             apk                          
@@ -298,7 +298,7 @@ syn                                                          2.0.102            
 terminal_size                                                0.4.2                rust-crate                   
 thiserror                                                    1.0.69               rust-crate                   
 thiserror                                                    2.0.12               rust-crate                   
-tzdata                                                       2026c-r0             apk                          
+tzdata                                                       2026d-r0             apk                          
 unicode-ident                                                1.0.18               rust-crate                   
 unicode-width                                                0.2.1                rust-crate                   
 utf8parse                                                    0.2.2                rust-crate                   
