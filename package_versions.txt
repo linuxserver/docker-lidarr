@@ -175,6 +175,9 @@ itertools                                                    0.10.5             
 itertools                                                    0.14.0               rust-crate                   
 ivf                                                          0.1.4                rust-crate                   
 jq                                                           1.8.2-r0             apk                          
+keyutils-libs                                                1.6.3-r4             apk                          
+krb5-conf                                                    1.0-r2               apk                          
+krb5-libs                                                    1.22.2-r1            apk                          
 lab                                                          0.11.0               rust-crate                   
 lame-libs                                                    3.100-r5             apk                          
 lcms2                                                        2.19-r0              apk                          
@@ -185,6 +188,7 @@ libbluray                                                    1.4.0-r0           
 libbsd                                                       0.12.2-r0            apk                          
 libbz2                                                       1.0.8-r6             apk                          
 libc                                                         0.2.172              rust-crate                   
+libcom_err                                                   1.47.4-r0            apk                          
 libcrypto3                                                   3.5.9-r0             apk                          
 libcurl                                                      8.22.0-r0            apk                          
 libdav1d                                                     1.5.3-r0             apk                          
@@ -218,12 +222,13 @@ libudfread                                                   1.2.0-r1           
 libunistring                                                 1.4.2-r0             apk                          
 libva                                                        2.23.0-r0            apk                          
 libvdpau                                                     1.5-r4               apk                          
+libverto                                                     0.3.2-r2             apk                          
 libvorbis                                                    1.3.7-r2             apk                          
 libvpl                                                       2.15.0-r1            apk                          
 libvpx                                                       1.15.2-r1            apk                          
 libwebp                                                      1.6.0-r0             apk                          
 libwebpmux                                                   1.6.0-r0             apk                          
-libx11                                                       1.8.13-r0            apk                          
+libx11                                                       1.8.14-r0            apk                          
 libxau                                                       1.0.12-r0            apk                          
 libxcb                                                       1.17.0-r2            apk                          
 libxdmcp                                                     1.1.5-r1             apk                          
