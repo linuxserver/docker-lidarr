@@ -20,6 +20,7 @@ RUN \
   apk add -U --upgrade --no-cache \
     chromaprint \
     icu-libs \
+    krb5-libs \
     sqlite-libs \
     xmlstarlet && \
   echo "**** install lidarr ****" && \
