@@ -1,11 +1,9 @@
 NAME                                                         VERSION              TYPE                        
-Azure.Core                                                   1.47.1               dotnet      (+5 duplicates)  
-Azure.Identity                                               1.14.2               dotnet      (+5 duplicates)  
-BouncyCastle.Cryptography                                    2.6.1                dotnet      (+5 duplicates)  
-Dapper                                                       2.1.66               dotnet      (+5 duplicates)  
+BouncyCastle.Cryptography                                    2.6.2                dotnet      (+5 duplicates)  
+Dapper                                                       2.1.79               dotnet      (+5 duplicates)  
 Diacritical.Net                                              1.0.4                dotnet      (+5 duplicates)  
 DryIoc.Microsoft.DependencyInjection                         6.2.0                dotnet      (+1 duplicate)   
-DryIoc.dll                                                   5.4.3                dotnet      (+7 duplicates)  
+DryIoc.dll                                                   5.4.3                dotnet      (+4 duplicates)  
 Dynamitey                                                    3.0.3                dotnet      (+3 duplicates)  
 Equ                                                          2.3.0                dotnet      (+5 duplicates)  
 FluentMigrator                                               6.2.0                dotnet      (+5 duplicates)  
@@ -15,25 +13,20 @@ FluentMigrator.Runner.Core                                   6.2.0              
 FluentMigrator.Runner.Postgres                               6.2.0                dotnet      (+5 duplicates)  
 FluentMigrator.Runner.SQLite                                 6.2.0                dotnet      (+5 duplicates)  
 FluentValidation                                             9.5.4                dotnet      (+5 duplicates)  
-IPAddressRange                                               6.2.0                dotnet      (+7 duplicates)  
+IPAddressRange                                               6.3.0                dotnet      (+4 duplicates)  
 Ical.Net                                                     4.3.1                dotnet      (+2 duplicates)  
 ImpromptuInterface                                           8.0.6                dotnet      (+3 duplicates)  
 Lidarr                                                       1.0.0                dotnet                       
 Lidarr.Api.V1                                                1.0.0                dotnet      (+2 duplicates)  
-Lidarr.Common                                                1.0.0                dotnet      (+7 duplicates)  
+Lidarr.Common                                                1.0.0                dotnet      (+6 duplicates)  
 Lidarr.Core                                                  1.0.0                dotnet      (+5 duplicates)  
 Lidarr.Host                                                  1.0.0                dotnet      (+1 duplicate)   
 Lidarr.Http                                                  1.0.0                dotnet      (+3 duplicates)  
 Lidarr.Mono                                                  1.0.0                dotnet                       
 Lidarr.SignalR                                               1.0.0                dotnet      (+4 duplicates)  
-MailKit                                                      4.14.0               dotnet      (+5 duplicates)  
-Microsoft.AspNetCore.Cryptography.Internal                   8.0.20               dotnet      (+5 duplicates)  
-Microsoft.AspNetCore.Cryptography.KeyDerivation              8.0.20               dotnet      (+5 duplicates)  
-Microsoft.Bcl.AsyncInterfaces                                8.0.0                dotnet      (+5 duplicates)  
-Microsoft.Bcl.Cryptography                                   8.0.0                dotnet      (+5 duplicates)  
-Microsoft.Data.SqlClient                                     6.1.1                dotnet      (+5 duplicates)  
-Microsoft.Extensions.Caching.Abstractions                    8.0.0                dotnet      (+4 duplicates)  
-Microsoft.Extensions.Caching.Memory                          8.0.1                dotnet      (+5 duplicates)  
+MailKit                                                      4.16.0               dotnet      (+5 duplicates)  
+Microsoft.AspNetCore.Cryptography.Internal                   8.0.27               dotnet      (+4 duplicates)  
+Microsoft.AspNetCore.Cryptography.KeyDerivation              8.0.27               dotnet      (+4 duplicates)  
 Microsoft.Extensions.Configuration                           8.0.0                dotnet      (+6 duplicates)  
 Microsoft.Extensions.Configuration.Abstractions              8.0.0                dotnet      (+6 duplicates)  
 Microsoft.Extensions.Configuration.Binder                    8.0.2                dotnet      (+6 duplicates)  
@@ -48,84 +41,67 @@ Microsoft.Extensions.Diagnostics                             8.0.1              
 Microsoft.Extensions.Diagnostics.Abstractions                8.0.1                dotnet      (+6 duplicates)  
 Microsoft.Extensions.FileProviders.Abstractions              8.0.0                dotnet      (+6 duplicates)  
 Microsoft.Extensions.FileProviders.Physical                  8.0.0                dotnet      (+6 duplicates)  
-Microsoft.Extensions.FileSystemGlobbing                      8.0.0                dotnet      (+6 duplicates)  
-Microsoft.Extensions.Hosting                                 8.0.1                dotnet      (+7 duplicates)  
-Microsoft.Extensions.Hosting.Abstractions                    8.0.1                dotnet      (+7 duplicates)  
+Microsoft.Extensions.FileSystemGlobbing                      8.0.0                dotnet      (+3 duplicates)  
+Microsoft.Extensions.Hosting                                 8.0.1                dotnet      (+6 duplicates)  
+Microsoft.Extensions.Hosting.Abstractions                    8.0.1                dotnet      (+6 duplicates)  
 Microsoft.Extensions.Hosting.WindowsServices                 8.0.1                dotnet      (+7 duplicates)  
-Microsoft.Extensions.Logging                                 8.0.1                dotnet      (+7 duplicates)  
-Microsoft.Extensions.Logging.Abstractions                    8.0.2                dotnet      (+1 duplicate)   
-Microsoft.Extensions.Logging.Abstractions                    8.0.3                dotnet      (+5 duplicates)  
-Microsoft.Extensions.Logging.Configuration                   8.0.1                dotnet      (+7 duplicates)  
-Microsoft.Extensions.Logging.Console                         8.0.1                dotnet      (+7 duplicates)  
-Microsoft.Extensions.Logging.Debug                           8.0.1                dotnet      (+7 duplicates)  
-Microsoft.Extensions.Logging.EventLog                        8.0.1                dotnet      (+7 duplicates)  
-Microsoft.Extensions.Logging.EventSource                     8.0.1                dotnet      (+7 duplicates)  
+Microsoft.Extensions.Logging                                 8.0.1                dotnet      (+6 duplicates)  
+Microsoft.Extensions.Logging.Abstractions                    8.0.2                dotnet      (+6 duplicates)  
+Microsoft.Extensions.Logging.Configuration                   8.0.1                dotnet      (+6 duplicates)  
+Microsoft.Extensions.Logging.Console                         8.0.1                dotnet      (+6 duplicates)  
+Microsoft.Extensions.Logging.Debug                           8.0.1                dotnet      (+6 duplicates)  
+Microsoft.Extensions.Logging.EventLog                        8.0.1                dotnet      (+6 duplicates)  
+Microsoft.Extensions.Logging.EventSource                     8.0.1                dotnet      (+6 duplicates)  
 Microsoft.Extensions.Options                                 8.0.2                dotnet      (+6 duplicates)  
 Microsoft.Extensions.Options.ConfigurationExtensions         8.0.0                dotnet      (+6 duplicates)  
 Microsoft.Extensions.Primitives                              8.0.0                dotnet      (+6 duplicates)  
-Microsoft.Identity.Client                                    4.73.1               dotnet      (+5 duplicates)  
-Microsoft.Identity.Client.Extensions.Msal                    4.73.1               dotnet      (+5 duplicates)  
-Microsoft.IdentityModel.Abstractions                         7.7.1                dotnet      (+5 duplicates)  
-Microsoft.IdentityModel.JsonWebTokens                        7.7.1                dotnet      (+5 duplicates)  
-Microsoft.IdentityModel.Logging                              7.7.1                dotnet      (+5 duplicates)  
-Microsoft.IdentityModel.Protocols                            7.7.1                dotnet      (+5 duplicates)  
-Microsoft.IdentityModel.Protocols.OpenIdConnect              7.7.1                dotnet      (+5 duplicates)  
-Microsoft.IdentityModel.Tokens                               7.7.1                dotnet      (+5 duplicates)  
 Microsoft.OpenApi                                            1.6.25               dotnet      (+2 duplicates)  
-Microsoft.SqlServer.Server                                   1.0.0                dotnet      (+5 duplicates)  
-Microsoft.Win32.Registry                                     5.0.0                dotnet      (+5 duplicates)  
+Microsoft.Win32.Registry                                     5.0.0                dotnet      (+2 duplicates)  
 Microsoft.Win32.SystemEvents                                 8.0.0                dotnet      (+5 duplicates)  
-MimeKit                                                      4.14.0               dotnet      (+5 duplicates)  
+MimeKit                                                      4.16.0               dotnet      (+5 duplicates)  
 Mono.Nat                                                     3.0.0                dotnet      (+5 duplicates)  
 Mono.Posix.NETStandard                                       5.20.1.34-servarr20  dotnet                       
 MonoTorrent                                                  3.0.2                dotnet      (+5 duplicates)  
-NLog                                                         5.4.0                dotnet      (+7 duplicates)  
-NLog.Extensions.Logging                                      5.4.0                dotnet      (+5 duplicates)  
-NLog.Layouts.ClefJsonLayout                                  1.0.4                dotnet      (+7 duplicates)  
+NLog                                                         5.5.1                dotnet      (+7 duplicates)  
+NLog.Extensions.Logging                                      5.5.0                dotnet      (+5 duplicates)  
+NLog.Layouts.ClefJsonLayout                                  1.0.5                dotnet      (+7 duplicates)  
 NLog.Targets.Syslog                                          7.0.0                dotnet      (+5 duplicates)  
 Newtonsoft.Json                                              13.0.4               dotnet      (+7 duplicates)  
 NodaTime                                                     3.2.0                dotnet      (+2 duplicates)  
-Npgsql                                                       9.0.3                dotnet      (+5 duplicates)  
-Polly                                                        8.6.4                dotnet      (+5 duplicates)  
+Npgsql                                                       9.0.5                dotnet      (+5 duplicates)  
+Polly                                                        8.6.6                dotnet      (+5 duplicates)  
 Polly.Contrib.WaitAndRetry                                   1.1.1                dotnet      (+5 duplicates)  
-Polly.Core                                                   8.6.4                dotnet      (+5 duplicates)  
+Polly.Core                                                   8.6.6                dotnet      (+5 duplicates)  
 ReusableTasks                                                4.0.0                dotnet      (+5 duplicates)  
-Sentry                                                       4.0.2                dotnet      (+7 duplicates)  
-SharpZipLib                                                  1.4.2                dotnet      (+7 duplicates)  
-SixLabors.ImageSharp                                         3.1.11               dotnet      (+5 duplicates)  
-SourceGear.sqlite3                                           3.50.4.2             dotnet      (+7 duplicates)  
+Sentry                                                       5.16.3               dotnet      (+4 duplicates)  
+SharpZipLib                                                  1.4.2                dotnet      (+4 duplicates)  
+SixLabors.ImageSharp                                         3.1.12               dotnet      (+5 duplicates)  
+SourceGear.sqlite3                                           3.53.4               dotnet      (+7 duplicates)  
 SpotifyAPI.Web                                               5.1.1                dotnet      (+5 duplicates)  
 Swashbuckle.AspNetCore.Annotations                           9.0.6                dotnet      (+2 duplicates)  
 Swashbuckle.AspNetCore.Swagger                               9.0.6                dotnet      (+2 duplicates)  
 Swashbuckle.AspNetCore.SwaggerGen                            9.0.6                dotnet      (+2 duplicates)  
-System.ClientModel                                           1.5.1                dotnet      (+5 duplicates)  
 System.ComponentModel                                        4.3.0                dotnet      (+2 duplicates)  
 System.ComponentModel.Annotations                            5.0.0                dotnet      (+4 duplicates)  
-System.Configuration.ConfigurationManager                    8.0.1                dotnet      (+7 duplicates)  
-System.Data.SQLite                                           2.0.2                dotnet      (+7 duplicates)  
-System.Diagnostics.DiagnosticSource                          6.0.1                dotnet      (+4 duplicates)  
-System.Diagnostics.EventLog                                  8.0.1                dotnet      (+6 duplicates)  
-System.Drawing.Common                                        8.0.20               dotnet      (+5 duplicates)  
+System.Data.SQLite                                           2.0.4                dotnet      (+4 duplicates)  
+System.Diagnostics.EventLog                                  8.0.1                dotnet      (+3 duplicates)  
+System.Drawing.Common                                        8.0.27               dotnet      (+5 duplicates)  
 System.Formats.Asn1                                          8.0.1                dotnet      (+4 duplicates)  
-System.IO                                                    4.3.0                dotnet      (+5 duplicates)  
+System.IO                                                    4.3.0                dotnet      (+3 duplicates)  
 System.IO.Abstractions                                       17.0.24              dotnet      (+7 duplicates)  
-System.IdentityModel.Tokens.Jwt                              7.7.1                dotnet      (+5 duplicates)  
-System.Memory.Data                                           8.0.1                dotnet      (+5 duplicates)  
-System.Private.Uri                                           4.3.0                dotnet      (+5 duplicates)  
-System.Reflection                                            4.3.0                dotnet      (+5 duplicates)  
-System.Reflection.Primitives                                 4.3.0                dotnet      (+5 duplicates)  
-System.Runtime                                               4.3.0                dotnet      (+5 duplicates)  
-System.Runtime.CompilerServices.Unsafe                       6.0.0                dotnet      (+4 duplicates)  
-System.Runtime.Loader                                        4.3.0                dotnet      (+5 duplicates)  
-System.Security.AccessControl                                5.0.0                dotnet      (+5 duplicates)  
+System.Private.Uri                                           4.3.0                dotnet      (+3 duplicates)  
+System.Reflection                                            4.3.0                dotnet      (+3 duplicates)  
+System.Reflection.Primitives                                 4.3.0                dotnet      (+3 duplicates)  
+System.Runtime                                               4.3.0                dotnet      (+3 duplicates)  
+System.Runtime.Loader                                        4.3.0                dotnet      (+3 duplicates)  
+System.Security.AccessControl                                5.0.0                dotnet      (+2 duplicates)  
 System.Security.Cryptography.Pkcs                            8.0.1                dotnet      (+4 duplicates)  
-System.Security.Cryptography.ProtectedData                   8.0.0                dotnet      (+7 duplicates)  
-System.Security.Principal.Windows                            5.0.0                dotnet      (+5 duplicates)  
-System.ServiceProcess.ServiceController                      8.0.1                dotnet      (+7 duplicates)  
-System.Text.Encoding                                         4.3.0                dotnet      (+5 duplicates)  
+System.Security.Principal.Windows                            5.0.0                dotnet      (+2 duplicates)  
+System.ServiceProcess.ServiceController                      8.0.1                dotnet      (+4 duplicates)  
+System.Text.Encoding                                         4.3.0                dotnet      (+3 duplicates)  
 System.Text.Encoding.CodePages                               8.0.0                dotnet                       
-System.Text.Json                                             8.0.6                dotnet      (+7 duplicates)  
-System.Threading.Tasks                                       4.3.0                dotnet      (+5 duplicates)  
+System.Text.Json                                             8.0.6                dotnet      (+5 duplicates)  
+System.Threading.Tasks                                       4.3.0                dotnet      (+3 duplicates)  
 TagLibSharp-Lidarr                                           2.2.0.27             dotnet      (+5 duplicates)  
 acl-libs                                                     2.3.2-r1             apk                          
 aligned                                                      0.4.2                rust-crate                   
@@ -133,7 +109,7 @@ aligned-vec                                                  0.6.4              
 alpine-baselayout                                            3.7.2-r1             apk                          
 alpine-baselayout-data                                       3.7.2-r1             apk                          
 alpine-keys                                                  2.6-r0               apk                          
-alpine-release                                               3.24.2-r0            apk                          
+alpine-release                                               3.24.3-r0            apk                          
 anstream                                                     0.6.19               rust-crate                   
 anstyle                                                      1.0.11               rust-crate                   
 anstyle-parse                                                0.2.7                rust-crate                   
@@ -150,12 +126,12 @@ av1-grain                                                    0.2.4              
 bash                                                         5.3.9-r1             apk                          
 bitflags                                                     2.9.1                rust-crate                   
 bitstream-io                                                 4.2.0                rust-crate                   
-brotli-libs                                                  1.2.0-r1             apk                          
+brotli-libs                                                  1.2.1-r0             apk                          
 busybox                                                      1.37.0-r31           apk                          
 busybox-binsh                                                1.37.0-r31           apk                          
-c-ares                                                       1.34.8-r0            apk                          
-ca-certificates                                              20260909-r0          apk                          
-ca-certificates-bundle                                       20260909-r0          apk                          
+c-ares                                                       1.34.9-r0            apk                          
+ca-certificates                                              20261020-r0          apk                          
+ca-certificates-bundle                                       20261020-r0          apk                          
 catatonit                                                    0.2.1-r0             apk                          
 cfg-if                                                       1.0.1                rust-crate                   
 chromaprint                                                  1.6.0-r0             apk                          
@@ -183,10 +159,10 @@ either                                                       1.15.0             
 equator                                                      0.4.2                rust-crate                   
 errno                                                        0.3.12               rust-crate                   
 fern                                                         0.7.1                rust-crate                   
-ffmpeg-libavcodec                                            8.1.2-r0             apk                          
-ffmpeg-libavformat                                           8.1.2-r0             apk                          
-ffmpeg-libavutil                                             8.1.2-r0             apk                          
-ffmpeg-libswresample                                         8.1.2-r0             apk                          
+ffmpeg-libavcodec                                            8.1.3-r0             apk                          
+ffmpeg-libavformat                                           8.1.3-r0             apk                          
+ffmpeg-libavutil                                             8.1.3-r0             apk                          
+ffmpeg-libswresample                                         8.1.3-r0             apk                          
 fftw-double-libs                                             3.3.11-r0            apk                          
 findutils                                                    4.10.0-r1            apk                          
 getrandom                                                    0.3.3                rust-crate                   
@@ -269,8 +245,8 @@ mbedtls3                                                     3.6.7-r0           
 memchr                                                       2.7.5                rust-crate                   
 minimal-lexical                                              0.2.1                rust-crate                   
 mpg123-libs                                                  1.33.5-r0            apk                          
-musl                                                         1.2.6-r2             apk                          
-musl-utils                                                   1.2.6-r2             apk                          
+musl                                                         1.2.6-r3             apk                          
+musl-utils                                                   1.2.6-r3             apk                          
 ncurses-terminfo-base                                        6.6_p20260516-r0     apk                          
 netcat-openbsd                                               1.234.1-r0           apk                          
 new_debug_unreachable                                        1.0.6                rust-crate                   
@@ -302,15 +278,15 @@ rav1e-libs                                                   0.8.1-r0           
 rayon                                                        1.10.0               rust-crate                   
 rayon-core                                                   1.12.1               rust-crate                   
 readline                                                     8.3.3-r1             apk                          
-runtime.any.System.IO                                        4.3.0                dotnet      (+5 duplicates)  
-runtime.any.System.Reflection                                4.3.0                dotnet      (+5 duplicates)  
-runtime.any.System.Reflection.Primitives                     4.3.0                dotnet      (+5 duplicates)  
-runtime.any.System.Runtime                                   4.3.0                dotnet      (+5 duplicates)  
-runtime.any.System.Text.Encoding                             4.3.0                dotnet      (+5 duplicates)  
-runtime.any.System.Threading.Tasks                           4.3.0                dotnet      (+5 duplicates)  
-runtime.unix.System.Private.Uri                              4.3.0                dotnet      (+5 duplicates)  
-runtimepack.Microsoft.AspNetCore.App.Runtime.linux-musl-x64  8.0.12               dotnet      (+4 duplicates)  
-runtimepack.Microsoft.NETCore.App.Runtime.linux-musl-x64     8.0.12               dotnet      (+7 duplicates)  
+runtime.any.System.IO                                        4.3.0                dotnet      (+2 duplicates)  
+runtime.any.System.Reflection                                4.3.0                dotnet      (+2 duplicates)  
+runtime.any.System.Reflection.Primitives                     4.3.0                dotnet      (+2 duplicates)  
+runtime.any.System.Runtime                                   4.3.0                dotnet      (+3 duplicates)  
+runtime.any.System.Text.Encoding                             4.3.0                dotnet      (+2 duplicates)  
+runtime.any.System.Threading.Tasks                           4.3.0                dotnet      (+2 duplicates)  
+runtime.unix.System.Private.Uri                              4.3.0                dotnet      (+3 duplicates)  
+runtimepack.Microsoft.AspNetCore.App.Runtime.linux-musl-x64  8.0.27               dotnet      (+4 duplicates)  
+runtimepack.Microsoft.NETCore.App.Runtime.linux-musl-x64     8.0.27               dotnet      (+7 duplicates)  
 rustix                                                       1.0.7                rust-crate                   
 scan_fmt                                                     0.2.6                rust-crate                   
 scanelf                                                      1.3.9-r1             apk                          
