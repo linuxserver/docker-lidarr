@@ -154,7 +154,7 @@ crossbeam-deque                                              0.8.6              
 crossbeam-epoch                                              0.9.18               rust-crate                   
 crossbeam-queue                                              0.3.12               rust-crate                   
 crossbeam-utils                                              0.8.21               rust-crate                   
-curl                                                         8.22.0-r0            apk                          
+curl                                                         8.23.0-r0            apk                          
 either                                                       1.15.0               rust-crate                   
 equator                                                      0.4.2                rust-crate                   
 errno                                                        0.3.12               rust-crate                   
@@ -190,7 +190,7 @@ libbz2                                                       1.0.8-r6           
 libc                                                         0.2.172              rust-crate                   
 libcom_err                                                   1.47.4-r0            apk                          
 libcrypto3                                                   3.5.9-r0             apk                          
-libcurl                                                      8.22.0-r0            apk                          
+libcurl                                                      8.23.0-r0            apk                          
 libdav1d                                                     1.5.3-r0             apk                          
 libdrm                                                       2.4.134-r0           apk                          
 libdvdcss                                                    1.4.3-r0             apk                          
